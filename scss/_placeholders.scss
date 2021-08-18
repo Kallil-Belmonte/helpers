@@ -1,0 +1,50 @@
+//---------- SUMMARY ----------//
+// TEXT CONTINUED
+// CENTER ALIGNMENT
+// BACKGROUND IMAGE
+//---------- END SUMMARY ----------//
+
+// TEXT CONTINUED
+%text-continued {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// CENTER ALIGNMENT
+%center-absolute,
+%center-absolute-y,
+%center-absolute-x {
+  position: absolute;
+}
+
+%center-absolute {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%center-absolute-y {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%center-absolute-x {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// BACKGROUND IMAGE
+%background-image-contain,
+%background-image-cover {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%background-image-contain {
+  background-size: contain;
+}
+
+%background-image-cover {
+  background-size: cover;
+}

@@ -1,0 +1,60 @@
+//---------- SUMMARY ----------//
+// STYLE BUTTON
+// SIZE
+// SQUARE
+// BACKGROUND IMAGE
+// POSITION
+//---------- END SUMMARY ----------//
+
+// STYLE BUTTON
+@mixin style-btn($btn-class) {
+  &.#{$btn-class},
+  &.#{$btn-class}:hover,
+  &.#{$btn-class}:not(:disabled):not(.disabled):active,
+  &.#{$btn-class}:not(:disabled):not(.disabled).active {
+    color: #fff;
+  }
+}
+
+@mixin style-btn-outline($btn-outline-class) {
+  &.#{$btn-outline-class}:hover,
+  &.#{$btn-outline-class}:not(:disabled):not(.disabled):active,
+  &.#{$btn-outline-class}:not(:disabled):not(.disabled).active {
+    color: #fff;
+  }
+}
+
+// SIZE
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// SQUARE
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+// BACKGROUND IMAGE
+@mixin bg-image($url, $attachment: fixed, $size: cover) {
+  background: url($url) no-repeat center center $attachment;
+  background-size: $size;
+}
+
+// POSITION
+@mixin position(
+  $position: static,
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto,
+  $z-index: auto
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  left: $left;
+  bottom: $bottom;
+  z-index: $z-index;
+}
