@@ -1,11 +1,10 @@
 /**
- * Gets the first and last day of the current year.
- *
+ * @description Gets the first and last day of the current year.
  * @see { @link https://codepen.io/kallil-belmonte/full/PdMREw }
  */
 
-export const getFirstDayOfYear = () =>
+export const getFirstDayOfYear = (): string =>
   new Date(new Date().getFullYear(), 0, 1).toISOString().slice(0, 10);
 
-export const getLastDayOfYear = () =>
+export const getLastDayOfYear = (): string =>
   new Date(new Date().getFullYear(), 11, 31).toISOString().slice(0, 10);

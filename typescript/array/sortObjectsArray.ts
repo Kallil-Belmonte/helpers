@@ -1,10 +1,9 @@
 /**
- * Sorts the objects inside an array by one property (in ascending or descending order).
- *
+ * @description Sorts the objects inside an array by one property (in ascending or descending order).
  * @see { @link https://codepen.io/kallil-belmonte/full/PdxGbP }
  */
 
-const sortObjectsArray = (array: [], property: string, reverse = false) => {
+const sortObjectsArray = (array: any[], property: string, reverse = false): any[] => {
   const sortBy = (key: string, reverseValue: boolean) => {
     const moveSmaller = reverseValue ? 1 : -1;
     const moveLarger = reverseValue ? -1 : 1;
