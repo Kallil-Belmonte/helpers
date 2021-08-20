@@ -21,13 +21,13 @@ const groupArrayItemsInArrays = (
       if (!matrix[lastIndex].length) {
         matrix[lastIndex].push(...array.slice(startSlice, endSlice));
 
-        const ultimoItem = matrix[matrix.length - 1];
-        const ultimoItemLastIndex: number = ultimoItem.length - 1;
+        const lastItem = matrix[matrix.length - 1];
+        const lastItemsLastIndex = lastItem.length - 1;
 
-        startSlice = array.findIndex(item => item === ultimoItem[ultimoItemLastIndex]);
+        startSlice = array.findIndex(item => item === lastItem[lastItemsLastIndex]);
         endSlice = startSlice + itemsQuantity;
 
-        if (ultimoItem.length < itemsQuantity) {
+        if (lastItem.length < itemsQuantity) {
           break;
         }
 
@@ -38,7 +38,7 @@ const groupArrayItemsInArrays = (
     }
   } else {
     array.forEach(item => {
-      const lastIndex: number = matrix.length - 1;
+      const lastIndex = matrix.length - 1;
 
       if (matrix[lastIndex].length < itemsQuantity) {
         matrix[lastIndex].push(item);

@@ -11,7 +11,6 @@ const sortObjectsArray = (array: any[], property: string, reverse = false): any[
     function move(a: any, b: any) {
       if (a[key] < b[key]) return moveSmaller;
       if (a[key] > b[key]) return moveLarger;
-
       return 0;
     }
 
