@@ -3,5 +3,7 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/ePYrQj }
  */
 
-export const limitWords = (text: string | null, numberOfWords: number): string | null =>
+const limitWords = (text: string | null, numberOfWords: number) =>
   text ? text.split(' ').splice(0, numberOfWords).join(' ') : text;
+
+export default limitWords;

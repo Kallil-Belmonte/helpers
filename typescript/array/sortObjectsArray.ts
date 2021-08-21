@@ -3,7 +3,7 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/PdxGbP }
  */
 
-const sortObjectsArray = (array: any[], property: string, reverse = false): any[] => {
+const sortObjectsArray = (array: any[], property: string, reverse = false) => {
   const sortBy = (key: string, reverseValue: boolean) => {
     const moveSmaller = reverseValue ? 1 : -1;
     const moveLarger = reverseValue ? -1 : 1;
