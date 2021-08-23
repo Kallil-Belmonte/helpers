@@ -4,16 +4,14 @@
  */
 
 const filterObject = (object: Object, propertiesToFilter: string[], removeProperties = true) => {
-  const { keys } = Object;
-  const objectFiltered = {};
+  const propertiesFiltered = Object.keys(object).filter(
+    key => propertiesToFilter.includes(key) !== removeProperties,
+  );
 
-  keys(object).forEach(key => {
-    if (propertiesToFilter.includes(key) !== removeProperties) {
-      objectFiltered[key] = object[key];
-    }
-  });
-
-  return objectFiltered;
+  return propertiesFiltered.reduce((accumulator, currentValue) => {
+    accumulator[currentValue] = object[currentValue];
+    return accumulator;
+  }, {});
 };
 
 export default filterObject;
