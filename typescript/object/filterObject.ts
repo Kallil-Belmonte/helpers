@@ -3,15 +3,13 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/xxxpKxv }
  */
 
-const filterObject = (object: Object, propertiesToFilter: string[], removeProperties = true) => {
-  const propertiesFiltered = Object.keys(object).filter(
-    key => propertiesToFilter.includes(key) !== removeProperties,
-  );
+const filterObject = (object: Object, propertiesToFilter: string[], removeProperties = true) =>
+  Object.keys(object).reduce((accumulator, currentValue) => {
+    if (propertiesToFilter.includes(currentValue) !== removeProperties) {
+      accumulator[currentValue] = object[currentValue];
+    }
 
-  return propertiesFiltered.reduce((accumulator, currentValue) => {
-    accumulator[currentValue] = object[currentValue];
     return accumulator;
   }, {});
-};
 
 export default filterObject;
