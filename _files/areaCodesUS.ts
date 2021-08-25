@@ -1,5 +1,5 @@
 const AREA_CODES_US = {
-  statesByCode: {
+  stateByCode: {
     // : '',
   },
   codesByState: {

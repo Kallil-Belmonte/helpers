@@ -1,5 +1,5 @@
 const AREA_CODES_BR = {
-  estadoPorDdd: {
+  estadoPorCodigo: {
     11: 'SP',
     12: 'SP',
     13: 'SP',
@@ -68,7 +68,7 @@ const AREA_CODES_BR = {
     98: 'MA',
     99: 'MA',
   },
-  dddsPorEstado: {
+  codigosPorEstado: {
     AC: [68],
     AL: [82],
     AM: [92, 97],
