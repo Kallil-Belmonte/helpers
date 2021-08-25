@@ -1,4 +1,7 @@
 https://www.allareacodes.com/area_code_listings_by_state.htm
 https://pt.chahaoba.com/Estados_Unidos
+https://pt.wikipedia.org/wiki/Lista_de_abrevia%C3%A7%C3%B5es_postais_dos_Estados_Unidos
 
 https://www.itmnetworks.com.br/ddi-dos-paises-codigos-internacionais-de-telefone
+
+https://gist.github.com/letanure/3012978
