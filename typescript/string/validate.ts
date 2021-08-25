@@ -11,6 +11,7 @@ type ConfigItemRegex = ConfigItem & { check: RegExp };
 type Config = {
   regex?: ConfigItemRegex;
   email?: ConfigItemBoolean;
+  phone?: ConfigItemBoolean;
   min?: ConfigItemNumber;
   max?: ConfigItemNumber;
   number?: ConfigItemBoolean;
@@ -25,6 +26,7 @@ type ValidationItem = { isValid: boolean; message: string };
 type Validations = {
   regex?: ValidationItem;
   email?: ValidationItem;
+  phone?: ValidationItem;
   min?: ValidationItem;
   max?: ValidationItem;
   number?: ValidationItem;
@@ -36,7 +38,8 @@ type Validations = {
 
 const validate = (value: string, config: Config = {}) => {
   const { values } = Object;
-  const { regex, email, min, max, number, lowercase, uppercase, specialCharacter, space } = config;
+  const { regex, email, phone, min, max, number, lowercase, uppercase, specialCharacter, space } =
+    config;
   const validations: Validations = {};
 
   const getValidation = (isValid: boolean, message: string): ValidationItem => ({
@@ -58,6 +61,14 @@ const validate = (value: string, config: Config = {}) => {
     const emailRegex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     validations.email = getValidation(emailRegex.test(value), message);
+  }
+
+  // Phone
+  if (phone?.check) {
+    const { message = 'Invalid phone.' } = phone;
+    const formattedValue = value.replace(/[^0-9]/g, '');
+    const phoneRegex = /^[0-9]{10,11}$/;
+    validations.phone = getValidation(phoneRegex.test(formattedValue), message);
   }
 
   // Min
