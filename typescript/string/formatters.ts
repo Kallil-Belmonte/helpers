@@ -9,15 +9,30 @@ export const removeSpecialCharacters = (text: string | null) =>
 export const removeAccent = (text: string | null) =>
   text ? text.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : text;
 
-export const formatDate = (date: string | null, format: string) => {
+export const formatDate = (date: string | Date, dateFormat: string, outputFormat: string) => {
   if (date) {
-    const standardDate = new Date(date.replace(/-/g, '/')).toLocaleDateString('pt-BR', {
-      day: 'numeric',
-      month: 'numeric',
-      year: 'numeric',
-    });
+    const d = date instanceof Date ? date.toISOString() : date;
+    const dFormat = date instanceof Date ? 'yyyy-mm-dd' : dateFormat.toLowerCase();
+    let stringFormat =
+      outputFormat.replace(/dd/i, '$<day>') || outputFormat.replace(/dd/i, '$<day>');
+    stringFormat =
+      stringFormat.replace(/mm/i, '$<month>') || stringFormat.replace(/m/i, '$<month>');
+    stringFormat = stringFormat.replace(/yyyy/i, '$<year>');
 
-    return standardDate.replace(/(?<day>\d{2})\/(?<month>\d{2})\/(?<year>\d{4})/g, format);
+    const getValue = (format: string) =>
+      format ? d.slice(dFormat.indexOf(format), dFormat.indexOf(format) + format.length) : '';
+
+    const getFormat = (id: string) => {
+      const check = (text: string) => (new RegExp(text, 'i').test(dFormat) ? text : '');
+      return check(`${id}${id}${id}${id}`) || check(`${id}${id}`) || check(`${id}`);
+    };
+
+    const day = getValue(getFormat('d'));
+    const month = getValue(getFormat('m'));
+    const year = getValue(getFormat('y'));
+    const regexBase = new RegExp(`(?<day>${day})(?<month>${month})(?<year>${year})`, 'g');
+
+    return `${day}${month}${year}`.replace(regexBase, stringFormat);
   }
 
   return date;
