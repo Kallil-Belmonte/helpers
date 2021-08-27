@@ -3,7 +3,7 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/mdmYVNo }
  */
 
-export const getPastDate = (daysQuantity: number, date: string, config = {}, locale = 'pt-BR') => {
+export const getPastDate = (daysQuantity: number, date?: string, config = {}, locale = 'pt-BR') => {
   const day = date ? new Date(date) : new Date();
   const pastDate = new Date(day.getFullYear(), day.getMonth(), day.getDate() - daysQuantity);
   return pastDate.toLocaleDateString(locale, {
@@ -16,7 +16,7 @@ export const getPastDate = (daysQuantity: number, date: string, config = {}, loc
 
 export const getFutureDate = (
   daysQuantity: number,
-  date: string,
+  date?: string,
   config = {},
   locale = 'pt-BR',
 ) => {

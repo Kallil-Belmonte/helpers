@@ -4,7 +4,7 @@
  */
 
 const removePrefixes = (value: string, prefix = '0') => {
-  let result = String(value);
+  let result = value;
 
   const removePrefix = () => {
     if (result[0] === prefix) {

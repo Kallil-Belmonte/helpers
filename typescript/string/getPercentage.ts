@@ -3,8 +3,13 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/MWmRGLJ }
  */
 
-const getPercentage = (value: number, total: number, locale: string | null = 'pt-BR') => {
-  const percentage = Number((value / (total / 100)).toFixed(2));
+const getPercentage = (
+  value: number | string,
+  total: number | string,
+  locale: string | null = 'pt-BR',
+) => {
+  const totalDivide = (Number(total) / 100).toFixed(2);
+  const percentage = Number(value) / Number(totalDivide);
 
   return locale
     ? new Intl.NumberFormat(locale, {
