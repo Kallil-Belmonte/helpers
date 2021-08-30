@@ -13,10 +13,8 @@ export const formatDate = (date: string | Date, dateFormat: string, outputFormat
   if (date) {
     const d = date instanceof Date ? date.toISOString() : date;
     const dFormat = date instanceof Date ? 'yyyy-mm-dd' : dateFormat.toLowerCase();
-    let stringFormat =
-      outputFormat.replace(/dd/i, '$<day>') || outputFormat.replace(/dd/i, '$<day>');
-    stringFormat =
-      stringFormat.replace(/mm/i, '$<month>') || stringFormat.replace(/m/i, '$<month>');
+    let stringFormat = outputFormat.replace(/d?d/i, '$<day>');
+    stringFormat = stringFormat.replace(/m?m/i, '$<month>');
     stringFormat = stringFormat.replace(/yyyy/i, '$<year>');
 
     const getValue = (format: string) =>
