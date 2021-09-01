@@ -11,26 +11,42 @@ export const removeAccent = (text: string | null) =>
 
 export const formatDate = (date: string | Date, dateFormat: string, outputFormat: string) => {
   if (date) {
-    const d = date instanceof Date ? date.toISOString() : date;
-    const dFormat = date instanceof Date ? 'yyyy-mm-dd' : dateFormat.toLowerCase();
-    let stringFormat = outputFormat.replace(/d?d/i, '$<day>');
-    stringFormat = stringFormat.replace(/m?m/i, '$<month>');
-    stringFormat = stringFormat.replace(/yyyy/i, '$<year>');
+    const dateBase = date instanceof Date ? date.toISOString().split('T')[0] : date;
+    const dateArray = dateBase
+      .replace(/[^0-9]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .split(' ');
+    const formatArray =
+      date instanceof Date
+        ? ['yyyy', 'mm', 'dd']
+        : dateFormat
+            .toLowerCase()
+            .replace(/[^dmy]/g, ' ')
+            .replace(/\s+/g, ' ')
+            .split(' ');
 
-    const getValue = (format: string) =>
-      format ? d.slice(dFormat.indexOf(format), dFormat.indexOf(format) + format.length) : '';
+    const { d, m, y } = dateArray.reduce(
+      (accumulator: { [key: string]: string }, currentValue: string, index: number) => {
+        accumulator[formatArray[index].charAt(0)] = currentValue.replace(/^0/g, '');
+        return accumulator;
+      },
+      { d: '', m: '', y: '' },
+    );
 
-    const getFormat = (id: string) => {
-      const check = (text: string) => (new RegExp(text, 'i').test(dFormat) ? text : '');
-      return check(`${id}${id}${id}${id}`) || check(`${id}${id}`) || check(`${id}`);
-    };
+    const quantDigits = (id: string) => outputFormat.toLowerCase().split(id).length - 1;
 
-    const day = getValue(getFormat('d'));
-    const month = getValue(getFormat('m'));
-    const year = getValue(getFormat('y'));
-    const regexBase = new RegExp(`(?<day>${day})(?<month>${month})(?<year>${year})`, 'g');
+    let result = outputFormat.toLowerCase();
 
-    return `${day}${month}${year}`.replace(regexBase, stringFormat);
+    result = result.replace(/d?d/gi, d);
+    if (quantDigits('d') === 2 && d.length === 1) result = result.replace(d, `0${d}`);
+
+    result = result.replace(/m?m/gi, m);
+    if (quantDigits('m') === 2 && m.length === 1) result = result.replace(m, `0${m}`);
+
+    result = result.replace(/yy?y?y?/gi, y);
+    if (quantDigits('y') <= 2) result = result.replace(y, y.slice(y.length - 2, y.length));
+
+    return result;
   }
 
   return date;
