@@ -11,40 +11,31 @@ export const removeAccent = (text: string | null) =>
 
 export const formatDate = (date: string | Date, dateFormat: string, outputFormat: string) => {
   if (date) {
-    const dateBase = date instanceof Date ? date.toISOString().split('T')[0] : date;
-    const dateArray = dateBase
-      .replace(/[^0-9]/g, ' ')
-      .replace(/\s+/g, ' ')
-      .split(' ');
-    const formatArray =
-      date instanceof Date
-        ? ['yyyy', 'mm', 'dd']
-        : dateFormat
-            .toLowerCase()
-            .replace(/[^dmy]/g, ' ')
-            .replace(/\s+/g, ' ')
-            .split(' ');
+    const getArray = (d: string, regex: RegExp) =>
+      d.replace(regex, ' ').replace(/\s+/g, ' ').split(' ');
+    const quantDigits = (id: string) => outputFormat.split(id).length - 1;
 
-    const { d, m, y } = dateArray.reduce(
-      (accumulator: { [key: string]: string }, currentValue: string, index: number) => {
+    const dateBase = date instanceof Date ? date.toISOString().split('T')[0] : date;
+    const dateArray = getArray(dateBase, /[^0-9]/g);
+    const formatArray = date instanceof Date ? ['Y', 'M', 'D'] : getArray(dateFormat, /[^DMY]/g);
+
+    const { D, M, Y } = dateArray.reduce(
+      (accumulator, currentValue, index) => {
         accumulator[formatArray[index].charAt(0)] = currentValue.replace(/^0/g, '');
         return accumulator;
       },
-      { d: '', m: '', y: '' },
+      { D: '', M: '', Y: '' },
     );
 
-    const quantDigits = (id: string) => outputFormat.toLowerCase().split(id).length - 1;
+    let result = outputFormat;
+    result = result.replace(/D?D/g, D);
+    if (quantDigits('D') === 2 && D.length === 1) result = result.replace(D, `0${D}`);
 
-    let result = outputFormat.toLowerCase();
+    result = result.replace(/M?M/g, M);
+    if (quantDigits('M') === 2 && M.length === 1) result = result.replace(M, `0${M}`);
 
-    result = result.replace(/d?d/gi, d);
-    if (quantDigits('d') === 2 && d.length === 1) result = result.replace(d, `0${d}`);
-
-    result = result.replace(/m?m/gi, m);
-    if (quantDigits('m') === 2 && m.length === 1) result = result.replace(m, `0${m}`);
-
-    result = result.replace(/yy?y?y?/gi, y);
-    if (quantDigits('y') <= 2) result = result.replace(y, y.slice(y.length - 2, y.length));
+    result = result.replace(/YY?Y?Y?/g, Y);
+    if (quantDigits('Y') <= 2) result = result.replace(Y, Y.slice(Y.length - 2, Y.length));
 
     return result;
   }
