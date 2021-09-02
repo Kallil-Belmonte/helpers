@@ -18,7 +18,9 @@ const getPropertiesFromOtherObject = (
       item => item[firstValueProp] === objectToGetProps[key][secondValueProp],
     );
 
-    properties.forEach(property => (result[key][property] = valueToCopy[property]));
+    if (valueToCopy) {
+      properties.forEach(property => (result[key][property] = valueToCopy[property]));
+    }
   });
 
   return result;

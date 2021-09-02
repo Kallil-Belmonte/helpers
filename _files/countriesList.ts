@@ -3,10 +3,11 @@
 // https://abbreviations.yourdictionary.com/articles/country-abbreviations.html
 // http://manualdemarcas.inpi.gov.br/projects/manual-de-marcas-2-edicao-1-revisao/wiki/Siglas_de_pa%C3%ADses_e_organiza%C3%A7%C3%B5es
 // https://www.itmnetworks.com.br/ddi-dos-paises-codigos-internacionais-de-telefone
+// https://countrycode.org/
 
 type Country = {
   countryCode: string;
-  initials: string;
+  isoCodes: string[];
   nameUS: string;
   nameBR: string;
   continentUS: string;
@@ -17,1399 +18,1707 @@ type CountriesList = {
   [key: string]: Country;
 };
 
-const teste = {
-  AD: { initials: 'AD', code: 'AND', nameUS: 'Andorra' },
-  AI: { initials: 'AI', code: 'AIA', nameUS: 'Anguilla' },
-  AL: { initials: 'AL', code: 'ALB', nameUS: 'Albania' },
-  AM: { initials: 'AM', code: 'ARM', nameUS: 'Armenia' },
-  AN: { initials: 'AN', code: 'ANT', nameUS: 'Netherlands Antilles' },
-  AO: { initials: 'AO', code: 'AGO', nameUS: 'Angola' },
-  AQ: { initials: 'AQ', code: 'ATA', nameUS: 'Antarctica' },
-  AR: { initials: 'AR', code: 'ARG', nameUS: 'Argentina' },
-  AS: { initials: 'AS', code: 'ASM', nameUS: 'American Samoa' },
-  AT: { initials: 'AT', code: 'AUT', nameUS: 'Austria' },
-  AU: { initials: 'AU', code: 'AUS', nameUS: 'Australia' },
-  AW: { initials: 'AW', code: 'ABW', nameUS: 'Aruba' },
-  AX: { initials: 'AX', code: 'ALA', nameUS: 'Aland Islands' },
-  BA: { initials: 'BA', code: 'BIH', nameUS: 'Bosnia and Herzegovina' },
-  BE: { initials: 'BE', code: 'BEL', nameUS: 'Belgium' },
-  BF: { initials: 'BF', code: 'BFA', nameUS: 'Burkina Faso' },
-  BG: { initials: 'BG', code: 'BGR', nameUS: 'Bulgaria, Republic of' },
-  BI: { initials: 'BI', code: 'BDI', nameUS: 'Burundi' },
-  BJ: { initials: 'BJ', code: 'BEN', nameUS: 'Benin' },
-  BL: { initials: 'BL', code: 'BLM', nameUS: 'Saint Barthelemy' },
-  BO: { initials: 'BO', code: 'BOL', nameUS: 'Bolivia' },
-  BQ: { initials: 'BQ', code: 'BES', nameUS: 'Bonaire, Sint Eustatius and Saba' },
-  BR: { initials: 'BR', code: 'BRA', nameUS: 'Brazil' },
-  BV: { initials: 'BV', code: 'BVT', nameUS: 'Bouvet Island' },
-  BW: { initials: 'BW', code: 'BWA', nameUS: 'Botswana' },
-  BY: { initials: 'BY', code: 'BLR', nameUS: 'Belarus' },
-  CA: { initials: 'CA', code: 'CAN', nameUS: 'Canada' },
-  CD: { initials: 'CD', code: 'COD', nameUS: 'Congo, Democratic Republic of' },
-  CF: { initials: 'CF', code: 'CAF', nameUS: 'Central African Republic' },
-  CG: { initials: 'CG', code: 'COG', nameUS: 'Congo' },
-  CH: { initials: 'CH', code: 'CHE', nameUS: 'Switzerland' },
-  CI: { initials: 'CI', code: 'CIV', nameUS: "Côte d'Ivoire" },
-  CK: { initials: 'CK', code: 'COK', nameUS: 'Cook Islands' },
-  CL: { initials: 'CL', code: 'CHL', nameUS: 'Chile' },
-  CM: { initials: 'CM', code: 'CMR', nameUS: 'Cameroon' },
-  CO: { initials: 'CO', code: 'COL', nameUS: 'Colombia' },
-  CU: { initials: 'CU', code: 'CUB', nameUS: 'Cuba' },
-  CV: { initials: 'CV', code: 'CPV', nameUS: 'Cape Verde' },
-  CW: { initials: 'CW', code: 'CUW', nameUS: 'Curaçao' },
-  CZ: { initials: 'CZ', code: 'CZE', nameUS: 'Czech Republic (Czechia)' },
-  DE: { initials: 'DE', code: 'DEU', nameUS: 'Germany' },
-  DJ: { initials: 'DJ', code: 'DJI', nameUS: 'Djibouti' },
-  DK: { initials: 'DK', code: 'DNK', nameUS: 'Denmark' },
-  DM: { initials: 'DM', code: 'DMA', nameUS: 'Dominica' },
-  DO: { initials: 'DO', code: 'DOM', nameUS: 'Dominican Republic' },
-  DZ: { initials: 'DZ', code: 'DZA', nameUS: 'Algeria' },
-  EC: { initials: 'EC', code: 'ECU', nameUS: 'Ecuador' },
-  EE: { initials: 'EE', code: 'EST', nameUS: 'Estonia' },
-  EG: { initials: 'EG', code: 'EGY', nameUS: 'Egypt' },
-  EH: { initials: 'EH', code: 'ESH', nameUS: 'Western Sahara' },
-  ER: { initials: 'ER', code: 'ERI', nameUS: 'Eritrea' },
-  ES: { initials: 'ES', code: 'ESP', nameUS: 'Spain' },
-  ET: { initials: 'ET', code: 'ETH', nameUS: 'Ethiopia' },
-  FI: { initials: 'FI', code: 'FIN', nameUS: 'Finland' },
-  FJ: { initials: 'FJ', code: 'FJI', nameUS: 'Fiji' },
-  FK: { initials: 'FK', code: 'FLK', nameUS: 'Falkland Islands (Malvinas)' },
-  FM: { initials: 'FM', code: 'FSM', nameUS: 'Micronesia' },
-  FO: { initials: 'FO', code: 'FRO', nameUS: 'Faroe Islands' },
-  FR: { initials: 'FR', code: 'FRA', nameUS: 'France' },
-  GA: { initials: 'GA', code: 'GAB', nameUS: 'Gabon' },
-  GB: { initials: 'GB', code: 'GBR', nameUS: 'United Kingdom' },
-  GD: { initials: 'GD', code: 'GRD', nameUS: 'Grenada' },
-  GF: { initials: 'GF', code: 'GUF', nameUS: 'French Guiana' },
-  GG: { initials: 'GG', code: 'GGY', nameUS: 'Guernsey' },
-  GH: { initials: 'GH', code: 'GHA', nameUS: 'Ghana' },
-  GI: { initials: 'GI', code: 'GIB', nameUS: 'Gibraltar' },
-  GL: { initials: 'GL', code: 'GRL', nameUS: 'Greenland' },
-  GM: { initials: 'GM', code: 'GMB', nameUS: 'Gambia' },
-  GN: { initials: 'GN', code: 'GIN', nameUS: 'Guinea' },
-  GP: { initials: 'GP', code: 'GLP', nameUS: 'Guadeloupe' },
-  GQ: { initials: 'GQ', code: 'GNQ', nameUS: 'Equatorial Guinea' },
-  GR: { initials: 'GR', code: 'GRC', nameUS: 'Greece' },
-  GS: { initials: 'GS', code: 'SGS', nameUS: 'South Georgia and the South Sandwich Islands' },
-  GT: { initials: 'GT', code: 'GTM', nameUS: 'Guatemala' },
-  GU: { initials: 'GU', code: 'GUM', nameUS: 'Guam' },
-  GW: { initials: 'GW', code: 'GNB', nameUS: 'Guinea-Bissau' },
-  GY: { initials: 'GY', code: 'GUY', nameUS: 'Guyana' },
-  HM: { initials: 'HM', code: 'HMD', nameUS: 'Heard Island and McDonald Islands' },
-  HN: { initials: 'HN', code: 'HND', nameUS: 'Honduras' },
-  HR: { initials: 'HR', code: 'HRV', nameUS: 'Croatia' },
-  HT: { initials: 'HT', code: 'HTI', nameUS: 'Haiti' },
-  HU: { initials: 'HU', code: 'HUN', nameUS: 'Hungary' },
-  IE: { initials: 'IE', code: 'IRL', nameUS: 'Ireland' },
-  IM: { initials: 'IM', code: 'IMN', nameUS: 'Isle of Man' },
-  IS: { initials: 'IS', code: 'ISL', nameUS: 'Iceland' },
-  IT: { initials: 'IT', code: 'ITA', nameUS: 'Italy' },
-  JE: { initials: 'JE', code: 'JEY', nameUS: 'Jersey' },
-  JM: { initials: 'JM', code: 'JAM', nameUS: 'Jamaica' },
-  KE: { initials: 'KE', code: 'KEN', nameUS: 'Kenya' },
-  KI: { initials: 'KI', code: 'KIR', nameUS: 'Kiribati' },
-  KM: { initials: 'KM', code: 'COM', nameUS: 'Comoros' },
-  KN: { initials: 'KN', code: 'KNA', nameUS: 'Saint Kitts and Nevis' },
-  LC: { initials: 'LC', code: 'LCA', nameUS: 'Saint Lucia' },
-  LI: { initials: 'LI', code: 'LIE', nameUS: 'Liechtenstein' },
-  LR: { initials: 'LR', code: 'LBR', nameUS: 'Liberia' },
-  LS: { initials: 'LS', code: 'LSO', nameUS: 'Lesotho' },
-  LT: { initials: 'LT', code: 'LTU', nameUS: 'Lithuania' },
-  LU: { initials: 'LU', code: 'LUX', nameUS: 'Luxembourg' },
-  LV: { initials: 'LV', code: 'LVA', nameUS: 'Latvia' },
-  LY: { initials: 'LY', code: 'LBY', nameUS: 'Libyan Arab Jamahiriya' },
-  MA: { initials: 'MA', code: 'MAR', nameUS: 'Morocco' },
-  MC: { initials: 'MC', code: 'MCO', nameUS: 'Monaco' },
-  MD: { initials: 'MD', code: 'MDA', nameUS: 'Moldova' },
-  ME: { initials: 'ME', code: 'MNE', nameUS: 'Montenegro' },
-  MF: { initials: 'MF', code: 'MAF', nameUS: 'Saint Martin' },
-  MG: { initials: 'MG', code: 'MDG', nameUS: 'Madagascar' },
-  MH: { initials: 'MH', code: 'MHL', nameUS: 'Marshall Islands' },
-  MK: { initials: 'MK', code: 'MKD', nameUS: 'Republic of North Macedonia' },
-  ML: { initials: 'ML', code: 'MLI', nameUS: 'Mali' },
-  MP: { initials: 'MP', code: 'MNP', nameUS: 'Northern Mariana Islands' },
-  MQ: { initials: 'MQ', code: 'MTQ', nameUS: 'Martinique' },
-  MR: { initials: 'MR', code: 'MRT', nameUS: 'Mauritania' },
-  MS: { initials: 'MS', code: 'MSR', nameUS: 'Montserrat' },
-  MT: { initials: 'MT', code: 'MLT', nameUS: 'Malta' },
-  MU: { initials: 'MU', code: 'MUS', nameUS: 'Mauritius' },
-  MW: { initials: 'MW', code: 'MWI', nameUS: 'Malawi' },
-  MX: { initials: 'MX', code: 'MEX', nameUS: 'Mexico' },
-  MZ: { initials: 'MZ', code: 'MOZ', nameUS: 'Mozambique' },
-  NA: { initials: 'NA', code: 'NAM', nameUS: 'Namibia' },
-  NC: { initials: 'NC', code: 'NCL', nameUS: 'New Caledonia' },
-  NE: { initials: 'NE', code: 'NER', nameUS: 'Niger' },
-  NF: { initials: 'NF', code: 'NFK', nameUS: 'Norfolk Island' },
-  NG: { initials: 'NG', code: 'NGA', nameUS: 'Nigeria' },
-  NI: { initials: 'NI', code: 'NIC', nameUS: 'Nicaragua' },
-  NL: { initials: 'NL', code: 'NLD', nameUS: 'Netherlands' },
-  NO: { initials: 'NO', code: 'NOR', nameUS: 'Norway' },
-  NR: { initials: 'NR', code: 'NRU', nameUS: 'Nauru' },
-  NU: { initials: 'NU', code: 'NIU', nameUS: 'Niue' },
-  NZ: { initials: 'NZ', code: 'NZL', nameUS: 'New Zealand' },
-  PA: { initials: 'PA', code: 'PAN', nameUS: 'Panama' },
-  PE: { initials: 'PE', code: 'PER', nameUS: 'Peru' },
-  PF: { initials: 'PF', code: 'PYF', nameUS: 'French Polynesia' },
-  PG: { initials: 'PG', code: 'PNG', nameUS: 'Papua New Guinea' },
-  PL: { initials: 'PL', code: 'POL', nameUS: 'Poland' },
-  PM: { initials: 'PM', code: 'SPM', nameUS: 'Saint Pierre and Miquelon' },
-  PN: { initials: 'PN', code: 'PCN', nameUS: 'Pitcairn Islands' },
-  PR: { initials: 'PR', code: 'PRI', nameUS: 'Puerto Rico' },
-  PT: { initials: 'PT', code: 'PRT', nameUS: 'Portugal' },
-  PW: { initials: 'PW', code: 'PLW', nameUS: 'Palau' },
-  PY: { initials: 'PY', code: 'PRY', nameUS: 'Paraguay' },
-  RE: { initials: 'RE', code: 'REU', nameUS: 'Reunion' },
-  RO: { initials: 'RO', code: 'ROU', nameUS: 'Romania' },
-  RS: { initials: 'RS', code: 'SRB', nameUS: 'Serbia' },
-  RU: { initials: 'RU', code: 'RUS', nameUS: 'Russian Federation' },
-  RW: { initials: 'RW', code: 'RWA', nameUS: 'Rwanda' },
-  SB: { initials: 'SB', code: 'SLB', nameUS: 'Solomon Islands' },
-  SC: { initials: 'SC', code: 'SYC', nameUS: 'Seychelles' },
-  SD: { initials: 'SD', code: 'SDN', nameUS: 'Sudan' },
-  SE: { initials: 'SE', code: 'SWE', nameUS: 'Sweden' },
-  SH: { initials: 'SH', code: 'SHN', nameUS: 'Saint Helena' },
-  SI: { initials: 'SI', code: 'SVN', nameUS: 'Slovenia' },
-  SJ: { initials: 'SJ', code: 'SJM', nameUS: 'Svalbard & Jan Mayen Islands' },
-  SK: { initials: 'SK', code: 'SVK', nameUS: 'Slovakia (Slovak Republic)' },
-  SL: { initials: 'SL', code: 'SLE', nameUS: 'Sierra Leone' },
-  SM: { initials: 'SM', code: 'SMR', nameUS: 'San Marino' },
-  SN: { initials: 'SN', code: 'SEN', nameUS: 'Senegal' },
-  SO: { initials: 'SO', code: 'SOM', nameUS: 'Somalia' },
-  SR: { initials: 'SR', code: 'SUR', nameUS: 'Suriname' },
-  SS: { initials: 'SS', code: 'SSD', nameUS: 'South Sudan' },
-  ST: { initials: 'ST', code: 'STP', nameUS: 'Sao Tome and Principe' },
-  SV: { initials: 'SV', code: 'SLV', nameUS: 'El Salvador' },
-  SX: { initials: 'SX', code: 'SXM', nameUS: 'Sint Maarten (Netherlands)' },
-  SZ: { initials: 'SZ', code: 'SWZ', nameUS: 'Eswatini, formerly known as Swaziland' },
-  TC: { initials: 'TC', code: 'TCA', nameUS: 'Turks and Caicos Islands' },
-  TD: { initials: 'TD', code: 'TCD', nameUS: 'Chad' },
-  TF: { initials: 'TF', code: 'ATF', nameUS: 'French Southern Territories' },
-  TG: { initials: 'TG', code: 'TGO', nameUS: 'Togo' },
-  TK: { initials: 'TK', code: 'TKL', nameUS: 'Tokelau' },
-  TN: { initials: 'TN', code: 'TUN', nameUS: 'Tunisia' },
-  TO: { initials: 'TO', code: 'TON', nameUS: 'Tonga, Kingdom of' },
-  TT: { initials: 'TT', code: 'TTO', nameUS: 'Trinidad and Tobago' },
-  TV: { initials: 'TV', code: 'TUV', nameUS: 'Tuvalu' },
-  TZ: { initials: 'TZ', code: 'TZA', nameUS: 'Tanzania' },
-  UA: { initials: 'UA', code: 'UKR', nameUS: 'Ukraine' },
-  UG: { initials: 'UG', code: 'UGA', nameUS: 'Uganda' },
-  UM: { initials: 'UM', code: 'UMI', nameUS: 'United States Minor Outlying Islands' },
-  US: { initials: 'US', code: 'USA', nameUS: 'United States of America' },
-  UY: { initials: 'UY', code: 'URY', nameUS: 'Uruguay' },
-  VA: { initials: 'VA', code: 'VAT', nameUS: 'Holy See (Vatican City State)' },
-  VC: { initials: 'VC', code: 'VCT', nameUS: 'Saint Vincent and the Grenadines' },
-  VE: { initials: 'VE', code: 'VEN', nameUS: 'Venezuela' },
-  VI: { initials: 'VI', code: 'VIR', nameUS: 'United States Virgin Islands' },
-  VU: { initials: 'VU', code: 'VUT', nameUS: 'Vanuatu' },
-  WF: { initials: 'WF', code: 'WLF', nameUS: 'Wallis and Futuna' },
-  WS: { initials: 'WS', code: 'WSM', nameUS: 'Samoa' },
-  YT: { initials: 'YT', code: 'MYT', nameUS: 'Mayotte' },
-  ZA: { initials: 'ZA', code: 'ZAF', nameUS: 'South Africa' },
-  ZM: { initials: 'ZM', code: 'ZMB', nameUS: 'Zambia' },
-};
+// Reorganizar a ordem das props e a propriedade título dos objetos.
 
+/*
+CONTINENTES
+
+África
+
+América
+  América do Norte
+  América Central
+  América do Sul
+
+Ásia
+
+Europa
+
+Oceania
+
+Antártida
+*/
 const COUNTRIES_LIST: CountriesList = {
-  AF: {
-    countryCode: '+93',
-    initials: 'AF',
+  Afghanistan: {
     nameUS: 'Afghanistan',
+    countryCode: '+93',
+    isoCodes: ['AF', 'AFG'],
     nameBR: 'Afeganistão',
-    continentUS: 'Asia',
     continentBR: 'Ásia',
   },
-  ZA: {
-    countryCode: '+27',
-    initials: 'ZA',
-    nameUS: 'South Africa',
-    nameBR: 'África do Sul',
-    continentUS: 'Africa',
+  Albania: {
+    nameUS: 'Albania',
+    countryCode: '+355',
+    isoCodes: ['AL', 'ALB'],
+    nameBR: 'Albânia',
+    continentBR: 'Europa',
+  },
+  Algeria: {
+    nameUS: 'Algeria',
+    countryCode: '+213',
+    isoCodes: ['DZ', 'DZA'],
+    nameBR: 'Argélia',
     continentBR: 'África',
   },
-  AL: {
-    countryCode: '+355',
-    initials: 'AL',
-    nameUS: 'Albania',
-    nameBR: 'Albânia',
-    continentUS: 'Europe',
+  'American Samoa': {
+    nameUS: 'American Samoa',
+    countryCode: '+1-684',
+    isoCodes: ['AS', 'ASM'],
+    nameBR: 'Samoa Americana',
+    continentBR: 'Oceania',
+  },
+  Andorra: {
+    nameUS: 'Andorra',
+    countryCode: '+376',
+    isoCodes: ['AD', 'AND'],
+    nameBR: 'Andorra',
     continentBR: 'Europa',
   },
-  DE: {
-    countryCode: '+49',
-    initials: 'DE',
-    nameUS: 'Germany',
-    nameBR: 'Alemanha',
-    continentUS: 'Europe',
+  Angola: {
+    nameUS: 'Angola',
+    countryCode: '+244',
+    isoCodes: ['AO', 'AGO'],
+    nameBR: 'Angola',
+    continentBR: 'África',
+  },
+  Anguilla: {
+    nameUS: 'Anguilla',
+    countryCode: '+1-264',
+    isoCodes: ['AI', 'AIA'],
+    nameBR: 'Anguilla',
+    continentBR: 'América Central',
+  },
+  Antarctica: {
+    nameUS: 'Antarctica',
+    countryCode: '+672',
+    isoCodes: ['AQ', 'ATA'],
+    nameBR: 'Ilha Christmas',
+    continentBR: 'Oceania',
+  },
+  'Antigua and Barbuda': {
+    nameUS: 'Antigua and Barbuda',
+    countryCode: '+1-268',
+    isoCodes: ['AG', 'ATG'],
+    nameBR: 'Antígua e Barbuda',
+    continentBR: 'América Central',
+  },
+  Argentina: {
+    nameUS: 'Argentina',
+    countryCode: '+54',
+    isoCodes: ['AR', 'ARG'],
+    nameBR: 'Argentina',
+    continentBR: 'América do Sul',
+  },
+  Armenia: {
+    nameUS: 'Armenia',
+    countryCode: '+374',
+    isoCodes: ['AM', 'ARM'],
+    nameBR: 'Armênia',
+    continentBR: 'Ásia',
+  },
+  Aruba: {
+    nameUS: 'Aruba',
+    countryCode: '+297',
+    isoCodes: ['AW', 'ABW'],
+    nameBR: 'Aruba',
+    continentBR: 'América Central',
+  },
+  Australia: {
+    nameUS: 'Australia',
+    countryCode: '+61',
+    isoCodes: ['AU', 'AUS'],
+    nameBR: 'Austrália',
+    continentBR: 'Oceania',
+  },
+  Austria: {
+    nameUS: 'Austria',
+    countryCode: '+43',
+    isoCodes: ['AT', 'AUT'],
+    nameBR: 'Áustria',
     continentBR: 'Europa',
+  },
+  Azerbaijan: {
+    nameUS: 'Azerbaijan',
+    countryCode: '+994',
+    isoCodes: ['AZ', 'AZE'],
+    nameBR: 'Azerbaijão',
+    continentBR: 'Ásia',
+  },
+  Bahamas: {
+    nameUS: 'Bahamas',
+    countryCode: '+1-242',
+    isoCodes: ['BS', 'BHS'],
+    nameBR: 'Bahamas',
+    continentBR: 'América Central',
+  },
+  Bahrain: {
+    nameUS: 'Bahrain',
+    countryCode: '+973',
+    isoCodes: ['BH', 'BHR'],
+    nameBR: 'Bahrein',
+    continentBR: 'Ásia',
+  },
+  Bangladesh: {
+    nameUS: 'Bangladesh',
+    countryCode: '+880',
+    isoCodes: ['BD', 'BGD'],
+    nameBR: 'Bangladesh',
+    continentBR: 'Ásia',
+  },
+  Barbados: {
+    nameUS: 'Barbados',
+    countryCode: '+1-246',
+    isoCodes: ['BB', 'BRB'],
+    nameBR: 'Barbados',
+    continentBR: 'América Central',
+  },
+  Belarus: {
+    nameUS: 'Belarus',
+    countryCode: '+375',
+    isoCodes: ['BY', 'BLR'],
+    nameBR: 'Bielorrússia',
+    continentBR: 'Europa',
+  },
+  Belgium: {
+    nameUS: 'Belgium',
+    countryCode: '+32',
+    isoCodes: ['BE', 'BEL'],
+    nameBR: 'Bélgica',
+    continentBR: 'Europa',
+  },
+  Belize: {
+    nameUS: 'Belize',
+    countryCode: '+501',
+    isoCodes: ['BZ', 'BLZ'],
+    nameBR: 'Belize',
+    continentBR: 'América Central',
+  },
+  Benin: {
+    nameUS: 'Benin',
+    countryCode: '+229',
+    isoCodes: ['BJ', 'BEN'],
+    nameBR: 'Benim',
+    continentBR: 'África',
+  },
+  Bermuda: {
+    nameUS: 'Bermuda',
+    countryCode: '+1-441',
+    isoCodes: ['BM', 'BMU'],
+    nameBR: 'Bermudas',
+    continentBR: 'América Central',
+  },
+  Bhutan: {
+    nameUS: 'Bhutan',
+    countryCode: '+975',
+    isoCodes: ['BT', 'BTN'],
+    nameBR: 'Butão',
+    continentBR: 'Ásia',
+  },
+  Bolivia: {
+    nameUS: 'Bolivia',
+    countryCode: '+591',
+    isoCodes: ['BO', 'BOL'],
+    nameBR: 'Bolívia',
+    continentBR: 'América do Sul',
+  },
+  'Bosnia and Herzegovina': {
+    nameUS: 'Bosnia and Herzegovina',
+    countryCode: '+387',
+    isoCodes: ['BA', 'BIH'],
+    nameBR: 'Bósnia e Herzegovina',
+    continentBR: 'Europa',
+  },
+  Botswana: {
+    nameUS: 'Botswana',
+    countryCode: '+267',
+    isoCodes: ['BW', 'BWA'],
+    nameBR: 'Botswana',
+    continentBR: 'África',
+  },
+  Brazil: {
+    nameUS: 'Brazil',
+    countryCode: '+55',
+    isoCodes: ['BR', 'BRA'],
+    nameBR: 'Brasil',
+    continentBR: 'América do Sul',
+  },
+  'British Indian Ocean Territory': {
+    nameUS: 'British Indian Ocean Territory',
+    countryCode: '+246',
+    isoCodes: ['IO', 'IOT'],
+    nameBR: 'Território Britânico do Oceano Índico',
+    continentBR: 'África',
+  },
+  'British Virgin Islands': {
+    nameUS: 'British Virgin Islands',
+    countryCode: '+1-284',
+    isoCodes: ['VG', 'VGB'],
+    nameBR: 'Ilhas Virgens Britânicas',
+    continentBR: 'América Central',
+  },
+  Brunei: {
+    nameUS: 'Brunei',
+    countryCode: '+673',
+    isoCodes: ['BN', 'BRN'],
+    nameBR: 'Brunei',
+    continentBR: 'Ásia',
+  },
+  Bulgaria: {
+    nameUS: 'Bulgaria',
+    countryCode: '+359',
+    isoCodes: ['BG', 'BGR'],
+    nameBR: 'Bulgária',
+    continentBR: 'Europa',
+  },
+  'Burkina Faso': {
+    nameUS: 'Burkina Faso',
+    countryCode: '+226',
+    isoCodes: ['BF', 'BFA'],
+    nameBR: 'Burkina Faso',
+    continentBR: 'África',
+  },
+  Burundi: {
+    nameUS: 'Burundi',
+    countryCode: '+257',
+    isoCodes: ['BI', 'BDI'],
+    nameBR: 'Burundi',
+    continentBR: 'África',
+  },
+  Cambodia: {
+    nameUS: 'Cambodia',
+    countryCode: '+855',
+    isoCodes: ['KH', 'KHM'],
+    nameBR: 'Camboja',
+    continentBR: 'Ásia',
+  },
+  Cameroon: {
+    nameUS: 'Cameroon',
+    countryCode: '+237',
+    isoCodes: ['CM', 'CMR'],
+    nameBR: 'Camarões',
+    continentBR: 'África',
+  },
+  Canada: {
+    nameUS: 'Canada',
+    countryCode: '+1',
+    isoCodes: ['CA', 'CAN'],
+    nameBR: 'Canadá',
+    continentBR: 'America do Norte',
+  },
+  'Cape Verde': {
+    nameUS: 'Cape Verde',
+    countryCode: '+238',
+    isoCodes: ['CV', 'CPV'],
+    nameBR: 'Cabo Verde',
+    continentBR: 'África',
+  },
+  'Cayman Islands': {
+    nameUS: 'Cayman Islands',
+    countryCode: '+1-345',
+    isoCodes: ['KY', 'CYM'],
+    nameBR: 'Ilhas Cayman',
+    continentBR: 'América Central',
+  },
+  'Central African Republic': {
+    nameUS: 'Central African Republic',
+    countryCode: '+236',
+    isoCodes: ['CF', 'CAF'],
+    nameBR: 'República Centro-Africana',
+    continentBR: 'África',
+  },
+  Chad: {
+    nameUS: 'Chad',
+    countryCode: '+235',
+    isoCodes: ['TD', 'TCD'],
+    nameBR: 'Chade',
+    continentBR: 'África',
+  },
+  Chile: {
+    nameUS: 'Chile',
+    countryCode: '+56',
+    isoCodes: ['CL', 'CHL'],
+    nameBR: 'Chile',
+    continentBR: 'América do Sul',
+  },
+  China: {
+    nameUS: 'China',
+    countryCode: '+86',
+    isoCodes: ['CN', 'CHN'],
+    nameBR: 'República Popular da China',
+    continentBR: 'Ásia',
+  },
+  'Christmas Island': {
+    nameUS: 'Christmas Island',
+    countryCode: '+61',
+    isoCodes: ['CX', 'CXR'],
+    nameBR: 'Austrália',
+    continentBR: 'Oceania',
+  },
+  'Cocos Islands': {
+    nameUS: 'Cocos Islands',
+    countryCode: '+61',
+    isoCodes: ['CC', 'CCK'],
+    nameBR: 'Austrália',
+    continentBR: 'Oceania',
+  },
+  Colombia: {
+    nameUS: 'Colombia',
+    countryCode: '+57',
+    isoCodes: ['CO', 'COL'],
+    nameBR: 'Colômbia',
+    continentBR: 'América do Sul',
+  },
+  Comoros: {
+    nameUS: 'Comoros',
+    countryCode: '+269',
+    isoCodes: ['KM', 'COM'],
+    nameBR: 'Comores',
+    continentBR: 'África',
+  },
+  'Cook Islands': {
+    nameUS: 'Cook Islands',
+    countryCode: '+682',
+    isoCodes: ['CK', 'COK'],
+    nameBR: 'Ilhas Cook',
+    continentBR: 'Oceania',
+  },
+  'Costa Rica': {
+    nameUS: 'Costa Rica',
+    countryCode: '+506',
+    isoCodes: ['CR', 'CRI'],
+    nameBR: 'Costa Rica',
+    continentBR: 'América Central',
+  },
+  Croatia: {
+    nameUS: 'Croatia',
+    countryCode: '+385',
+    isoCodes: ['HR', 'HRV'],
+    nameBR: 'Croácia',
+    continentBR: 'Europa',
+  },
+  Cuba: {
+    nameUS: 'Cuba',
+    countryCode: '+53',
+    isoCodes: ['CU', 'CUB'],
+    nameBR: 'Cuba',
+    continentBR: 'América Central',
+  },
+  Curacao: {
+    nameUS: 'Curacao',
+    countryCode: '+599',
+    isoCodes: ['CW', 'CUW'],
+    nameBR: 'Antilhas Holandesas',
+    continentBR: 'América Central',
+  },
+  Cyprus: {
+    nameUS: 'Cyprus',
+    countryCode: '+357',
+    isoCodes: ['CY', 'CYP'],
+    nameBR: 'Chipre',
+    continentBR: 'Europa',
+  },
+  'Czech Republic': {
+    nameUS: 'Czech Republic',
+    countryCode: '+420',
+    isoCodes: ['CZ', 'CZE'],
+    nameBR: 'República Tcheca',
+    continentBR: 'Europa',
+  },
+  'Democratic Republic of the Congo': {
+    nameUS: 'Democratic Republic of the Congo',
+    countryCode: '+243',
+    isoCodes: ['CD', 'COD'],
+    nameBR: 'Congo-Kinshasa',
+    continentBR: 'África',
+  },
+  Denmark: {
+    nameUS: 'Denmark',
+    countryCode: '+45',
+    isoCodes: ['DK', 'DNK'],
+    nameBR: 'Dinamarca',
+    continentBR: 'Europa',
+  },
+  Djibouti: {
+    nameUS: 'Djibouti',
+    countryCode: '+253',
+    isoCodes: ['DJ', 'DJI'],
+    nameBR: 'Djibuti',
+    continentBR: 'África',
+  },
+  Dominica: {
+    nameUS: 'Dominica',
+    countryCode: '+1-767',
+    isoCodes: ['DM', 'DMA'],
+    nameBR: 'Dominica',
+    continentBR: 'América Central',
+  },
+  'Dominican Republic': {
+    nameUS: 'Dominican Republic',
+    countryCode: '+1-809 +1-829 +1-849',
+    isoCodes: ['DO', 'DOM'],
+    nameBR: 'República Dominicana',
+    continentBR: 'América Central',
+  },
+  'East Timor': {
+    nameUS: 'East Timor',
+    countryCode: '+670',
+    isoCodes: ['TL', 'TLS'],
+    nameBR: 'Timor-Leste',
+    continentBR: 'Ásia',
+  },
+  Ecuador: {
+    nameUS: 'Ecuador',
+    countryCode: '+593',
+    isoCodes: ['EC', 'ECU'],
+    nameBR: 'Equador',
+    continentBR: 'América do Sul',
+  },
+  Egypt: {
+    nameUS: 'Egypt',
+    countryCode: '+20',
+    isoCodes: ['EG', 'EGY'],
+    nameBR: 'Egito',
+    continentBR: 'África/Ásia',
+  },
+  'El Salvador': {
+    nameUS: 'El Salvador',
+    countryCode: '+503',
+    isoCodes: ['SV', 'SLV'],
+    nameBR: 'El Salvador',
+    continentBR: 'América Central',
+  },
+  'Equatorial Guinea': {
+    nameUS: 'Equatorial Guinea',
+    countryCode: '+240',
+    isoCodes: ['GQ', 'GNQ'],
+    nameBR: 'Guiné Equatorial',
+    continentBR: 'África',
+  },
+  Eritrea: {
+    nameUS: 'Eritrea',
+    countryCode: '+291',
+    isoCodes: ['ER', 'ERI'],
+    nameBR: 'Eritreia',
+    continentBR: 'África',
+  },
+  Estonia: {
+    nameUS: 'Estonia',
+    countryCode: '+372',
+    isoCodes: ['EE', 'EST'],
+    nameBR: 'Estónia',
+    continentBR: 'Europa',
+  },
+  Ethiopia: {
+    nameUS: 'Ethiopia',
+    countryCode: '+251',
+    isoCodes: ['ET', 'ETH'],
+    nameBR: 'Etiópia',
+    continentBR: 'África',
+  },
+  'Falkland Islands': {
+    nameUS: 'Falkland Islands',
+    countryCode: '+500',
+    isoCodes: ['FK', 'FLK'],
+    nameBR: 'Ilhas Malvinas',
+    continentBR: 'América do Sul',
+  },
+  'Faroe Islands': {
+    nameUS: 'Faroe Islands',
+    countryCode: '+298',
+    isoCodes: ['FO', 'FRO'],
+    nameBR: 'Ilhas Féroe',
+    continentBR: 'Europa',
+  },
+  Fiji: {
+    nameUS: 'Fiji',
+    countryCode: '+679',
+    isoCodes: ['FJ', 'FJI'],
+    nameBR: 'Fiji',
+    continentBR: 'Oceania',
+  },
+  Finland: {
+    nameUS: 'Finland',
+    countryCode: '+358',
+    isoCodes: ['FI', 'FIN'],
+    nameBR: 'Finlândia',
+    continentBR: 'Europa',
+  },
+  France: {
+    nameUS: 'France',
+    countryCode: '+33',
+    isoCodes: ['FR', 'FRA'],
+    nameBR: 'França',
+    continentBR: 'Europa',
+  },
+  'French Polynesia': {
+    nameUS: 'French Polynesia',
+    countryCode: '+689',
+    isoCodes: ['PF', 'PYF'],
+    nameBR: 'Polinésia Francesa',
+    continentBR: 'Oceania',
+  },
+  Gabon: {
+    nameUS: 'Gabon',
+    countryCode: '+241',
+    isoCodes: ['GA', 'GAB'],
+    nameBR: 'Gabão',
+    continentBR: 'África',
+  },
+  Gambia: {
+    nameUS: 'Gambia',
+    countryCode: '+220',
+    isoCodes: ['GM', 'GMB'],
+    nameBR: 'Gâmbia',
+    continentBR: 'África',
+  },
+  Georgia: {
+    nameUS: 'Georgia',
+    countryCode: '+995',
+    isoCodes: ['GE', 'GEO'],
+    nameBR: 'Geórgia',
+    continentBR: 'Ásia',
+  },
+  Germany: {
+    nameUS: 'Germany',
+    countryCode: '+49',
+    isoCodes: ['DE', 'DEU'],
+    nameBR: 'Alemanha',
+    continentBR: 'Europa',
+  },
+  Ghana: {
+    nameUS: 'Ghana',
+    countryCode: '+233',
+    isoCodes: ['GH', 'GHA'],
+    nameBR: 'Gana',
+    continentBR: 'África',
+  },
+  Gibraltar: {
+    nameUS: 'Gibraltar',
+    countryCode: '+350',
+    isoCodes: ['GI', 'GIB'],
+    nameBR: 'Gibraltar',
+    continentBR: 'Europa',
+  },
+  Greece: {
+    nameUS: 'Greece',
+    countryCode: '+30',
+    isoCodes: ['GR', 'GRC'],
+    nameBR: 'Grécia',
+    continentBR: 'Europa',
+  },
+  Greenland: {
+    nameUS: 'Greenland',
+    countryCode: '+299',
+    isoCodes: ['GL', 'GRL'],
+    nameBR: 'Groenlândia',
+    continentBR: 'América do Norte',
+  },
+  Grenada: {
+    nameUS: 'Grenada',
+    countryCode: '+1-473',
+    isoCodes: ['GD', 'GRD'],
+    nameBR: 'Granada',
+    continentBR: 'América Central',
+  },
+  Guam: {
+    nameUS: 'Guam',
+    countryCode: '+1-671',
+    isoCodes: ['GU', 'GUM'],
+    nameBR: 'Guam',
+    continentBR: 'Oceania',
+  },
+  Guatemala: {
+    nameUS: 'Guatemala',
+    countryCode: '+502',
+    isoCodes: ['GT', 'GTM'],
+    nameBR: 'Guatemala',
+    continentBR: 'América Central',
+  },
+  Guernsey: {
+    nameUS: 'Guernsey',
+    countryCode: '+44-1481',
+    isoCodes: ['GG', 'GGY'],
+    nameBR: 'Guernsey',
+    continentBR: 'Europa',
+  },
+  Guinea: {
+    nameUS: 'Guinea',
+    countryCode: '+224',
+    isoCodes: ['GN', 'GIN'],
+    nameBR: 'Guiné',
+    continentBR: 'África',
+  },
+  'Guinea-Bissau': {
+    nameUS: 'Guinea-Bissau',
+    countryCode: '+245',
+    isoCodes: ['GW', 'GNB'],
+    nameBR: 'Guiné-Bissau',
+    continentBR: 'África',
+  },
+  Guyana: {
+    nameUS: 'Guyana',
+    countryCode: '+592',
+    isoCodes: ['GY', 'GUY'],
+    nameBR: 'Guiana',
+    continentBR: 'América do Sul',
+  },
+  Haiti: {
+    nameUS: 'Haiti',
+    countryCode: '+509',
+    isoCodes: ['HT', 'HTI'],
+    nameBR: 'Haiti',
+    continentBR: 'América Central',
+  },
+  Honduras: {
+    nameUS: 'Honduras',
+    countryCode: '+504',
+    isoCodes: ['HN', 'HND'],
+    nameBR: 'Honduras',
+    continentBR: 'América Central',
+  },
+  'Hong Kong': {
+    nameUS: 'Hong Kong',
+    countryCode: '+852',
+    isoCodes: ['HK', 'HKG'],
+    nameBR: 'Hong Kong',
+    continentBR: 'Ásia',
+  },
+  Hungary: {
+    nameUS: 'Hungary',
+    countryCode: '+36',
+    isoCodes: ['HU', 'HUN'],
+    nameBR: 'Hungria',
+    continentBR: 'Europa',
+  },
+  Iceland: {
+    nameUS: 'Iceland',
+    countryCode: '+354',
+    isoCodes: ['IS', 'ISL'],
+    nameBR: 'Islândia',
+    continentBR: 'Europa',
+  },
+  India: {
+    nameUS: 'India',
+    countryCode: '+91',
+    isoCodes: ['IN', 'IND'],
+    nameBR: 'Índia',
+    continentBR: 'Ásia',
+  },
+  Indonesia: {
+    nameUS: 'Indonesia',
+    countryCode: '+62',
+    isoCodes: ['ID', 'IDN'],
+    nameBR: 'Indonésia',
+    continentBR: 'Ásia/Oceania',
+  },
+  Iran: {
+    nameUS: 'Iran',
+    countryCode: '+98',
+    isoCodes: ['IR', 'IRN'],
+    nameBR: 'Irã',
+    continentBR: 'Ásia',
+  },
+  Iraq: {
+    nameUS: 'Iraq',
+    countryCode: '+964',
+    isoCodes: ['IQ', 'IRQ'],
+    nameBR: 'Iraque',
+    continentBR: 'Ásia',
+  },
+  Ireland: {
+    nameUS: 'Ireland',
+    countryCode: '+353',
+    isoCodes: ['IE', 'IRL'],
+    nameBR: 'Irlanda',
+    continentBR: 'Europa',
+  },
+  'Isle of Man': {
+    nameUS: 'Isle of Man',
+    countryCode: '+44-1624',
+    isoCodes: ['IM', 'IMN'],
+    nameBR: 'Ilha de Man',
+    continentBR: 'Europa',
+  },
+  Israel: {
+    nameUS: 'Israel',
+    countryCode: '+972',
+    isoCodes: ['IL', 'ISR'],
+    nameBR: ' Israel',
+    continentBR: 'Ásia',
+  },
+  Italy: {
+    nameUS: 'Italy',
+    countryCode: '+39',
+    isoCodes: ['IT', 'ITA'],
+    nameBR: 'Itália',
+    continentBR: 'Europa',
+  },
+  'Ivory Coast': {
+    nameUS: 'Ivory Coast',
+    countryCode: '+225',
+    isoCodes: ['CI', 'CIV'],
+    nameBR: 'Costa do Marfim',
+    continentBR: 'África',
+  },
+  Jamaica: {
+    nameUS: 'Jamaica',
+    countryCode: '+1-876',
+    isoCodes: ['JM', 'JAM'],
+    nameBR: 'Jamaica',
+    continentBR: 'América Central',
+  },
+  Japan: {
+    nameUS: 'Japan',
+    countryCode: '+81',
+    isoCodes: ['JP', 'JPN'],
+    nameBR: 'Japão',
+    continentBR: 'Ásia',
+  },
+  Jersey: {
+    nameUS: 'Jersey',
+    countryCode: '+44-1534',
+    isoCodes: ['JE', 'JEY'],
+    nameBR: 'Jersey',
+    continentBR: 'Europa',
+  },
+  Jordan: {
+    nameUS: 'Jordan',
+    countryCode: '+962',
+    isoCodes: ['JO', 'JOR'],
+    nameBR: 'Jordânia',
+    continentBR: 'Ásia',
+  },
+  Kazakhstan: {
+    nameUS: 'Kazakhstan',
+    countryCode: '+7',
+    isoCodes: ['KZ', 'KAZ'],
+    nameBR: 'Cazaquistão',
+    continentBR: 'Ásia',
+  },
+  Kenya: {
+    nameUS: 'Kenya',
+    countryCode: '+254',
+    isoCodes: ['KE', 'KEN'],
+    nameBR: 'Quênia',
+    continentBR: 'África',
+  },
+  Kiribati: {
+    nameUS: 'Kiribati',
+    countryCode: '+686',
+    isoCodes: ['KI', 'KIR'],
+    nameBR: 'Kiribati',
+    continentBR: 'Oceania',
+  },
+  Kosovo: {
+    nameUS: 'Kosovo',
+    countryCode: '+383',
+    isoCodes: ['XK', 'XKX'],
+    nameBR: 'Kosovo',
+    continentBR: 'Europa',
+  },
+  Kuwait: {
+    nameUS: 'Kuwait',
+    countryCode: '+965',
+    isoCodes: ['KW', 'KWT'],
+    nameBR: 'Kuwait',
+    continentBR: 'Ásia',
+  },
+  Kyrgyzstan: {
+    nameUS: 'Kyrgyzstan',
+    countryCode: '+996',
+    isoCodes: ['KG', 'KGZ'],
+    nameBR: 'Quirguistão',
+    continentBR: 'Ásia',
+  },
+  Laos: {
+    nameUS: 'Laos',
+    countryCode: '+856',
+    isoCodes: ['LA', 'LAO'],
+    nameBR: 'Laos',
+    continentBR: 'Ásia',
+  },
+  Latvia: {
+    nameUS: 'Latvia',
+    countryCode: '+371',
+    isoCodes: ['LV', 'LVA'],
+    nameBR: 'Letônia',
+    continentBR: 'Europa',
+  },
+  Lebanon: {
+    nameUS: 'Lebanon',
+    countryCode: '+961',
+    isoCodes: ['LB', 'LBN'],
+    nameBR: 'Líbano',
+    continentBR: 'Ásia',
+  },
+  Lesotho: {
+    nameUS: 'Lesotho',
+    countryCode: '+266',
+    isoCodes: ['LS', 'LSO'],
+    nameBR: 'Lesoto',
+    continentBR: 'África',
+  },
+  Liberia: {
+    nameUS: 'Liberia',
+    countryCode: '+231',
+    isoCodes: ['LR', 'LBR'],
+    nameBR: 'Libéria',
+    continentBR: 'África',
+  },
+  Libya: {
+    nameUS: 'Libya',
+    countryCode: '+218',
+    isoCodes: ['LY', 'LBY'],
+    nameBR: 'Líbia',
+    continentBR: 'África',
+  },
+  Liechtenstein: {
+    nameUS: 'Liechtenstein',
+    countryCode: '+423',
+    isoCodes: ['LI', 'LIE'],
+    nameBR: 'Liechtenstein',
+    continentBR: 'Europa',
+  },
+  Lithuania: {
+    nameUS: 'Lithuania',
+    countryCode: '+370',
+    isoCodes: ['LT', 'LTU'],
+    nameBR: 'Lituânia',
+    continentBR: 'Europa',
+  },
+  Luxembourg: {
+    nameUS: 'Luxembourg',
+    countryCode: '+352',
+    isoCodes: ['LU', 'LUX'],
+    nameBR: 'Luxemburgo',
+    continentBR: 'Europa',
+  },
+  Macau: {
+    nameUS: 'Macau',
+    countryCode: '+853',
+    isoCodes: ['MO', 'MAC'],
+    nameBR: 'Macau',
+    continentBR: 'Ásia',
+  },
+  Macedonia: {
+    nameUS: 'Macedonia',
+    countryCode: '+389',
+    isoCodes: ['MK', 'MKD'],
+    nameBR: 'República da Macedônia',
+    continentBR: 'Europa',
+  },
+  Madagascar: {
+    nameUS: 'Madagascar',
+    countryCode: '+261',
+    isoCodes: ['MG', 'MDG'],
+    nameBR: 'Madagascar',
+    continentBR: 'África',
+  },
+  Malawi: {
+    nameUS: 'Malawi',
+    countryCode: '+265',
+    isoCodes: ['MW', 'MWI'],
+    nameBR: 'Malawi',
+    continentBR: 'África',
+  },
+  Malaysia: {
+    nameUS: 'Malaysia',
+    countryCode: '+60',
+    isoCodes: ['MY', 'MYS'],
+    nameBR: 'Malásia',
+    continentBR: 'Ásia',
+  },
+  Maldives: {
+    nameUS: 'Maldives',
+    countryCode: '+960',
+    isoCodes: ['MV', 'MDV'],
+    nameBR: 'Maldivas',
+    continentBR: 'Ásia',
+  },
+  Mali: {
+    nameUS: 'Mali',
+    countryCode: '+223',
+    isoCodes: ['ML', 'MLI'],
+    nameBR: 'Mali',
+    continentBR: 'África',
+  },
+  Malta: {
+    nameUS: 'Malta',
+    countryCode: '+356',
+    isoCodes: ['MT', 'MLT'],
+    nameBR: 'Malta',
+    continentBR: 'Europa',
+  },
+  'Marshall Islands': {
+    nameUS: 'Marshall Islands',
+    countryCode: '+692',
+    isoCodes: ['MH', 'MHL'],
+    nameBR: 'Ilhas Marshall',
+    continentBR: 'Oceania',
+  },
+  Mauritania: {
+    nameUS: 'Mauritania',
+    countryCode: '+222',
+    isoCodes: ['MR', 'MRT'],
+    nameBR: 'Mauritânia',
+    continentBR: 'África',
+  },
+  Mauritius: {
+    nameUS: 'Mauritius',
+    countryCode: '+230',
+    isoCodes: ['MU', 'MUS'],
+    nameBR: 'Maurícia',
+    continentBR: 'África',
+  },
+  Mayotte: {
+    nameUS: 'Mayotte',
+    countryCode: '+262',
+    isoCodes: ['YT', 'MYT'],
+    nameBR: 'Reunião',
+    continentBR: 'África',
+  },
+  Mexico: {
+    nameUS: 'Mexico',
+    countryCode: '+52',
+    isoCodes: ['MX', 'MEX'],
+    nameBR: 'México',
+    continentBR: 'América do Norte',
+  },
+  Micronesia: {
+    nameUS: 'Micronesia',
+    countryCode: '+691',
+    isoCodes: ['FM', 'FSM'],
+    nameBR: 'Estados Federados da Micronésia',
+    continentBR: 'Oceania',
+  },
+  Moldova: {
+    nameUS: 'Moldova',
+    countryCode: '+373',
+    isoCodes: ['MD', 'MDA'],
+    nameBR: 'Moldávia',
+    continentBR: 'Europa',
+  },
+  Monaco: {
+    nameUS: 'Monaco',
+    countryCode: '+377',
+    isoCodes: ['MC', 'MCO'],
+    nameBR: 'Mônaco',
+    continentBR: 'Europa',
+  },
+  Mongolia: {
+    nameUS: 'Mongolia',
+    countryCode: '+976',
+    isoCodes: ['MN', 'MNG'],
+    nameBR: 'Mongólia',
+    continentBR: 'Ásia',
+  },
+  Montenegro: {
+    nameUS: 'Montenegro',
+    countryCode: '+382',
+    isoCodes: ['ME', 'MNE'],
+    nameBR: 'Montenegro',
+    continentBR: 'Europa',
+  },
+  Montserrat: {
+    nameUS: 'Montserrat',
+    countryCode: '+1-664',
+    isoCodes: ['MS', 'MSR'],
+    nameBR: 'Montserrat',
+    continentBR: 'América Central',
+  },
+  Morocco: {
+    nameUS: 'Morocco',
+    countryCode: '+212',
+    isoCodes: ['MA', 'MAR'],
+    nameBR: 'Marrocos',
+    continentBR: 'África',
+  },
+  Mozambique: {
+    nameUS: 'Mozambique',
+    countryCode: '+258',
+    isoCodes: ['MZ', 'MOZ'],
+    nameBR: 'Moçambique',
+    continentBR: 'África',
+  },
+  Myanmar: {
+    nameUS: 'Myanmar',
+    countryCode: '+95',
+    isoCodes: ['MM', 'MMR'],
+    nameBR: 'Myanmar',
+    continentBR: 'Ásia',
+  },
+  Namibia: {
+    nameUS: 'Namibia',
+    countryCode: '+264',
+    isoCodes: ['NA', 'NAM'],
+    nameBR: 'Namíbia',
+    continentBR: 'África',
+  },
+  Nauru: {
+    nameUS: 'Nauru',
+    countryCode: '+674',
+    isoCodes: ['NR', 'NRU'],
+    nameBR: 'Nauru',
+    continentBR: 'Oceania',
+  },
+  Nepal: {
+    nameUS: 'Nepal',
+    countryCode: '+977',
+    isoCodes: ['NP', 'NPL'],
+    nameBR: 'Nepal',
+    continentBR: 'Ásia',
+  },
+  Netherlands: {
+    nameUS: 'Netherlands',
+    countryCode: '+31',
+    isoCodes: ['NL', 'NLD'],
+    nameBR: 'Países Baixos',
+    continentBR: 'Europa',
+  },
+  'Netherlands Antilles': {
+    nameUS: 'Netherlands Antilles',
+    countryCode: '+599',
+    isoCodes: ['AN', 'ANT'],
+    nameBR: 'Antilhas Holandesas',
+    continentBR: 'América Central',
+  },
+  'New Caledonia': {
+    nameUS: 'New Caledonia',
+    countryCode: '+687',
+    isoCodes: ['NC', 'NCL'],
+    nameBR: 'Nova Caledônia',
+    continentBR: 'Oceania',
+  },
+  'New Zealand': {
+    nameUS: 'New Zealand',
+    countryCode: '+64',
+    isoCodes: ['NZ', 'NZL'],
+    nameBR: 'Nova Zelândia',
+    continentBR: 'Oceania',
+  },
+  Nicaragua: {
+    nameUS: 'Nicaragua',
+    countryCode: '+505',
+    isoCodes: ['NI', 'NIC'],
+    nameBR: 'Nicarágua',
+    continentBR: 'América Central',
+  },
+  Niger: {
+    nameUS: 'Niger',
+    countryCode: '+227',
+    isoCodes: ['NE', 'NER'],
+    nameBR: 'Níger',
+    continentBR: 'África',
+  },
+  Nigeria: {
+    nameUS: 'Nigeria',
+    countryCode: '+234',
+    isoCodes: ['NG', 'NGA'],
+    nameBR: 'Nigéria',
+    continentBR: 'África',
+  },
+  Niue: {
+    nameUS: 'Niue',
+    countryCode: '+683',
+    isoCodes: ['NU', 'NIU'],
+    nameBR: 'Niue',
+    continentBR: 'Oceania',
+  },
+  'North Korea': {
+    nameUS: 'North Korea',
+    countryCode: '+850',
+    isoCodes: ['KP', 'PRK'],
+    nameBR: 'Coreia do Norte',
+    continentBR: 'Ásia',
+  },
+  'Northern Mariana Islands': {
+    nameUS: 'Northern Mariana Islands',
+    countryCode: '+1-670',
+    isoCodes: ['MP', 'MNP'],
+    nameBR: 'Ilhas Marianas do Norte',
+    continentBR: 'Oceania',
+  },
+  Norway: {
+    nameUS: 'Norway',
+    countryCode: '+47',
+    isoCodes: ['NO', 'NOR'],
+    nameBR: 'Noruega',
+    continentBR: 'Europa',
+  },
+  Oman: {
+    nameUS: 'Oman',
+    countryCode: '+968',
+    isoCodes: ['OM', 'OMN'],
+    nameBR: 'Omã',
+    continentBR: 'Ásia',
+  },
+  Pakistan: {
+    nameUS: 'Pakistan',
+    countryCode: '+92',
+    isoCodes: ['PK', 'PAK'],
+    nameBR: 'Paquistão',
+    continentBR: 'Ásia',
+  },
+  Palau: {
+    nameUS: 'Palau',
+    countryCode: '+680',
+    isoCodes: ['PW', 'PLW'],
+    nameBR: 'Palau',
+    continentBR: 'Oceania',
+  },
+  Palestine: {
+    nameUS: 'Palestine',
+    countryCode: '+970',
+    isoCodes: ['PS', 'PSE'],
+    nameBR: 'Palestina',
+    continentBR: 'Ásia',
+  },
+  Panama: {
+    nameUS: 'Panama',
+    countryCode: '+507',
+    isoCodes: ['PA', 'PAN'],
+    nameBR: 'Panamá',
+    continentBR: 'América Central',
+  },
+  'Papua New Guinea': {
+    nameUS: 'Papua New Guinea',
+    countryCode: '+675',
+    isoCodes: ['PG', 'PNG'],
+    nameBR: 'Papua-Nova Guiné',
+    continentBR: 'Oceania',
+  },
+  Paraguay: {
+    nameUS: 'Paraguay',
+    countryCode: '+595',
+    isoCodes: ['PY', 'PRY'],
+    nameBR: 'Paraguai',
+    continentBR: 'América do Sul',
+  },
+  Peru: {
+    nameUS: 'Peru',
+    countryCode: '+51',
+    isoCodes: ['PE', 'PER'],
+    nameBR: 'Peru',
+    continentBR: 'América do Sul',
+  },
+  Philippines: {
+    nameUS: 'Philippines',
+    countryCode: '+63',
+    isoCodes: ['PH', 'PHL'],
+    nameBR: 'Filipinas',
+    continentBR: 'Ásia',
+  },
+  Pitcairn: {
+    nameUS: 'Pitcairn',
+    countryCode: '+64',
+    isoCodes: ['PN', 'PCN'],
+    nameBR: 'Nova Zelândia',
+    continentBR: 'Oceania',
+  },
+  Poland: {
+    nameUS: 'Poland',
+    countryCode: '+48',
+    isoCodes: ['PL', 'POL'],
+    nameBR: 'Polônia',
+    continentBR: 'Europa',
+  },
+  Portugal: {
+    nameUS: 'Portugal',
+    countryCode: '+351',
+    isoCodes: ['PT', 'PRT'],
+    nameBR: 'Portugal',
+    continentBR: 'Europa',
+  },
+  'Puerto Rico': {
+    nameUS: 'Puerto Rico',
+    countryCode: '+1-787 +1-939',
+    isoCodes: ['PR', 'PRI'],
+    nameBR: 'Porto Rico',
+    continentBR: 'América Central',
+  },
+  Qatar: {
+    nameUS: 'Qatar',
+    countryCode: '+974',
+    isoCodes: ['QA', 'QAT'],
+    nameBR: 'Qatar',
+    continentBR: 'Ásia',
+  },
+  'Republic of the Congo': {
+    nameUS: 'Republic of the Congo',
+    countryCode: '+242',
+    isoCodes: ['CG', 'COG'],
+    nameBR: 'Congo-Brazzaville',
+    continentBR: 'África',
+  },
+  Reunion: {
+    nameUS: 'Reunion',
+    countryCode: '+262',
+    isoCodes: ['RE', 'REU'],
+    nameBR: 'Reunião',
+    continentBR: 'África',
+  },
+  Romania: {
+    nameUS: 'Romania',
+    countryCode: '+40',
+    isoCodes: ['RO', 'ROU'],
+    nameBR: 'Romênia',
+    continentBR: 'Europa',
+  },
+  Russia: {
+    nameUS: 'Russia',
+    countryCode: '+7',
+    isoCodes: ['RU', 'RUS'],
+    nameBR: 'Cazaquistão',
+    continentBR: 'Ásia',
+  },
+  Rwanda: {
+    nameUS: 'Rwanda',
+    countryCode: '+250',
+    isoCodes: ['RW', 'RWA'],
+    nameBR: 'Ruanda',
+    continentBR: 'África',
+  },
+  'Saint Barthelemy': {
+    nameUS: 'Saint Barthelemy',
+    countryCode: '+590',
+    isoCodes: ['BL', 'BLM'],
+    nameBR: 'Guadalupe',
+    continentBR: 'América Central',
+  },
+  'Saint Helena': {
+    nameUS: 'Saint Helena',
+    countryCode: '+290',
+    isoCodes: ['SH', 'SHN'],
+    nameBR: 'Santa Helena (território)',
+    continentBR: 'África',
+  },
+  'Saint Kitts and Nevis': {
+    nameUS: 'Saint Kitts and Nevis',
+    countryCode: '+1-869',
+    isoCodes: ['KN', 'KNA'],
+    nameBR: 'São Cristóvão e Nevis',
+    continentBR: 'América Central',
+  },
+  'Saint Lucia': {
+    nameUS: 'Saint Lucia',
+    countryCode: '+1-758',
+    isoCodes: ['LC', 'LCA'],
+    nameBR: 'Santa Lúcia',
+    continentBR: 'América Central',
+  },
+  'Saint Martin': {
+    nameUS: 'Saint Martin',
+    countryCode: '+590',
+    isoCodes: ['MF', 'MAF'],
+    nameBR: 'Guadalupe',
+    continentBR: 'América Central',
+  },
+  'Saint Pierre and Miquelon': {
+    nameUS: 'Saint Pierre and Miquelon',
+    countryCode: '+508',
+    isoCodes: ['PM', 'SPM'],
+    nameBR: 'Saint-Pierre e Miquelon',
+    continentBR: 'América do Norte',
+  },
+  'Saint Vincent and the Grenadines': {
+    nameUS: 'Saint Vincent and the Grenadines',
+    countryCode: '+1-784',
+    isoCodes: ['VC', 'VCT'],
+    nameBR: 'São Vicente e Granadinas',
+    continentBR: 'América Central',
+  },
+  Samoa: {
+    nameUS: 'Samoa',
+    countryCode: '+685',
+    isoCodes: ['WS', 'WSM'],
+    nameBR: 'Samoa',
+    continentBR: 'Oceania',
+  },
+  'San Marino': {
+    nameUS: 'San Marino',
+    countryCode: '+378',
+    isoCodes: ['SM', 'SMR'],
+    nameBR: 'São Marinho',
+    continentBR: 'Europa',
+  },
+  'Sao Tome and Principe': {
+    nameUS: 'Sao Tome and Principe',
+    countryCode: '+239',
+    isoCodes: ['ST', 'STP'],
+    nameBR: 'São Tomé e Príncipe',
+    continentBR: 'África',
+  },
+  'Saudi Arabia': {
+    nameUS: 'Saudi Arabia',
+    countryCode: '+966',
+    isoCodes: ['SA', 'SAU'],
+    nameBR: 'Arábia Saudita',
+    continentBR: 'Ásia',
+  },
+  Senegal: {
+    nameUS: 'Senegal',
+    countryCode: '+221',
+    isoCodes: ['SN', 'SEN'],
+    nameBR: 'Senegal',
+    continentBR: 'África',
+  },
+  Serbia: {
+    nameUS: 'Serbia',
+    countryCode: '+381',
+    isoCodes: ['RS', 'SRB'],
+    nameBR: 'Sérvia',
+    continentBR: 'Europa',
+  },
+  Seychelles: {
+    nameUS: 'Seychelles',
+    countryCode: '+248',
+    isoCodes: ['SC', 'SYC'],
+    nameBR: 'Seicheles',
+    continentBR: 'África',
+  },
+  'Sierra Leone': {
+    nameUS: 'Sierra Leone',
+    countryCode: '+232',
+    isoCodes: ['SL', 'SLE'],
+    nameBR: 'Serra Leoa',
+    continentBR: 'África',
+  },
+  Singapore: {
+    nameUS: 'Singapore',
+    countryCode: '+65',
+    isoCodes: ['SG', 'SGP'],
+    nameBR: 'Singapura',
+    continentBR: 'Ásia',
+  },
+  'Sint Maarten': {
+    nameUS: 'Sint Maarten',
+    countryCode: '+1-721',
+    isoCodes: ['SX', 'SXM'],
+    nameBR: 'São Martinho',
+    continentBR: 'America do Norte',
+  },
+  Slovakia: {
+    nameUS: 'Slovakia',
+    countryCode: '+421',
+    isoCodes: ['SK', 'SVK'],
+    nameBR: 'Eslováquia',
+    continentBR: 'Europa',
+  },
+  Slovenia: {
+    nameUS: 'Slovenia',
+    countryCode: '+386',
+    isoCodes: ['SI', 'SVN'],
+    nameBR: 'Eslovénia',
+    continentBR: 'Europa',
+  },
+  'Solomon Islands': {
+    nameUS: 'Solomon Islands',
+    countryCode: '+677',
+    isoCodes: ['SB', 'SLB'],
+    nameBR: 'Ilhas Salomão',
+    continentBR: 'Oceania',
+  },
+  Somalia: {
+    nameUS: 'Somalia',
+    countryCode: '+252',
+    isoCodes: ['SO', 'SOM'],
+    nameBR: 'Somália',
+    continentBR: 'África',
+  },
+  'South Africa': {
+    nameUS: 'South Africa',
+    countryCode: '+27',
+    isoCodes: ['ZA', 'ZAF'],
+    nameBR: 'África do Sul',
+    continentBR: 'África',
+  },
+  'South Korea': {
+    nameUS: 'South Korea',
+    countryCode: '+82',
+    isoCodes: ['KR', 'KOR'],
+    nameBR: 'Coreia do Sul',
+    continentBR: 'Ásia',
+  },
+  'South Sudan': {
+    nameUS: 'South Sudan',
+    countryCode: '+211',
+    isoCodes: ['SS', 'SSD'],
+    nameBR: 'Sudão do Sul',
+    continentBR: 'África',
+  },
+  Spain: {
+    nameUS: 'Spain',
+    countryCode: '+34',
+    isoCodes: ['ES', 'ESP'],
+    nameBR: 'Espanha',
+    continentBR: 'Europa',
+  },
+  'Sri Lanka': {
+    nameUS: 'Sri Lanka',
+    countryCode: '+94',
+    isoCodes: ['LK', 'LKA'],
+    nameBR: 'Sri Lanka',
+    continentBR: 'Ásia',
+  },
+  Sudan: {
+    nameUS: 'Sudan',
+    countryCode: '+249',
+    isoCodes: ['SD', 'SDN'],
+    nameBR: 'Sudão',
+    continentBR: 'África',
+  },
+  Suriname: {
+    nameUS: 'Suriname',
+    countryCode: '+597',
+    isoCodes: ['SR', 'SUR'],
+    nameBR: 'Suriname',
+    continentBR: 'América do Sul',
+  },
+  'Svalbard and Jan Mayen': {
+    nameUS: 'Svalbard and Jan Mayen',
+    countryCode: '+47',
+    isoCodes: ['SJ', 'SJM'],
+    nameBR: 'Noruega',
+    continentBR: 'Europa',
+  },
+  Swaziland: {
+    nameUS: 'Swaziland',
+    countryCode: '+268',
+    isoCodes: ['SZ', 'SWZ'],
+    nameBR: 'Suazilândia',
+    continentBR: 'África',
+  },
+  Sweden: {
+    nameUS: 'Sweden',
+    countryCode: '+46',
+    isoCodes: ['SE', 'SWE'],
+    nameBR: 'Suécia',
+    continentBR: 'Europa',
+  },
+  Switzerland: {
+    nameUS: 'Switzerland',
+    countryCode: '+41',
+    isoCodes: ['CH', 'CHE'],
+    nameBR: 'Suíça',
+    continentBR: 'Europa',
+  },
+  Syria: {
+    nameUS: 'Syria',
+    countryCode: '+963',
+    isoCodes: ['SY', 'SYR'],
+    nameBR: 'Síria',
+    continentBR: 'Ásia',
+  },
+  Taiwan: {
+    nameUS: 'Taiwan',
+    countryCode: '+886',
+    isoCodes: ['TW', 'TWN'],
+    nameBR: 'República da China',
+    continentBR: 'Ásia',
+  },
+  Tajikistan: {
+    nameUS: 'Tajikistan',
+    countryCode: '+992',
+    isoCodes: ['TJ', 'TJK'],
+    nameBR: 'Tadjiquistão',
+    continentBR: 'Ásia',
+  },
+  Tanzania: {
+    nameUS: 'Tanzania',
+    countryCode: '+255',
+    isoCodes: ['TZ', 'TZA'],
+    nameBR: 'Tanzânia',
+    continentBR: 'África',
+  },
+  Thailand: {
+    nameUS: 'Thailand',
+    countryCode: '+66',
+    isoCodes: ['TH', 'THA'],
+    nameBR: 'Tailândia',
+    continentBR: 'Ásia',
+  },
+  Togo: {
+    nameUS: 'Togo',
+    countryCode: '+228',
+    isoCodes: ['TG', 'TGO'],
+    nameBR: 'Togo',
+    continentBR: 'África',
+  },
+  Tokelau: {
+    nameUS: 'Tokelau',
+    countryCode: '+690',
+    isoCodes: ['TK', 'TKL'],
+    nameBR: 'Tokelau',
+    continentBR: 'Oceania',
+  },
+  Tonga: {
+    nameUS: 'Tonga',
+    countryCode: '+676',
+    isoCodes: ['TO', 'TON'],
+    nameBR: 'Tonga',
+    continentBR: 'Oceania',
+  },
+  'Trinidad and Tobago': {
+    nameUS: 'Trinidad and Tobago',
+    countryCode: '+1-868',
+    isoCodes: ['TT', 'TTO'],
+    nameBR: 'Trinidad e Tobago',
+    continentBR: 'América Central',
+  },
+  Tunisia: {
+    nameUS: 'Tunisia',
+    countryCode: '+216',
+    isoCodes: ['TN', 'TUN'],
+    nameBR: 'Tunísia',
+    continentBR: 'África',
+  },
+  Turkey: {
+    nameUS: 'Turkey',
+    countryCode: '+90',
+    isoCodes: ['TR', 'TUR'],
+    nameBR: 'Turquia',
+    continentBR: 'Ásia//Europa',
+  },
+  Turkmenistan: {
+    nameUS: 'Turkmenistan',
+    countryCode: '+993',
+    isoCodes: ['TM', 'TKM'],
+    nameBR: 'Turquemenistão',
+    continentBR: 'Ásia',
+  },
+  'Turks and Caicos Islands': {
+    nameUS: 'Turks and Caicos Islands',
+    countryCode: '+1-649',
+    isoCodes: ['TC', 'TCA'],
+    nameBR: 'Turcas e Caicos',
+    continentBR: 'América Central',
+  },
+  Tuvalu: {
+    nameUS: 'Tuvalu',
+    countryCode: '+688',
+    isoCodes: ['TV', 'TUV'],
+    nameBR: 'Tuvalu',
+    continentBR: 'Oceania',
+  },
+  'U.S. Virgin Islands': {
+    nameUS: 'U.S. Virgin Islands',
+    countryCode: '+1-340',
+    isoCodes: ['VI', 'VIR'],
+    nameBR: 'Ilhas Virgens Americanas',
+    continentBR: 'América Central',
+  },
+  Uganda: {
+    nameUS: 'Uganda',
+    countryCode: '+256',
+    isoCodes: ['UG', 'UGA'],
+    nameBR: 'Uganda',
+    continentBR: 'África',
+  },
+  Ukraine: {
+    nameUS: 'Ukraine',
+    countryCode: '+380',
+    isoCodes: ['UA', 'UKR'],
+    nameBR: 'Ucrânia',
+    continentBR: 'Europa',
+  },
+  'United Arab Emirates': {
+    nameUS: 'United Arab Emirates',
+    countryCode: '+971',
+    isoCodes: ['AE', 'ARE'],
+    nameBR: 'Emirados Árabes Unidos',
+    continentBR: 'Ásia',
+  },
+  'United Kingdom': {
+    nameUS: 'United Kingdom',
+    countryCode: '+44',
+    isoCodes: ['GB', 'GBR'],
+    nameBR: 'Reino Unido',
+    continentBR: 'Europa',
+  },
+  'United States': {
+    nameUS: 'United States',
+    countryCode: '+1',
+    isoCodes: ['US', 'USA'],
+    nameBR: 'Estados Unidos',
+    continentBR: 'America do Norte',
+  },
+  Uruguay: {
+    nameUS: 'Uruguay',
+    countryCode: '+598',
+    isoCodes: ['UY', 'URY'],
+    nameBR: 'Uruguai',
+    continentBR: 'América do Sul',
+  },
+  Uzbekistan: {
+    nameUS: 'Uzbekistan',
+    countryCode: '+998',
+    isoCodes: ['UZ', 'UZB'],
+    nameBR: 'Uzbequistão',
+    continentBR: 'Ásia',
+  },
+  Vanuatu: {
+    nameUS: 'Vanuatu',
+    countryCode: '+678',
+    isoCodes: ['VU', 'VUT'],
+    nameBR: 'Vanuatu',
+    continentBR: 'Oceania',
+  },
+  Vatican: {
+    nameUS: 'Vatican',
+    countryCode: '+379',
+    isoCodes: ['VA', 'VAT'],
+    nameBR: 'Vaticano',
+    continentBR: 'Europa',
+  },
+  Venezuela: {
+    nameUS: 'Venezuela',
+    countryCode: '+58',
+    isoCodes: ['VE', 'VEN'],
+    nameBR: 'Venezuela',
+    continentBR: 'América do Sul',
+  },
+  Vietnam: {
+    nameUS: 'Vietnam',
+    countryCode: '+84',
+    isoCodes: ['VN', 'VNM'],
+    nameBR: 'Vietnã',
+    continentBR: 'Ásia',
+  },
+  'Wallis and Futuna': {
+    nameUS: 'Wallis and Futuna',
+    countryCode: '+681',
+    isoCodes: ['WF', 'WLF'],
+    nameBR: 'Wallis e Futuna',
+    continentBR: 'Oceania',
+  },
+  'Western Sahara': {
+    nameUS: 'Western Sahara',
+    countryCode: '+212',
+    isoCodes: ['EH', 'ESH'],
+    nameBR: 'Marrocos',
+    continentBR: 'África',
+  },
+  Yemen: {
+    nameUS: 'Yemen',
+    countryCode: '+967',
+    isoCodes: ['YE', 'YEM'],
+    nameBR: 'Iêmen',
+    continentBR: 'Ásia',
+  },
+  Zambia: {
+    nameUS: 'Zambia',
+    countryCode: '+260',
+    isoCodes: ['ZM', 'ZMB'],
+    nameBR: 'Zâmbia',
+    continentBR: 'África',
+  },
+  Zimbabwe: {
+    nameUS: 'Zimbabwe',
+    countryCode: '+263',
+    isoCodes: ['ZW', 'ZWE'],
+    nameBR: 'Zimbábue',
+    continentBR: 'África',
   },
 };
-/*
-: {
-  countryCode: '+',
-  initials: '',
-  nameUS: '',
-  nameBR: '',
-  continentUS: '',
-  continentBR: '',
-},
-*/
-
-// <td>+376</td>
-// <td>Andorra</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+244</td>
-// <td>Angola</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Anguilla</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Antígua e Barbuda</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+599</td>
-// <td>Antilhas Holandesas</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+966</td>
-// <td>Arábia Saudita</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+213</td>
-// <td>Argélia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+54</td>
-// <td>Argentina</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+374</td>
-// <td>Armênia</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+297</td>
-// <td>Aruba</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+247</td>
-// <td>Ascensão</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+61</td>
-// <td>Austrália</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+43</td>
-// <td>Áustria</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+994</td>
-// <td>Azerbaijão</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Bahamas</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+880</td>
-// <td>Bangladesh</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Barbados</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+973</td>
-// <td>Bahrein</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+32</td>
-// <td>Bélgica</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+501</td>
-// <td>Belize</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+229</td>
-// <td>Benim</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Bermudas</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+375</td>
-// <td>Bielorrússia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+591</td>
-// <td>Bolívia</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+387</td>
-// <td>Bósnia e Herzegovina</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+267</td>
-// <td>Botswana</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+55</td>
-// <td>Brasil</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+673</td>
-// <td>Brunei</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+359</td>
-// <td>Bulgária</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+226</td>
-// <td>Burkina Faso</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+257</td>
-// <td>Burundi</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+975</td>
-// <td>Butão</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+238</td>
-// <td>Cabo Verde</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+237</td>
-// <td>Camarões</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+855</td>
-// <td>Camboja</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Canadá</td>
-// <td>América do Norte</td>
-// </tr>
-// <tr>
-// <td>+7</td>
-// <td>Cazaquistão</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+237</td>
-// <td>Chade</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+56</td>
-// <td>Chile</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+86</td>
-// <td>República Popular da China</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+357</td>
-// <td>Chipre</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+57</td>
-// <td>Colômbia</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+269</td>
-// <td>Comores</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+242</td>
-// <td>Congo-Brazzaville</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+243</td>
-// <td>Congo-Kinshasa</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+850</td>
-// <td>Coreia do Norte</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+82</td>
-// <td>Coreia do Sul</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+225</td>
-// <td>Costa do Marfim</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+506</td>
-// <td>Costa Rica</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+385</td>
-// <td>Croácia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+53</td>
-// <td>Cuba</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+45</td>
-// <td>Dinamarca</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+253</td>
-// <td>Djibuti</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Dominica</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+20</td>
-// <td>Egipto</td>
-// <td>África/Ásia</td>
-// </tr>
-// <tr>
-// <td>+503</td>
-// <td>El Salvador</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+971</td>
-// <td>Emirados Árabes Unidos</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+593</td>
-// <td>Equador</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+291</td>
-// <td>Eritreia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+421</td>
-// <td>Eslováquia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+386</td>
-// <td>Eslovénia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+34</td>
-// <td>Espanha</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Estados Unidos</td>
-// <td>América do Norte</td>
-// </tr>
-// <tr>
-// <td>+372</td>
-// <td>Estónia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+251</td>
-// <td>Etiópia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+679</td>
-// <td>Fiji</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+63</td>
-// <td>Filipinas</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+358</td>
-// <td>Finlândia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+33</td>
-// <td>França</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+241</td>
-// <td>Gabão</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+220</td>
-// <td>Gâmbia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+233</td>
-// <td>Gana</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+995</td>
-// <td>Geórgia</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+350</td>
-// <td>Gibraltar</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Granada</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+30</td>
-// <td>Grécia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+299</td>
-// <td>Groenlândia</td>
-// <td>América do Norte</td>
-// </tr>
-// <tr>
-// <td>+590</td>
-// <td>Guadalupe</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+671</td>
-// <td>Guam</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+502</td>
-// <td>Guatemala</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+592</td>
-// <td>Guiana</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+594</td>
-// <td>Guiana Francesa</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+224</td>
-// <td>Guiné</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+245</td>
-// <td>Guiné-Bissau</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+240</td>
-// <td>Guiné Equatorial</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+509</td>
-// <td>Haiti</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+504</td>
-// <td>Honduras</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+852</td>
-// <td>Hong Kong</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+36</td>
-// <td>Hungria</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+967</td>
-// <td>Iêmen</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Ilhas Cayman</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+672</td>
-// <td>Ilha Christmas</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+672</td>
-// <td>Ilhas Cocos</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+682</td>
-// <td>Ilhas Cook</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+298</td>
-// <td>Ilhas Féroe</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+672</td>
-// <td>Ilha Heard e Ilhas McDonald</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+960</td>
-// <td>Maldivas</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+500</td>
-// <td>Ilhas Malvinas</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Ilhas Marianas do Norte</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+692</td>
-// <td>Ilhas Marshall</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+672</td>
-// <td>Ilha Norfolk</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+677</td>
-// <td>Ilhas Salomão</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Ilhas Virgens Americanas</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Ilhas Virgens Britânicas</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+91</td>
-// <td>Índia</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+62</td>
-// <td>Indonésia</td>
-// <td>Ásia/Oceania</td>
-// </tr>
-// <tr>
-// <td>+98</td>
-// <td>Irã</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+964</td>
-// <td>Iraque</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+353</td>
-// <td>Irlanda</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+354</td>
-// <td>Islândia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+972</td>
-// <td><span class="flagicon">&nbsp;</span>Israel</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+39</td>
-// <td>Itália</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Jamaica</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+81</td>
-// <td>Japão</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+962</td>
-// <td>Jordânia</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+686</td>
-// <td>Kiribati</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+383</td>
-// <td>Kosovo</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+965</td>
-// <td>Kuwait</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+856</td>
-// <td>Laos</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+266</td>
-// <td>Lesoto</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+371</td>
-// <td>Letônia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+961</td>
-// <td>Líbano</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+231</td>
-// <td>Libéria</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+218</td>
-// <td>Líbia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+423</td>
-// <td>Liechtenstein</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+370</td>
-// <td>Lituânia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+352</td>
-// <td>Luxemburgo</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+853</td>
-// <td>Macau</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+389</td>
-// <td>República da Macedônia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+261</td>
-// <td>Madagascar</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+60</td>
-// <td>Malásia</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+265</td>
-// <td>Malawi</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+223</td>
-// <td>Mali</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+356</td>
-// <td>Malta</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+212</td>
-// <td>Marrocos</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+596</td>
-// <td>Martinica</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+230</td>
-// <td>Maurícia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+222</td>
-// <td>Mauritânia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+269</td>
-// <td>Mayotte</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+52</td>
-// <td>México</td>
-// <td>América do Norte</td>
-// </tr>
-// <tr>
-// <td>+691</td>
-// <td>Estados Federados da Micronésia</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+258</td>
-// <td>Moçambique</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+373</td>
-// <td>Moldávia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+377</td>
-// <td>Mônaco</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+976</td>
-// <td>Mongólia</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+382</td>
-// <td>Montenegro</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Montserrat</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+95</td>
-// <td>Myanmar</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+264</td>
-// <td>Namíbia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+674</td>
-// <td>Nauru</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+977</td>
-// <td>Nepal</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+505</td>
-// <td>Nicarágua</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+227</td>
-// <td>Níger</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+234</td>
-// <td>Nigéria</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+683</td>
-// <td>Niue</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+47</td>
-// <td>Noruega</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+687</td>
-// <td>Nova Caledônia</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+64</td>
-// <td>Nova Zelândia</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+968</td>
-// <td>Omã</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+31</td>
-// <td>Países Baixos</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+680</td>
-// <td>Palau</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+970</td>
-// <td>Palestina</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+507</td>
-// <td>Panamá</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+675</td>
-// <td>Papua-Nova Guiné</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+92</td>
-// <td>Paquistão</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+595</td>
-// <td>Paraguai</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+51</td>
-// <td>Peru</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+689</td>
-// <td>Polinésia Francesa</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+48</td>
-// <td>Polônia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Porto Rico</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+351</td>
-// <td>Portugal</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+974</td>
-// <td>Qatar</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+254</td>
-// <td>Quênia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+996</td>
-// <td>Quirguistão</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+44</td>
-// <td>Reino Unido</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+236</td>
-// <td>República Centro-Africana</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>República Dominicana</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+420</td>
-// <td>República Tcheca</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+262</td>
-// <td>Reunião</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+40</td>
-// <td>Romênia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+250</td>
-// <td>Ruanda</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+7</td>
-// <td>Rússia</td>
-// <td>Europa/Ásia</td>
-// </tr>
-// <tr>
-// <td>+212</td>
-// <td>Saara Ocidental</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+685</td>
-// <td>Samoa</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Samoa Americana</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+290</td>
-// <td>Santa Helena (território)</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Santa Lúcia</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>São Cristóvão e Nevis</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+378</td>
-// <td>São Marinho</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+508</td>
-// <td>Saint-Pierre e Miquelon</td>
-// <td>América do Norte</td>
-// </tr>
-// <tr>
-// <td>+239</td>
-// <td>São Tomé e Príncipe</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>São Vicente e Granadinas</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+248</td>
-// <td>Seicheles</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+221</td>
-// <td>Senegal</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+232</td>
-// <td>Serra Leoa</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+381</td>
-// <td>Sérvia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+65</td>
-// <td>Singapura</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+963</td>
-// <td>Síria</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+252</td>
-// <td>Somália</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+94</td>
-// <td>Sri Lanka</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+268</td>
-// <td>Suazilândia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+249</td>
-// <td>Sudão</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+211</td>
-// <td>Sudão do Sul</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+46</td>
-// <td>Suécia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+41</td>
-// <td>Suíça</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+597</td>
-// <td>Suriname</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+992</td>
-// <td>Tadjiquistão</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+66</td>
-// <td>Tailândia</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+886</td>
-// <td>República da China</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+255</td>
-// <td>Tanzânia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+246</td>
-// <td>Território Britânico do Oceano Índico</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+670</td>
-// <td>Timor-Leste</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+228</td>
-// <td>Togo</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+690</td>
-// <td>Tokelau</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+676</td>
-// <td>Tonga</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Trinidad e Tobago</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+216</td>
-// <td>Tunísia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+1</td>
-// <td>Turcas e Caicos</td>
-// <td>América Central</td>
-// </tr>
-// <tr>
-// <td>+993</td>
-// <td>Turquemenistão</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+90</td>
-// <td>Turquia</td>
-// <td>Ásia//Europa</td>
-// </tr>
-// <tr>
-// <td>+688</td>
-// <td>Tuvalu</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+380</td>
-// <td>Ucrânia</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+256</td>
-// <td>Uganda</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+598</td>
-// <td>Uruguai</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+998</td>
-// <td>Uzbequistão</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+678</td>
-// <td>Vanuatu</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+379</td>
-// <td>Vaticano</td>
-// <td>Europa</td>
-// </tr>
-// <tr>
-// <td>+58</td>
-// <td>Venezuela</td>
-// <td>América do Sul</td>
-// </tr>
-// <tr>
-// <td>+84</td>
-// <td>Vietnã</td>
-// <td>Ásia</td>
-// </tr>
-// <tr>
-// <td>+681</td>
-// <td>Wallis e Futuna</td>
-// <td>Oceania</td>
-// </tr>
-// <tr>
-// <td>+260</td>
-// <td>Zâmbia</td>
-// <td>África</td>
-// </tr>
-// <tr>
-// <td>+263</td>
-// <td>Zimbábue</td>
-// <td>África</td>
 
 export default COUNTRIES_LIST;
