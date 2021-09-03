@@ -3,21 +3,21 @@ type Country = {
   nameBR: string;
   continentUS: string;
   continentBR: string;
-  isoCodes: string[];
+  initials: string[];
   countryCode: string;
 };
 
-type CountriesList = {
+type Countries = {
   [key: string]: Country;
 };
 
-const COUNTRIES_LIST: CountriesList = {
+const COUNTRIES: Countries = {
   Afghanistan: {
     nameUS: 'Afghanistan',
     nameBR: 'Afeganistão',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['AF', 'AFG'],
+    initials: ['AF', 'AFG'],
     countryCode: '+93',
   },
   Albania: {
@@ -25,7 +25,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Albânia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['AL', 'ALB'],
+    initials: ['AL', 'ALB'],
     countryCode: '+355',
   },
   Algeria: {
@@ -33,7 +33,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Argélia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['DZ', 'DZA'],
+    initials: ['DZ', 'DZA'],
     countryCode: '+213',
   },
   'American Samoa': {
@@ -41,7 +41,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Samoa Americana',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['AS', 'ASM'],
+    initials: ['AS', 'ASM'],
     countryCode: '+1-684',
   },
   Andorra: {
@@ -49,7 +49,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Andorra',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['AD', 'AND'],
+    initials: ['AD', 'AND'],
     countryCode: '+376',
   },
   Angola: {
@@ -57,7 +57,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Angola',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['AO', 'AGO'],
+    initials: ['AO', 'AGO'],
     countryCode: '+244',
   },
   Anguilla: {
@@ -65,7 +65,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Anguilla',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['AI', 'AIA'],
+    initials: ['AI', 'AIA'],
     countryCode: '+1-264',
   },
   Antarctica: {
@@ -73,7 +73,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ilha Christmas',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['AQ', 'ATA'],
+    initials: ['AQ', 'ATA'],
     countryCode: '+672',
   },
   'Antigua and Barbuda': {
@@ -81,7 +81,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Antígua e Barbuda',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['AG', 'ATG'],
+    initials: ['AG', 'ATG'],
     countryCode: '+1-268',
   },
   Argentina: {
@@ -89,7 +89,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Argentina',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['AR', 'ARG'],
+    initials: ['AR', 'ARG'],
     countryCode: '+54',
   },
   Armenia: {
@@ -97,7 +97,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Armênia',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['AM', 'ARM'],
+    initials: ['AM', 'ARM'],
     countryCode: '+374',
   },
   Aruba: {
@@ -105,7 +105,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Aruba',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['AW', 'ABW'],
+    initials: ['AW', 'ABW'],
     countryCode: '+297',
   },
   Australia: {
@@ -113,7 +113,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Austrália',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['AU', 'AUS'],
+    initials: ['AU', 'AUS'],
     countryCode: '+61',
   },
   Austria: {
@@ -121,7 +121,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Áustria',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['AT', 'AUT'],
+    initials: ['AT', 'AUT'],
     countryCode: '+43',
   },
   Azerbaijan: {
@@ -129,7 +129,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Azerbaijão',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['AZ', 'AZE'],
+    initials: ['AZ', 'AZE'],
     countryCode: '+994',
   },
   Bahamas: {
@@ -137,7 +137,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Bahamas',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['BS', 'BHS'],
+    initials: ['BS', 'BHS'],
     countryCode: '+1-242',
   },
   Bahrain: {
@@ -145,7 +145,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Bahrein',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['BH', 'BHR'],
+    initials: ['BH', 'BHR'],
     countryCode: '+973',
   },
   Bangladesh: {
@@ -153,7 +153,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Bangladesh',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['BD', 'BGD'],
+    initials: ['BD', 'BGD'],
     countryCode: '+880',
   },
   Barbados: {
@@ -161,7 +161,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Barbados',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['BB', 'BRB'],
+    initials: ['BB', 'BRB'],
     countryCode: '+1-246',
   },
   Belarus: {
@@ -169,7 +169,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Bielorrússia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['BY', 'BLR'],
+    initials: ['BY', 'BLR'],
     countryCode: '+375',
   },
   Belgium: {
@@ -177,7 +177,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Bélgica',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['BE', 'BEL'],
+    initials: ['BE', 'BEL'],
     countryCode: '+32',
   },
   Belize: {
@@ -185,7 +185,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Belize',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['BZ', 'BLZ'],
+    initials: ['BZ', 'BLZ'],
     countryCode: '+501',
   },
   Benin: {
@@ -193,7 +193,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Benim',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['BJ', 'BEN'],
+    initials: ['BJ', 'BEN'],
     countryCode: '+229',
   },
   Bermuda: {
@@ -201,7 +201,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Bermudas',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['BM', 'BMU'],
+    initials: ['BM', 'BMU'],
     countryCode: '+1-441',
   },
   Bhutan: {
@@ -209,7 +209,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Butão',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['BT', 'BTN'],
+    initials: ['BT', 'BTN'],
     countryCode: '+975',
   },
   Bolivia: {
@@ -217,7 +217,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Bolívia',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['BO', 'BOL'],
+    initials: ['BO', 'BOL'],
     countryCode: '+591',
   },
   'Bosnia and Herzegovina': {
@@ -225,7 +225,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Bósnia e Herzegovina',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['BA', 'BIH'],
+    initials: ['BA', 'BIH'],
     countryCode: '+387',
   },
   Botswana: {
@@ -233,7 +233,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Botswana',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['BW', 'BWA'],
+    initials: ['BW', 'BWA'],
     countryCode: '+267',
   },
   Brazil: {
@@ -241,7 +241,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Brasil',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['BR', 'BRA'],
+    initials: ['BR', 'BRA'],
     countryCode: '+55',
   },
   'British Indian Ocean Territory': {
@@ -249,7 +249,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Território Britânico do Oceano Índico',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['IO', 'IOT'],
+    initials: ['IO', 'IOT'],
     countryCode: '+246',
   },
   'British Virgin Islands': {
@@ -257,7 +257,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ilhas Virgens Britânicas',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['VG', 'VGB'],
+    initials: ['VG', 'VGB'],
     countryCode: '+1-284',
   },
   Brunei: {
@@ -265,7 +265,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Brunei',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['BN', 'BRN'],
+    initials: ['BN', 'BRN'],
     countryCode: '+673',
   },
   Bulgaria: {
@@ -273,7 +273,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Bulgária',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['BG', 'BGR'],
+    initials: ['BG', 'BGR'],
     countryCode: '+359',
   },
   'Burkina Faso': {
@@ -281,7 +281,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Burkina Faso',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['BF', 'BFA'],
+    initials: ['BF', 'BFA'],
     countryCode: '+226',
   },
   Burundi: {
@@ -289,7 +289,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Burundi',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['BI', 'BDI'],
+    initials: ['BI', 'BDI'],
     countryCode: '+257',
   },
   Cambodia: {
@@ -297,7 +297,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Camboja',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['KH', 'KHM'],
+    initials: ['KH', 'KHM'],
     countryCode: '+855',
   },
   Cameroon: {
@@ -305,7 +305,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Camarões',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['CM', 'CMR'],
+    initials: ['CM', 'CMR'],
     countryCode: '+237',
   },
   Canada: {
@@ -313,7 +313,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Canadá',
     continentUS: 'North America',
     continentBR: 'América do Norte',
-    isoCodes: ['CA', 'CAN'],
+    initials: ['CA', 'CAN'],
     countryCode: '+1',
   },
   'Cape Verde': {
@@ -321,7 +321,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Cabo Verde',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['CV', 'CPV'],
+    initials: ['CV', 'CPV'],
     countryCode: '+238',
   },
   'Cayman Islands': {
@@ -329,7 +329,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ilhas Cayman',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['KY', 'CYM'],
+    initials: ['KY', 'CYM'],
     countryCode: '+1-345',
   },
   'Central African Republic': {
@@ -337,7 +337,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'República Centro-Africana',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['CF', 'CAF'],
+    initials: ['CF', 'CAF'],
     countryCode: '+236',
   },
   Chad: {
@@ -345,7 +345,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Chade',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['TD', 'TCD'],
+    initials: ['TD', 'TCD'],
     countryCode: '+235',
   },
   Chile: {
@@ -353,7 +353,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Chile',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['CL', 'CHL'],
+    initials: ['CL', 'CHL'],
     countryCode: '+56',
   },
   China: {
@@ -361,7 +361,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'República Popular da China',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['CN', 'CHN'],
+    initials: ['CN', 'CHN'],
     countryCode: '+86',
   },
   'Christmas Island': {
@@ -369,7 +369,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Austrália',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['CX', 'CXR'],
+    initials: ['CX', 'CXR'],
     countryCode: '+61',
   },
   'Cocos Islands': {
@@ -377,7 +377,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Austrália',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['CC', 'CCK'],
+    initials: ['CC', 'CCK'],
     countryCode: '+61',
   },
   Colombia: {
@@ -385,7 +385,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Colômbia',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['CO', 'COL'],
+    initials: ['CO', 'COL'],
     countryCode: '+57',
   },
   Comoros: {
@@ -393,7 +393,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Comores',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['KM', 'COM'],
+    initials: ['KM', 'COM'],
     countryCode: '+269',
   },
   'Cook Islands': {
@@ -401,7 +401,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ilhas Cook',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['CK', 'COK'],
+    initials: ['CK', 'COK'],
     countryCode: '+682',
   },
   'Costa Rica': {
@@ -409,7 +409,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Costa Rica',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['CR', 'CRI'],
+    initials: ['CR', 'CRI'],
     countryCode: '+506',
   },
   Croatia: {
@@ -417,7 +417,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Croácia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['HR', 'HRV'],
+    initials: ['HR', 'HRV'],
     countryCode: '+385',
   },
   Cuba: {
@@ -425,7 +425,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Cuba',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['CU', 'CUB'],
+    initials: ['CU', 'CUB'],
     countryCode: '+53',
   },
   Curacao: {
@@ -433,7 +433,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Antilhas Holandesas',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['CW', 'CUW'],
+    initials: ['CW', 'CUW'],
     countryCode: '+599',
   },
   Cyprus: {
@@ -441,7 +441,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Chipre',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['CY', 'CYP'],
+    initials: ['CY', 'CYP'],
     countryCode: '+357',
   },
   'Czech Republic': {
@@ -449,7 +449,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'República Tcheca',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['CZ', 'CZE'],
+    initials: ['CZ', 'CZE'],
     countryCode: '+420',
   },
   'Democratic Republic of the Congo': {
@@ -457,7 +457,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Congo-Kinshasa',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['CD', 'COD'],
+    initials: ['CD', 'COD'],
     countryCode: '+243',
   },
   Denmark: {
@@ -465,7 +465,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Dinamarca',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['DK', 'DNK'],
+    initials: ['DK', 'DNK'],
     countryCode: '+45',
   },
   Djibouti: {
@@ -473,7 +473,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Djibuti',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['DJ', 'DJI'],
+    initials: ['DJ', 'DJI'],
     countryCode: '+253',
   },
   Dominica: {
@@ -481,7 +481,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Dominica',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['DM', 'DMA'],
+    initials: ['DM', 'DMA'],
     countryCode: '+1-767',
   },
   'Dominican Republic': {
@@ -489,7 +489,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'República Dominicana',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['DO', 'DOM'],
+    initials: ['DO', 'DOM'],
     countryCode: '+1-809 +1-829 +1-849',
   },
   'East Timor': {
@@ -497,7 +497,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Timor-Leste',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['TL', 'TLS'],
+    initials: ['TL', 'TLS'],
     countryCode: '+670',
   },
   Ecuador: {
@@ -505,7 +505,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Equador',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['EC', 'ECU'],
+    initials: ['EC', 'ECU'],
     countryCode: '+593',
   },
   Egypt: {
@@ -513,7 +513,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Egito',
     continentUS: 'Africa, Asia',
     continentBR: 'África, Ásia',
-    isoCodes: ['EG', 'EGY'],
+    initials: ['EG', 'EGY'],
     countryCode: '+20',
   },
   'El Salvador': {
@@ -521,7 +521,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'El Salvador',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['SV', 'SLV'],
+    initials: ['SV', 'SLV'],
     countryCode: '+503',
   },
   'Equatorial Guinea': {
@@ -529,7 +529,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Guiné Equatorial',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['GQ', 'GNQ'],
+    initials: ['GQ', 'GNQ'],
     countryCode: '+240',
   },
   Eritrea: {
@@ -537,7 +537,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Eritreia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['ER', 'ERI'],
+    initials: ['ER', 'ERI'],
     countryCode: '+291',
   },
   Estonia: {
@@ -545,7 +545,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Estónia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['EE', 'EST'],
+    initials: ['EE', 'EST'],
     countryCode: '+372',
   },
   Ethiopia: {
@@ -553,7 +553,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Etiópia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['ET', 'ETH'],
+    initials: ['ET', 'ETH'],
     countryCode: '+251',
   },
   'Falkland Islands': {
@@ -561,7 +561,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ilhas Malvinas',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['FK', 'FLK'],
+    initials: ['FK', 'FLK'],
     countryCode: '+500',
   },
   'Faroe Islands': {
@@ -569,7 +569,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ilhas Féroe',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['FO', 'FRO'],
+    initials: ['FO', 'FRO'],
     countryCode: '+298',
   },
   Fiji: {
@@ -577,7 +577,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Fiji',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['FJ', 'FJI'],
+    initials: ['FJ', 'FJI'],
     countryCode: '+679',
   },
   Finland: {
@@ -585,7 +585,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Finlândia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['FI', 'FIN'],
+    initials: ['FI', 'FIN'],
     countryCode: '+358',
   },
   France: {
@@ -593,7 +593,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'França',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['FR', 'FRA'],
+    initials: ['FR', 'FRA'],
     countryCode: '+33',
   },
   'French Polynesia': {
@@ -601,7 +601,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Polinésia Francesa',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['PF', 'PYF'],
+    initials: ['PF', 'PYF'],
     countryCode: '+689',
   },
   Gabon: {
@@ -609,7 +609,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Gabão',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['GA', 'GAB'],
+    initials: ['GA', 'GAB'],
     countryCode: '+241',
   },
   Gambia: {
@@ -617,7 +617,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Gâmbia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['GM', 'GMB'],
+    initials: ['GM', 'GMB'],
     countryCode: '+220',
   },
   Georgia: {
@@ -625,7 +625,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Geórgia',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['GE', 'GEO'],
+    initials: ['GE', 'GEO'],
     countryCode: '+995',
   },
   Germany: {
@@ -633,7 +633,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Alemanha',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['DE', 'DEU'],
+    initials: ['DE', 'DEU'],
     countryCode: '+49',
   },
   Ghana: {
@@ -641,7 +641,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Gana',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['GH', 'GHA'],
+    initials: ['GH', 'GHA'],
     countryCode: '+233',
   },
   Gibraltar: {
@@ -649,7 +649,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Gibraltar',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['GI', 'GIB'],
+    initials: ['GI', 'GIB'],
     countryCode: '+350',
   },
   Greece: {
@@ -657,7 +657,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Grécia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['GR', 'GRC'],
+    initials: ['GR', 'GRC'],
     countryCode: '+30',
   },
   Greenland: {
@@ -665,7 +665,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Groenlândia',
     continentUS: 'North America',
     continentBR: 'América do Norte',
-    isoCodes: ['GL', 'GRL'],
+    initials: ['GL', 'GRL'],
     countryCode: '+299',
   },
   Grenada: {
@@ -673,7 +673,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Granada',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['GD', 'GRD'],
+    initials: ['GD', 'GRD'],
     countryCode: '+1-473',
   },
   Guam: {
@@ -681,7 +681,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Guam',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['GU', 'GUM'],
+    initials: ['GU', 'GUM'],
     countryCode: '+1-671',
   },
   Guatemala: {
@@ -689,7 +689,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Guatemala',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['GT', 'GTM'],
+    initials: ['GT', 'GTM'],
     countryCode: '+502',
   },
   Guernsey: {
@@ -697,7 +697,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Guernsey',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['GG', 'GGY'],
+    initials: ['GG', 'GGY'],
     countryCode: '+44-1481',
   },
   Guinea: {
@@ -705,7 +705,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Guiné',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['GN', 'GIN'],
+    initials: ['GN', 'GIN'],
     countryCode: '+224',
   },
   'Guinea-Bissau': {
@@ -713,7 +713,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Guiné-Bissau',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['GW', 'GNB'],
+    initials: ['GW', 'GNB'],
     countryCode: '+245',
   },
   Guyana: {
@@ -721,7 +721,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Guiana',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['GY', 'GUY'],
+    initials: ['GY', 'GUY'],
     countryCode: '+592',
   },
   Haiti: {
@@ -729,7 +729,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Haiti',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['HT', 'HTI'],
+    initials: ['HT', 'HTI'],
     countryCode: '+509',
   },
   Honduras: {
@@ -737,7 +737,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Honduras',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['HN', 'HND'],
+    initials: ['HN', 'HND'],
     countryCode: '+504',
   },
   'Hong Kong': {
@@ -745,7 +745,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Hong Kong',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['HK', 'HKG'],
+    initials: ['HK', 'HKG'],
     countryCode: '+852',
   },
   Hungary: {
@@ -753,7 +753,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Hungria',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['HU', 'HUN'],
+    initials: ['HU', 'HUN'],
     countryCode: '+36',
   },
   Iceland: {
@@ -761,7 +761,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Islândia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['IS', 'ISL'],
+    initials: ['IS', 'ISL'],
     countryCode: '+354',
   },
   India: {
@@ -769,7 +769,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Índia',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['IN', 'IND'],
+    initials: ['IN', 'IND'],
     countryCode: '+91',
   },
   Indonesia: {
@@ -777,7 +777,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Indonésia',
     continentUS: 'Asia, Oceania',
     continentBR: 'Ásia, Oceania',
-    isoCodes: ['ID', 'IDN'],
+    initials: ['ID', 'IDN'],
     countryCode: '+62',
   },
   Iran: {
@@ -785,7 +785,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Irã',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['IR', 'IRN'],
+    initials: ['IR', 'IRN'],
     countryCode: '+98',
   },
   Iraq: {
@@ -793,7 +793,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Iraque',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['IQ', 'IRQ'],
+    initials: ['IQ', 'IRQ'],
     countryCode: '+964',
   },
   Ireland: {
@@ -801,7 +801,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Irlanda',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['IE', 'IRL'],
+    initials: ['IE', 'IRL'],
     countryCode: '+353',
   },
   'Isle of Man': {
@@ -809,7 +809,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ilha de Man',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['IM', 'IMN'],
+    initials: ['IM', 'IMN'],
     countryCode: '+44-1624',
   },
   Israel: {
@@ -817,7 +817,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: ' Israel',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['IL', 'ISR'],
+    initials: ['IL', 'ISR'],
     countryCode: '+972',
   },
   Italy: {
@@ -825,7 +825,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Itália',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['IT', 'ITA'],
+    initials: ['IT', 'ITA'],
     countryCode: '+39',
   },
   'Ivory Coast': {
@@ -833,7 +833,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Costa do Marfim',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['CI', 'CIV'],
+    initials: ['CI', 'CIV'],
     countryCode: '+225',
   },
   Jamaica: {
@@ -841,7 +841,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Jamaica',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['JM', 'JAM'],
+    initials: ['JM', 'JAM'],
     countryCode: '+1-876',
   },
   Japan: {
@@ -849,7 +849,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Japão',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['JP', 'JPN'],
+    initials: ['JP', 'JPN'],
     countryCode: '+81',
   },
   Jersey: {
@@ -857,7 +857,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Jersey',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['JE', 'JEY'],
+    initials: ['JE', 'JEY'],
     countryCode: '+44-1534',
   },
   Jordan: {
@@ -865,7 +865,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Jordânia',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['JO', 'JOR'],
+    initials: ['JO', 'JOR'],
     countryCode: '+962',
   },
   Kazakhstan: {
@@ -873,7 +873,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Cazaquistão',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['KZ', 'KAZ'],
+    initials: ['KZ', 'KAZ'],
     countryCode: '+7',
   },
   Kenya: {
@@ -881,7 +881,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Quênia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['KE', 'KEN'],
+    initials: ['KE', 'KEN'],
     countryCode: '+254',
   },
   Kiribati: {
@@ -889,7 +889,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Kiribati',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['KI', 'KIR'],
+    initials: ['KI', 'KIR'],
     countryCode: '+686',
   },
   Kosovo: {
@@ -897,7 +897,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Kosovo',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['XK', 'XKX'],
+    initials: ['XK', 'XKX'],
     countryCode: '+383',
   },
   Kuwait: {
@@ -905,7 +905,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Kuwait',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['KW', 'KWT'],
+    initials: ['KW', 'KWT'],
     countryCode: '+965',
   },
   Kyrgyzstan: {
@@ -913,7 +913,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Quirguistão',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['KG', 'KGZ'],
+    initials: ['KG', 'KGZ'],
     countryCode: '+996',
   },
   Laos: {
@@ -921,7 +921,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Laos',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['LA', 'LAO'],
+    initials: ['LA', 'LAO'],
     countryCode: '+856',
   },
   Latvia: {
@@ -929,7 +929,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Letônia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['LV', 'LVA'],
+    initials: ['LV', 'LVA'],
     countryCode: '+371',
   },
   Lebanon: {
@@ -937,7 +937,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Líbano',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['LB', 'LBN'],
+    initials: ['LB', 'LBN'],
     countryCode: '+961',
   },
   Lesotho: {
@@ -945,7 +945,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Lesoto',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['LS', 'LSO'],
+    initials: ['LS', 'LSO'],
     countryCode: '+266',
   },
   Liberia: {
@@ -953,7 +953,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Libéria',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['LR', 'LBR'],
+    initials: ['LR', 'LBR'],
     countryCode: '+231',
   },
   Libya: {
@@ -961,7 +961,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Líbia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['LY', 'LBY'],
+    initials: ['LY', 'LBY'],
     countryCode: '+218',
   },
   Liechtenstein: {
@@ -969,7 +969,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Liechtenstein',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['LI', 'LIE'],
+    initials: ['LI', 'LIE'],
     countryCode: '+423',
   },
   Lithuania: {
@@ -977,7 +977,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Lituânia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['LT', 'LTU'],
+    initials: ['LT', 'LTU'],
     countryCode: '+370',
   },
   Luxembourg: {
@@ -985,7 +985,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Luxemburgo',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['LU', 'LUX'],
+    initials: ['LU', 'LUX'],
     countryCode: '+352',
   },
   Macau: {
@@ -993,7 +993,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Macau',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['MO', 'MAC'],
+    initials: ['MO', 'MAC'],
     countryCode: '+853',
   },
   Macedonia: {
@@ -1001,7 +1001,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'República da Macedônia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['MK', 'MKD'],
+    initials: ['MK', 'MKD'],
     countryCode: '+389',
   },
   Madagascar: {
@@ -1009,7 +1009,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Madagascar',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['MG', 'MDG'],
+    initials: ['MG', 'MDG'],
     countryCode: '+261',
   },
   Malawi: {
@@ -1017,7 +1017,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Malawi',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['MW', 'MWI'],
+    initials: ['MW', 'MWI'],
     countryCode: '+265',
   },
   Malaysia: {
@@ -1025,7 +1025,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Malásia',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['MY', 'MYS'],
+    initials: ['MY', 'MYS'],
     countryCode: '+60',
   },
   Maldives: {
@@ -1033,7 +1033,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Maldivas',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['MV', 'MDV'],
+    initials: ['MV', 'MDV'],
     countryCode: '+960',
   },
   Mali: {
@@ -1041,7 +1041,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Mali',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['ML', 'MLI'],
+    initials: ['ML', 'MLI'],
     countryCode: '+223',
   },
   Malta: {
@@ -1049,7 +1049,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Malta',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['MT', 'MLT'],
+    initials: ['MT', 'MLT'],
     countryCode: '+356',
   },
   'Marshall Islands': {
@@ -1057,7 +1057,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ilhas Marshall',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['MH', 'MHL'],
+    initials: ['MH', 'MHL'],
     countryCode: '+692',
   },
   Mauritania: {
@@ -1065,7 +1065,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Mauritânia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['MR', 'MRT'],
+    initials: ['MR', 'MRT'],
     countryCode: '+222',
   },
   Mauritius: {
@@ -1073,7 +1073,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Maurícia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['MU', 'MUS'],
+    initials: ['MU', 'MUS'],
     countryCode: '+230',
   },
   Mayotte: {
@@ -1081,7 +1081,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Reunião',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['YT', 'MYT'],
+    initials: ['YT', 'MYT'],
     countryCode: '+262',
   },
   Mexico: {
@@ -1089,7 +1089,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'México',
     continentUS: 'North America',
     continentBR: 'América do Norte',
-    isoCodes: ['MX', 'MEX'],
+    initials: ['MX', 'MEX'],
     countryCode: '+52',
   },
   Micronesia: {
@@ -1097,7 +1097,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Estados Federados da Micronésia',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['FM', 'FSM'],
+    initials: ['FM', 'FSM'],
     countryCode: '+691',
   },
   Moldova: {
@@ -1105,7 +1105,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Moldávia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['MD', 'MDA'],
+    initials: ['MD', 'MDA'],
     countryCode: '+373',
   },
   Monaco: {
@@ -1113,7 +1113,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Mônaco',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['MC', 'MCO'],
+    initials: ['MC', 'MCO'],
     countryCode: '+377',
   },
   Mongolia: {
@@ -1121,7 +1121,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Mongólia',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['MN', 'MNG'],
+    initials: ['MN', 'MNG'],
     countryCode: '+976',
   },
   Montenegro: {
@@ -1129,7 +1129,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Montenegro',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['ME', 'MNE'],
+    initials: ['ME', 'MNE'],
     countryCode: '+382',
   },
   Montserrat: {
@@ -1137,7 +1137,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Montserrat',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['MS', 'MSR'],
+    initials: ['MS', 'MSR'],
     countryCode: '+1-664',
   },
   Morocco: {
@@ -1145,7 +1145,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Marrocos',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['MA', 'MAR'],
+    initials: ['MA', 'MAR'],
     countryCode: '+212',
   },
   Mozambique: {
@@ -1153,7 +1153,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Moçambique',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['MZ', 'MOZ'],
+    initials: ['MZ', 'MOZ'],
     countryCode: '+258',
   },
   Myanmar: {
@@ -1161,7 +1161,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Myanmar',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['MM', 'MMR'],
+    initials: ['MM', 'MMR'],
     countryCode: '+95',
   },
   Namibia: {
@@ -1169,7 +1169,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Namíbia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['NA', 'NAM'],
+    initials: ['NA', 'NAM'],
     countryCode: '+264',
   },
   Nauru: {
@@ -1177,7 +1177,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Nauru',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['NR', 'NRU'],
+    initials: ['NR', 'NRU'],
     countryCode: '+674',
   },
   Nepal: {
@@ -1185,7 +1185,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Nepal',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['NP', 'NPL'],
+    initials: ['NP', 'NPL'],
     countryCode: '+977',
   },
   Netherlands: {
@@ -1193,7 +1193,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Países Baixos',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['NL', 'NLD'],
+    initials: ['NL', 'NLD'],
     countryCode: '+31',
   },
   'Netherlands Antilles': {
@@ -1201,7 +1201,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Antilhas Holandesas',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['AN', 'ANT'],
+    initials: ['AN', 'ANT'],
     countryCode: '+599',
   },
   'New Caledonia': {
@@ -1209,7 +1209,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Nova Caledônia',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['NC', 'NCL'],
+    initials: ['NC', 'NCL'],
     countryCode: '+687',
   },
   'New Zealand': {
@@ -1217,7 +1217,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Nova Zelândia',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['NZ', 'NZL'],
+    initials: ['NZ', 'NZL'],
     countryCode: '+64',
   },
   Nicaragua: {
@@ -1225,7 +1225,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Nicarágua',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['NI', 'NIC'],
+    initials: ['NI', 'NIC'],
     countryCode: '+505',
   },
   Niger: {
@@ -1233,7 +1233,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Níger',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['NE', 'NER'],
+    initials: ['NE', 'NER'],
     countryCode: '+227',
   },
   Nigeria: {
@@ -1241,7 +1241,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Nigéria',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['NG', 'NGA'],
+    initials: ['NG', 'NGA'],
     countryCode: '+234',
   },
   Niue: {
@@ -1249,7 +1249,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Niue',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['NU', 'NIU'],
+    initials: ['NU', 'NIU'],
     countryCode: '+683',
   },
   'North Korea': {
@@ -1257,7 +1257,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Coreia do Norte',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['KP', 'PRK'],
+    initials: ['KP', 'PRK'],
     countryCode: '+850',
   },
   'Northern Mariana Islands': {
@@ -1265,7 +1265,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ilhas Marianas do Norte',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['MP', 'MNP'],
+    initials: ['MP', 'MNP'],
     countryCode: '+1-670',
   },
   Norway: {
@@ -1273,7 +1273,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Noruega',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['NO', 'NOR'],
+    initials: ['NO', 'NOR'],
     countryCode: '+47',
   },
   Oman: {
@@ -1281,7 +1281,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Omã',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['OM', 'OMN'],
+    initials: ['OM', 'OMN'],
     countryCode: '+968',
   },
   Pakistan: {
@@ -1289,7 +1289,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Paquistão',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['PK', 'PAK'],
+    initials: ['PK', 'PAK'],
     countryCode: '+92',
   },
   Palau: {
@@ -1297,7 +1297,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Palau',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['PW', 'PLW'],
+    initials: ['PW', 'PLW'],
     countryCode: '+680',
   },
   Palestine: {
@@ -1305,7 +1305,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Palestina',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['PS', 'PSE'],
+    initials: ['PS', 'PSE'],
     countryCode: '+970',
   },
   Panama: {
@@ -1313,7 +1313,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Panamá',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['PA', 'PAN'],
+    initials: ['PA', 'PAN'],
     countryCode: '+507',
   },
   'Papua New Guinea': {
@@ -1321,7 +1321,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Papua-Nova Guiné',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['PG', 'PNG'],
+    initials: ['PG', 'PNG'],
     countryCode: '+675',
   },
   Paraguay: {
@@ -1329,7 +1329,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Paraguai',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['PY', 'PRY'],
+    initials: ['PY', 'PRY'],
     countryCode: '+595',
   },
   Peru: {
@@ -1337,7 +1337,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Peru',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['PE', 'PER'],
+    initials: ['PE', 'PER'],
     countryCode: '+51',
   },
   Philippines: {
@@ -1345,7 +1345,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Filipinas',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['PH', 'PHL'],
+    initials: ['PH', 'PHL'],
     countryCode: '+63',
   },
   Pitcairn: {
@@ -1353,7 +1353,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Nova Zelândia',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['PN', 'PCN'],
+    initials: ['PN', 'PCN'],
     countryCode: '+64',
   },
   Poland: {
@@ -1361,7 +1361,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Polônia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['PL', 'POL'],
+    initials: ['PL', 'POL'],
     countryCode: '+48',
   },
   Portugal: {
@@ -1369,7 +1369,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Portugal',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['PT', 'PRT'],
+    initials: ['PT', 'PRT'],
     countryCode: '+351',
   },
   'Puerto Rico': {
@@ -1377,7 +1377,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Porto Rico',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['PR', 'PRI'],
+    initials: ['PR', 'PRI'],
     countryCode: '+1-787 +1-939',
   },
   Qatar: {
@@ -1385,7 +1385,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Qatar',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['QA', 'QAT'],
+    initials: ['QA', 'QAT'],
     countryCode: '+974',
   },
   'Republic of the Congo': {
@@ -1393,7 +1393,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Congo-Brazzaville',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['CG', 'COG'],
+    initials: ['CG', 'COG'],
     countryCode: '+242',
   },
   Reunion: {
@@ -1401,7 +1401,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Reunião',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['RE', 'REU'],
+    initials: ['RE', 'REU'],
     countryCode: '+262',
   },
   Romania: {
@@ -1409,7 +1409,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Romênia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['RO', 'ROU'],
+    initials: ['RO', 'ROU'],
     countryCode: '+40',
   },
   Russia: {
@@ -1417,7 +1417,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Cazaquistão',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['RU', 'RUS'],
+    initials: ['RU', 'RUS'],
     countryCode: '+7',
   },
   Rwanda: {
@@ -1425,7 +1425,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ruanda',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['RW', 'RWA'],
+    initials: ['RW', 'RWA'],
     countryCode: '+250',
   },
   'Saint Barthelemy': {
@@ -1433,7 +1433,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Guadalupe',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['BL', 'BLM'],
+    initials: ['BL', 'BLM'],
     countryCode: '+590',
   },
   'Saint Helena': {
@@ -1441,7 +1441,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Santa Helena (território)',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['SH', 'SHN'],
+    initials: ['SH', 'SHN'],
     countryCode: '+290',
   },
   'Saint Kitts and Nevis': {
@@ -1449,7 +1449,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'São Cristóvão e Nevis',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['KN', 'KNA'],
+    initials: ['KN', 'KNA'],
     countryCode: '+1-869',
   },
   'Saint Lucia': {
@@ -1457,7 +1457,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Santa Lúcia',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['LC', 'LCA'],
+    initials: ['LC', 'LCA'],
     countryCode: '+1-758',
   },
   'Saint Martin': {
@@ -1465,7 +1465,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Guadalupe',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['MF', 'MAF'],
+    initials: ['MF', 'MAF'],
     countryCode: '+590',
   },
   'Saint Pierre and Miquelon': {
@@ -1473,7 +1473,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Saint-Pierre e Miquelon',
     continentUS: 'North America',
     continentBR: 'América do Norte',
-    isoCodes: ['PM', 'SPM'],
+    initials: ['PM', 'SPM'],
     countryCode: '+508',
   },
   'Saint Vincent and the Grenadines': {
@@ -1481,7 +1481,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'São Vicente e Granadinas',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['VC', 'VCT'],
+    initials: ['VC', 'VCT'],
     countryCode: '+1-784',
   },
   Samoa: {
@@ -1489,7 +1489,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Samoa',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['WS', 'WSM'],
+    initials: ['WS', 'WSM'],
     countryCode: '+685',
   },
   'San Marino': {
@@ -1497,7 +1497,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'São Marinho',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['SM', 'SMR'],
+    initials: ['SM', 'SMR'],
     countryCode: '+378',
   },
   'Sao Tome and Principe': {
@@ -1505,7 +1505,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'São Tomé e Príncipe',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['ST', 'STP'],
+    initials: ['ST', 'STP'],
     countryCode: '+239',
   },
   'Saudi Arabia': {
@@ -1513,7 +1513,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Arábia Saudita',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['SA', 'SAU'],
+    initials: ['SA', 'SAU'],
     countryCode: '+966',
   },
   Senegal: {
@@ -1521,7 +1521,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Senegal',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['SN', 'SEN'],
+    initials: ['SN', 'SEN'],
     countryCode: '+221',
   },
   Serbia: {
@@ -1529,7 +1529,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Sérvia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['RS', 'SRB'],
+    initials: ['RS', 'SRB'],
     countryCode: '+381',
   },
   Seychelles: {
@@ -1537,7 +1537,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Seicheles',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['SC', 'SYC'],
+    initials: ['SC', 'SYC'],
     countryCode: '+248',
   },
   'Sierra Leone': {
@@ -1545,7 +1545,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Serra Leoa',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['SL', 'SLE'],
+    initials: ['SL', 'SLE'],
     countryCode: '+232',
   },
   Singapore: {
@@ -1553,7 +1553,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Singapura',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['SG', 'SGP'],
+    initials: ['SG', 'SGP'],
     countryCode: '+65',
   },
   'Sint Maarten': {
@@ -1561,7 +1561,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'São Martinho',
     continentUS: 'North America',
     continentBR: 'América do Norte',
-    isoCodes: ['SX', 'SXM'],
+    initials: ['SX', 'SXM'],
     countryCode: '+1-721',
   },
   Slovakia: {
@@ -1569,7 +1569,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Eslováquia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['SK', 'SVK'],
+    initials: ['SK', 'SVK'],
     countryCode: '+421',
   },
   Slovenia: {
@@ -1577,7 +1577,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Eslovénia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['SI', 'SVN'],
+    initials: ['SI', 'SVN'],
     countryCode: '+386',
   },
   'Solomon Islands': {
@@ -1585,7 +1585,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ilhas Salomão',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['SB', 'SLB'],
+    initials: ['SB', 'SLB'],
     countryCode: '+677',
   },
   Somalia: {
@@ -1593,7 +1593,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Somália',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['SO', 'SOM'],
+    initials: ['SO', 'SOM'],
     countryCode: '+252',
   },
   'South Africa': {
@@ -1601,7 +1601,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'África do Sul',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['ZA', 'ZAF'],
+    initials: ['ZA', 'ZAF'],
     countryCode: '+27',
   },
   'South Korea': {
@@ -1609,7 +1609,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Coreia do Sul',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['KR', 'KOR'],
+    initials: ['KR', 'KOR'],
     countryCode: '+82',
   },
   'South Sudan': {
@@ -1617,7 +1617,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Sudão do Sul',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['SS', 'SSD'],
+    initials: ['SS', 'SSD'],
     countryCode: '+211',
   },
   Spain: {
@@ -1625,7 +1625,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Espanha',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['ES', 'ESP'],
+    initials: ['ES', 'ESP'],
     countryCode: '+34',
   },
   'Sri Lanka': {
@@ -1633,7 +1633,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Sri Lanka',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['LK', 'LKA'],
+    initials: ['LK', 'LKA'],
     countryCode: '+94',
   },
   Sudan: {
@@ -1641,7 +1641,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Sudão',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['SD', 'SDN'],
+    initials: ['SD', 'SDN'],
     countryCode: '+249',
   },
   Suriname: {
@@ -1649,7 +1649,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Suriname',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['SR', 'SUR'],
+    initials: ['SR', 'SUR'],
     countryCode: '+597',
   },
   'Svalbard and Jan Mayen': {
@@ -1657,7 +1657,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Noruega',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['SJ', 'SJM'],
+    initials: ['SJ', 'SJM'],
     countryCode: '+47',
   },
   Swaziland: {
@@ -1665,7 +1665,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Suazilândia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['SZ', 'SWZ'],
+    initials: ['SZ', 'SWZ'],
     countryCode: '+268',
   },
   Sweden: {
@@ -1673,7 +1673,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Suécia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['SE', 'SWE'],
+    initials: ['SE', 'SWE'],
     countryCode: '+46',
   },
   Switzerland: {
@@ -1681,7 +1681,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Suíça',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['CH', 'CHE'],
+    initials: ['CH', 'CHE'],
     countryCode: '+41',
   },
   Syria: {
@@ -1689,7 +1689,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Síria',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['SY', 'SYR'],
+    initials: ['SY', 'SYR'],
     countryCode: '+963',
   },
   Taiwan: {
@@ -1697,7 +1697,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'República da China',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['TW', 'TWN'],
+    initials: ['TW', 'TWN'],
     countryCode: '+886',
   },
   Tajikistan: {
@@ -1705,7 +1705,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Tadjiquistão',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['TJ', 'TJK'],
+    initials: ['TJ', 'TJK'],
     countryCode: '+992',
   },
   Tanzania: {
@@ -1713,7 +1713,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Tanzânia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['TZ', 'TZA'],
+    initials: ['TZ', 'TZA'],
     countryCode: '+255',
   },
   Thailand: {
@@ -1721,7 +1721,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Tailândia',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['TH', 'THA'],
+    initials: ['TH', 'THA'],
     countryCode: '+66',
   },
   Togo: {
@@ -1729,7 +1729,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Togo',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['TG', 'TGO'],
+    initials: ['TG', 'TGO'],
     countryCode: '+228',
   },
   Tokelau: {
@@ -1737,7 +1737,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Tokelau',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['TK', 'TKL'],
+    initials: ['TK', 'TKL'],
     countryCode: '+690',
   },
   Tonga: {
@@ -1745,7 +1745,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Tonga',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['TO', 'TON'],
+    initials: ['TO', 'TON'],
     countryCode: '+676',
   },
   'Trinidad and Tobago': {
@@ -1753,7 +1753,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Trinidad e Tobago',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['TT', 'TTO'],
+    initials: ['TT', 'TTO'],
     countryCode: '+1-868',
   },
   Tunisia: {
@@ -1761,7 +1761,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Tunísia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['TN', 'TUN'],
+    initials: ['TN', 'TUN'],
     countryCode: '+216',
   },
   Turkey: {
@@ -1769,7 +1769,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Turquia',
     continentUS: 'Asia, Europe',
     continentBR: 'Ásia, Europa',
-    isoCodes: ['TR', 'TUR'],
+    initials: ['TR', 'TUR'],
     countryCode: '+90',
   },
   Turkmenistan: {
@@ -1777,7 +1777,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Turquemenistão',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['TM', 'TKM'],
+    initials: ['TM', 'TKM'],
     countryCode: '+993',
   },
   'Turks and Caicos Islands': {
@@ -1785,7 +1785,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Turcas e Caicos',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['TC', 'TCA'],
+    initials: ['TC', 'TCA'],
     countryCode: '+1-649',
   },
   Tuvalu: {
@@ -1793,7 +1793,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Tuvalu',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['TV', 'TUV'],
+    initials: ['TV', 'TUV'],
     countryCode: '+688',
   },
   'U.S. Virgin Islands': {
@@ -1801,7 +1801,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ilhas Virgens Americanas',
     continentUS: 'Central America',
     continentBR: 'América Central',
-    isoCodes: ['VI', 'VIR'],
+    initials: ['VI', 'VIR'],
     countryCode: '+1-340',
   },
   Uganda: {
@@ -1809,7 +1809,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Uganda',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['UG', 'UGA'],
+    initials: ['UG', 'UGA'],
     countryCode: '+256',
   },
   Ukraine: {
@@ -1817,7 +1817,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Ucrânia',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['UA', 'UKR'],
+    initials: ['UA', 'UKR'],
     countryCode: '+380',
   },
   'United Arab Emirates': {
@@ -1825,7 +1825,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Emirados Árabes Unidos',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['AE', 'ARE'],
+    initials: ['AE', 'ARE'],
     countryCode: '+971',
   },
   'United Kingdom': {
@@ -1833,7 +1833,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Reino Unido',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['GB', 'GBR'],
+    initials: ['GB', 'GBR'],
     countryCode: '+44',
   },
   'United States': {
@@ -1841,7 +1841,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Estados Unidos',
     continentUS: 'North America',
     continentBR: 'América do Norte',
-    isoCodes: ['US', 'USA'],
+    initials: ['US', 'USA'],
     countryCode: '+1',
   },
   Uruguay: {
@@ -1849,7 +1849,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Uruguai',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['UY', 'URY'],
+    initials: ['UY', 'URY'],
     countryCode: '+598',
   },
   Uzbekistan: {
@@ -1857,7 +1857,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Uzbequistão',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['UZ', 'UZB'],
+    initials: ['UZ', 'UZB'],
     countryCode: '+998',
   },
   Vanuatu: {
@@ -1865,7 +1865,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Vanuatu',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['VU', 'VUT'],
+    initials: ['VU', 'VUT'],
     countryCode: '+678',
   },
   Vatican: {
@@ -1873,7 +1873,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Vaticano',
     continentUS: 'Europe',
     continentBR: 'Europa',
-    isoCodes: ['VA', 'VAT'],
+    initials: ['VA', 'VAT'],
     countryCode: '+379',
   },
   Venezuela: {
@@ -1881,7 +1881,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Venezuela',
     continentUS: 'South America',
     continentBR: 'América do Sul',
-    isoCodes: ['VE', 'VEN'],
+    initials: ['VE', 'VEN'],
     countryCode: '+58',
   },
   Vietnam: {
@@ -1889,7 +1889,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Vietnã',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['VN', 'VNM'],
+    initials: ['VN', 'VNM'],
     countryCode: '+84',
   },
   'Wallis and Futuna': {
@@ -1897,7 +1897,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Wallis e Futuna',
     continentUS: 'Oceania',
     continentBR: 'Oceania',
-    isoCodes: ['WF', 'WLF'],
+    initials: ['WF', 'WLF'],
     countryCode: '+681',
   },
   'Western Sahara': {
@@ -1905,7 +1905,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Marrocos',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['EH', 'ESH'],
+    initials: ['EH', 'ESH'],
     countryCode: '+212',
   },
   Yemen: {
@@ -1913,7 +1913,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Iêmen',
     continentUS: 'Asia',
     continentBR: 'Ásia',
-    isoCodes: ['YE', 'YEM'],
+    initials: ['YE', 'YEM'],
     countryCode: '+967',
   },
   Zambia: {
@@ -1921,7 +1921,7 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Zâmbia',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['ZM', 'ZMB'],
+    initials: ['ZM', 'ZMB'],
     countryCode: '+260',
   },
   Zimbabwe: {
@@ -1929,9 +1929,9 @@ const COUNTRIES_LIST: CountriesList = {
     nameBR: 'Zimbábue',
     continentUS: 'Africa',
     continentBR: 'África',
-    isoCodes: ['ZW', 'ZWE'],
+    initials: ['ZW', 'ZWE'],
     countryCode: '+263',
   },
 };
 
-export default COUNTRIES_LIST;
+export default COUNTRIES;
