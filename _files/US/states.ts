@@ -4,11 +4,11 @@ type State = {
   initials: string;
 };
 
-type StatesUS = {
+type States = {
   [key: string]: State;
 };
 
-const STATES_US: StatesUS = {
+const STATES: States = {
   Alabama: {
     name: 'Alabama',
     initials: 'AL',
@@ -239,8 +239,8 @@ const STATES_US: StatesUS = {
     initials: 'VA',
     region: 'South',
   },
-  Washington: {
-    name: 'Washington',
+  'Washington, D.C.': {
+    name: 'Washington, D.C.',
     initials: 'WA',
     region: 'West',
   },
@@ -261,4 +261,4 @@ const STATES_US: StatesUS = {
   },
 };
 
-export default STATES_US;
+export default STATES;

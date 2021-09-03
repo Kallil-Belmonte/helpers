@@ -4,11 +4,11 @@ type State = {
   initials: string;
 };
 
-type StatesBR = {
+type States = {
   [key: string]: State;
 };
 
-const STATES_BR: StatesBR = {
+const STATES: States = {
   Acre: {
     name: 'Acre',
     region: 'Norte',
@@ -146,4 +146,4 @@ const STATES_BR: StatesBR = {
   },
 };
 
-export default STATES_BR;
+export default STATES;
