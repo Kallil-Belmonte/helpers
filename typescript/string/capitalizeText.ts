@@ -1,5 +1,5 @@
 /**
- * @description Limits the number of words in a text.
+ * @description Capitalize all words of a text, except the words in the array of the second parameter.
  * @see { @link https://codepen.io/kallil-belmonte/full/VRRxEQ }
  */
 
