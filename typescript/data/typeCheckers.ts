@@ -1,3 +1,8 @@
+/**
+ * @description Checks the type of the data.
+ * @see { @link https://codepen.io/kallil-belmonte/full/dyRpNyr }
+ */
+
 const { keys } = Object;
 const { stringify, parse } = JSON;
 
