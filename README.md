@@ -14,6 +14,13 @@ General helpers free to use.
   * cities
   * states
 * countries
+
+ ## SCSS
+ 
+*  _functions
+* _helpers
+*  _mixins
+* _placeholders
  
  ## TypeScript
 
