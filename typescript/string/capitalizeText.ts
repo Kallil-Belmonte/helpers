@@ -3,7 +3,7 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/VRRxEQ }
  */
 
-const capitalizeText = (text: string | null, exceptionWords?: string[]) =>
+const capitalizeText = (text: string | null, exceptionWords: string[] = []) =>
   text
     ? text
         .split(' ')
