@@ -17,4 +17,6 @@ export const isArray = (value: any) => !!value && value.constructor === Array;
 export const isObject = (value: any) =>
   !!value && (value.constructor === Object || parse(stringify(value)).constructor === Object);
 
+export const isFunction = (value: any) => typeof value === 'function';
+
 export const isEvent = (value: any) => !!value && keys(value).includes('eventPhase');
