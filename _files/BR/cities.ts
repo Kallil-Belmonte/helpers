@@ -1,10 +1,10 @@
-export type City = {
+type City = {
   name: string;
   state: string;
   stateInitials: string;
 };
 
-type Cities = {
+export type Cities = {
   [key: string]: City;
 };
 

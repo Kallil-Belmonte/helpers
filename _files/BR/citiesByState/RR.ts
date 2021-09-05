@@ -1,4 +1,6 @@
-const RR = {
+import { Cities } from '../cities';
+
+const RR: Cities = {
   Amajari: {
     name: 'Amajari',
     state: 'Roraima',

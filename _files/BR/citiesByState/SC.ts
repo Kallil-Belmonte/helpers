@@ -1,4 +1,6 @@
-const SC = {
+import { Cities } from '../cities';
+
+const SC: Cities = {
   'Abdon Batista': {
     name: 'Abdon Batista',
     state: 'Santa Catarina',

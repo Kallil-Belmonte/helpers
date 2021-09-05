@@ -1,4 +1,6 @@
-const TO = {
+import { Cities } from '../cities';
+
+const TO: Cities = {
   Abreulândia: {
     name: 'Abreulândia',
     state: 'Tocantins',

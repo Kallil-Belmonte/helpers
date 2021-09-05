@@ -1,12 +1,4 @@
-type City = {
-  name: string;
-  state: string;
-  stateInitials: string;
-};
-
-type Cities = {
-  [key: string]: City;
-};
+import { Cities } from '../cities';
 
 const AM: Cities = {
   Alvarães: {

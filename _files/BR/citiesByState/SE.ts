@@ -1,4 +1,6 @@
-const SE = {
+import { Cities } from '../cities';
+
+const SE: Cities = {
   'Amparo do São Francisco': {
     name: 'Amparo do São Francisco',
     state: 'Sergipe',

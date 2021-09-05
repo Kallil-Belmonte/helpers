@@ -1,4 +1,6 @@
-const RO = {
+import { Cities } from '../cities';
+
+const RO: Cities = {
   "Alta Floresta d'Oeste": {
     name: "Alta Floresta d'Oeste",
     state: 'Rondônia',

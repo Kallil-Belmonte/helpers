@@ -1,4 +1,6 @@
-const RN = {
+import { Cities } from '../cities';
+
+const RN: Cities = {
   Acari: {
     name: 'Acari',
     state: 'Rio Grande do Norte',

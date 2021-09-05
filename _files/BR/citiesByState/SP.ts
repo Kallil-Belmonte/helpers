@@ -1,4 +1,6 @@
-const SP = {
+import { Cities } from '../cities';
+
+const SP: Cities = {
   Adamantina: {
     name: 'Adamantina',
     state: 'São Paulo',

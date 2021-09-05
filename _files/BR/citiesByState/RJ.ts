@@ -1,4 +1,6 @@
-const RJ = {
+import { Cities } from '../cities';
+
+const RJ: Cities = {
   'Angra dos Reis': {
     name: 'Angra dos Reis',
     state: 'Rio de Janeiro',
