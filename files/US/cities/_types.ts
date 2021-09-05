@@ -1,6 +1,5 @@
 type City = {
   name: string;
-  type: string;
   state: string;
   stateInitials: string;
 };
