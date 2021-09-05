@@ -7,10 +7,12 @@ General helpers free to use.
 ## Files
 
 - [BR](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/BR)
+  - [citiesByState](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/BR/citiesByState)
   - [areaCodes](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/BR/areaCodes.ts)
   - [cities](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/BR/cities.ts)
   - [states](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/BR/states.ts)
 - [US](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/US)
+  - [citiesByState](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/US/citiesByState)
   - [areaCodes](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/US/areaCodes.ts)
   - [cities](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/US/cities.ts)
   - [states](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/US/states.ts)
