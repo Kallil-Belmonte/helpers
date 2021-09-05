@@ -12,20 +12,17 @@ type Cities = {
 
 // Five states Delaware, Maine, Vermont, West Virginia and Wyoming—have no cities with populations of 100,000 or more.
 
+// FUNÇÃO PARA AGRUPAR AS CIDADES POR ESTADO
 // const result = {};
-
-// Object.values(states).forEach((item) => {
-//   const citiesArray = Object.values(cities).filter(city => city.state === item.name);
-
+// Object.values(STATES).forEach((item) => {
+//   const citiesArray = Object.values(CITIES).filter(city => city.state === item.name);
 //   citiesObject = {};
-//   citiesArray.forEach(city => citiesObject[city.name] = cities[city.name]);
-
+//   citiesArray.forEach(city => citiesObject[city.name] = CITIES[city.name]);
 //   result[item.name] = Object.keys(citiesObject).sort().reduce((acc, key) => {
 //     acc[key] = citiesObject[key];
 //     return acc;
 //   }, {});
 // });
-
 // console.log(result)
 
 const CITIES: Cities = {

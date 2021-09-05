@@ -56,7 +56,7 @@ General helpers free to use.
   - [capitalizeText](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/string/capitalizeText.ts)
   - [colorConverter](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/string/colorConverter.ts)
   - [firstLastDayOfYear](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/string/firstLastDayOfYear.ts)
-  - [formatters](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/string/formattersts)
+  - [formatters](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/string/formatters.ts)
   - [getPastFutureDate](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/string/getPastFutureDate.ts)
   - [getPercentage](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/string/getPercentage.ts)
   - [limitWords](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/string/limitWords.ts)
