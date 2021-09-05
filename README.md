@@ -18,14 +18,7 @@ General helpers free to use.
   - [states](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/US/states.ts)
 - [countries](https://github.com/Kallil-Belmonte/helpers/tree/main/_files/countries.ts)
 
-## SCSS
-
-- [ \_functions](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_functions.scss)
-- [\_helpers](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_helpers.scss)
-- [ \_mixins](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_mixins.scss)
-- [\_placeholders](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_placeholders.scss)
-
-## TypeScript
+## Functions
 
 - [array](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/array)
   - [filterObjectsArrayToUniqueItems](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/array/filterObjectsArrayToUniqueItems.ts)
@@ -62,3 +55,10 @@ General helpers free to use.
   - [limitWords](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/string/limitWords.ts)
   - [removePrefixes](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/string/removePrefixes.ts)
   - [validate](https://github.com/Kallil-Belmonte/helpers/tree/main/typescript/string/validate.ts)
+
+## SCSS
+
+- [ \_functions](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_functions.scss)
+- [\_helpers](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_helpers.scss)
+- [ \_mixins](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_mixins.scss)
+- [\_placeholders](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_placeholders.scss)
