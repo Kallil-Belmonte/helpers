@@ -11,6 +11,17 @@ export type Cities = {
 // https://en.wikipedia.org/wiki/List_of_municipalities_in_
 // https://codepen.io/kallil-belmonte/pen/abwmaog
 
+// FUNÇÃO FAZER SORT DO OBJETO
+// const result = {};
+// Object.keys(obj).sort().forEach(key => {
+//   const item = obj[key];
+//   result[item.name] = {};
+//   result[item.name].name = item.name;
+//   result[item.name].state = item.state;
+//   result[item.name].stateInitials = item.stateInitials;
+// });
+// console.log(result);
+
 // FUNÇÃO PARA AGRUPAR AS CIDADES POR ESTADO
 // const result = {};
 // Object.values(STATES).forEach((item) => {

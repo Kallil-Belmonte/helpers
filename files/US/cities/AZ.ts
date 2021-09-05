@@ -411,8 +411,8 @@ const AZ: Cities = {
     state: 'Arizona',
     stateInitials: 'AZ',
   },
-  'Tusayan[a]': {
-    name: 'Tusayan[a]',
+  Tusayan: {
+    name: 'Tusayan',
     state: 'Arizona',
     stateInitials: 'AZ',
   },

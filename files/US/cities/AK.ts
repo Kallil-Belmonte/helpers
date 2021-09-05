@@ -171,8 +171,8 @@ const AK: Cities = {
     state: 'Alaska',
     stateInitials: 'AK',
   },
-  'Edna Bay[b]': {
-    name: 'Edna Bay[b]',
+  'Edna Bay': {
+    name: 'Edna Bay',
     state: 'Alaska',
     stateInitials: 'AK',
   },
@@ -726,8 +726,8 @@ const AK: Cities = {
     state: 'Alaska',
     stateInitials: 'AK',
   },
-  'Whale Pass[f]': {
-    name: 'Whale Pass[f]',
+  'Whale Pass': {
+    name: 'Whale Pass',
     state: 'Alaska',
     stateInitials: 'AK',
   },
