@@ -8,9 +8,9 @@ type Cities = {
   [key: string]: City;
 };
 
-// https://en.wikipedia.org/wiki/List_of_municipalities_in_California
+// Five states Delaware, Maine, Vermont, West Virginia and Wyoming, have no cities with populations of 100,000 or more.
 
-// Five states Delaware, Maine, Vermont, West Virginia and Wyoming—have no cities with populations of 100,000 or more.
+// https://en.wikipedia.org/wiki/List_of_municipalities_in_California
 
 // FUNÇÃO PARA AGRUPAR AS CIDADES POR ESTADO
 // const result = {};
