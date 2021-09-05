@@ -9,15 +9,8 @@ const valueToNumber = (value: string, decimalSymbol = ',') => {
 
   if (value && (decimalSymbol === comma || decimalSymbol === dot)) {
     let result = value.replace(/[a-z$%]/gi, '').trim();
-
-    if (decimalSymbol === comma) {
-      result = result.replace(/\./g, '').replace(/,/g, '.');
-    }
-
-    if (decimalSymbol === dot) {
-      result = result.replace(/,/g, '');
-    }
-
+    if (decimalSymbol === comma) result = result.replace(/\./g, '').replace(/,/g, '.');
+    if (decimalSymbol === dot) result = result.replace(/,/g, '');
     return Number(result);
   }
 
