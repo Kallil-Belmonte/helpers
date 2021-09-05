@@ -3,7 +3,9 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/PXdZKE }
  */
 
-const someObjectHasValue = (objects: Object[], property: string, value: any) =>
+type ObjectType = { [key: string | number]: any };
+
+const someObjectHasValue = (objects: ObjectType[], property: string, value: any) =>
   objects.some(item => JSON.stringify(item[property]) === JSON.stringify(value));
 
 export default someObjectHasValue;

@@ -3,7 +3,7 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/oNwzzQw }
  */
 
-type ObjectType = { [key: string]: any };
+type ObjectType = { [key: string | number]: any };
 
 type Value = any[] | ObjectType;
 

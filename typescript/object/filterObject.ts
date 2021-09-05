@@ -3,7 +3,9 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/xxxpKxv }
  */
 
-const filterObject = (object: Object, propertiesToFilter: string[], removeProperties = true) =>
+type ObjectType = { [key: string | number]: any };
+
+const filterObject = (object: ObjectType, propertiesToFilter: string[], removeProperties = true) =>
   Object.keys(object).reduce((accumulator, currentValue) => {
     if (propertiesToFilter.includes(currentValue) !== removeProperties) {
       accumulator[currentValue] = object[currentValue];

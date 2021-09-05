@@ -1,4 +1,4 @@
-type City = {
+export type City = {
   name: string;
   state: string;
   stateInitials: string;
