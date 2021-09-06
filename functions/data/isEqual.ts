@@ -17,18 +17,18 @@ const isEqual = (firstValue: Value, secondValue: Value, checkOrder?: boolean) =>
 
   if (!checkOrder) {
     if (isArray(firstValue) && isArray(secondValue)) {
-      return stringify(values(firstValue).sort()) === stringify(values(secondValue).sort());
+      const orderedArray = (array: any): any[] => array.map((item: any) => stringify(item)).sort();
+      return stringify(orderedArray(firstValue)) === stringify(orderedArray(secondValue));
     }
 
     if (isObject(firstValue) && isObject(secondValue)) {
-      const orderedObject = (object: ObjectType): ObjectType =>
+      const orderedObject = (object: any): ObjectType =>
         keys(object)
           .sort()
           .reduce((accumulator, currentValue) => {
             accumulator[currentValue] = object[currentValue];
             return accumulator;
           }, {});
-
       return stringify(orderedObject(firstValue)) === stringify(orderedObject(secondValue));
     }
   }
