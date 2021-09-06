@@ -716,11 +716,6 @@ const CT: Cities = {
     state: 'Connecticut',
     stateInitials: 'CT',
   },
-  'Total:': {
-    name: 'Total:',
-    state: 'Connecticut',
-    stateInitials: 'CT',
-  },
   Trumbull: {
     name: 'Trumbull',
     state: 'Connecticut',

@@ -456,16 +456,6 @@ const AZ: Cities = {
     state: 'Arizona',
     stateInitials: 'AZ',
   },
-  'Total Municipalities': {
-    name: 'Total Municipalities',
-    state: 'Arizona',
-    stateInitials: 'AZ',
-  },
-  'State of Arizona': {
-    name: 'State of Arizona',
-    state: 'Arizona',
-    stateInitials: 'AZ',
-  },
 };
 
 export default AZ;

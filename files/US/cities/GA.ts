@@ -2421,11 +2421,6 @@ const GA: Cities = {
     state: 'Georgia',
     stateInitials: 'GA',
   },
-  Total: {
-    name: 'Total',
-    state: 'Georgia',
-    stateInitials: 'GA',
-  },
   Trenton: {
     name: 'Trenton',
     state: 'Georgia',
