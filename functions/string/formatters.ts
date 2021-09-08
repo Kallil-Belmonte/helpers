@@ -9,6 +9,16 @@ export const removeSpecialCharacters = (text: string | null) =>
 export const removeAccent = (text: string | null) =>
   text ? text.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : text;
 
+export const removeHTML = (html: string, keepNewLines?: boolean) => {
+  const spacesRegex = keepNewLines ? /  +/g : /\s\s+/g;
+  return html
+    ? html
+        .replace(/<[^>]*>/gi, '')
+        .replace(spacesRegex, ' ')
+        .trim()
+    : html;
+};
+
 export const formatDate = (date: string | Date, dateFormat: string, outputFormat: string) => {
   if (date) {
     const getArray = (d: string, regex: RegExp) =>
