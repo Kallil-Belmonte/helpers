@@ -3,10 +3,10 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/bZZOoQ }
  */
 
-export const removeSpecialCharacters = (text: string | null) =>
+export const removeSpecialCharacters = (text: string) =>
   text ? text.replace(/[^\w\s]/gi, '') : text;
 
-export const removeAccent = (text: string | null) =>
+export const removeAccent = (text: string) =>
   text ? text.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : text;
 
 export const removeHTML = (html: string, keepNewLines?: boolean) => {
@@ -53,13 +53,13 @@ export const formatDate = (date: string | Date, dateFormat: string, outputFormat
   return date;
 };
 
-export const formatCPF = (cpf: string | null) =>
+export const formatCPF = (cpf: string) =>
   cpf ? cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4') : cpf;
 
-export const formatCNPJ = (cnpj: string | null) =>
+export const formatCNPJ = (cnpj: string) =>
   cnpj ? cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5') : cnpj;
 
-export const formatPrice = (price: number | null) =>
+export const formatPrice = (price: number) =>
   price
     ? new Intl.NumberFormat('pt-BR', {
         style: 'currency',
@@ -67,7 +67,7 @@ export const formatPrice = (price: number | null) =>
       }).format(price)
     : price;
 
-export const formatTelephoneNumber = (telephoneNumber: string | null) => {
+export const formatTelephoneNumber = (telephoneNumber: string) => {
   if (telephoneNumber) {
     return telephoneNumber.length > 10
       ? telephoneNumber.replace(/^(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')
@@ -77,5 +77,4 @@ export const formatTelephoneNumber = (telephoneNumber: string | null) => {
   return telephoneNumber;
 };
 
-export const formatCEP = (cep: string | null) =>
-  cep ? cep.replace(/^(\d{5})(\d{3})/, '$1-$2') : cep;
+export const formatCEP = (cep: string) => (cep ? cep.replace(/^(\d{5})(\d{3})/, '$1-$2') : cep);
