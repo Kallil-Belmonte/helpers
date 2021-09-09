@@ -39,6 +39,11 @@ const STATES: States = {
     region: 'Nordeste',
     initials: 'CE',
   },
+  'Distrito Federal': {
+    name: 'Distrito Federal',
+    region: 'Centro-Oeste',
+    initials: 'DF',
+  },
   'Espírito Santo': {
     name: 'Espírito Santo',
     region: 'Sudeste',
@@ -138,11 +143,6 @@ const STATES: States = {
     name: 'Tocantins',
     region: 'Norte',
     initials: 'TO',
-  },
-  'Distrito Federal': {
-    name: 'Distrito Federal',
-    region: 'Centro-Oeste',
-    initials: 'DF',
   },
 };
 
