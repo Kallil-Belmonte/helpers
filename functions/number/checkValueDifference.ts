@@ -17,7 +17,7 @@ const checkValueDifference = (firstValue: number, secondValue: number, options: 
 
   const differenceCheck = strict
     ? differenceBetwenValues === difference
-    : differenceBetwenValues <= difference;
+    : differenceBetwenValues >= difference;
 
   return checkEqual ? firstValue === secondValue || differenceCheck : differenceCheck;
 };
