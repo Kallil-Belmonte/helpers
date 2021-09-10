@@ -4,11 +4,17 @@
  */
 
 const sortObjectsArray = (array: any[], property: string, reverse = false) => {
-  const propertiesSorted = array.map(item => item[property]).sort();
-  const properetiesResult = reverse ? propertiesSorted.reverse() : propertiesSorted;
+  const modifiedArray = array.map((item, index) => {
+    const copiedItem = { ...item };
+    if (!copiedItem[property]) copiedItem[property] = `zzz ${index}`;
+    return copiedItem;
+  });
+  const propertiesSorted = modifiedArray.map(item => item[property]).sort();
+  const propertiesResult = reverse ? propertiesSorted.reverse() : propertiesSorted;
 
-  return properetiesResult.map(propertyResult => {
-    const object = array.find(item => item[property] === propertyResult);
+  return propertiesResult.map(propertyResult => {
+    const object = modifiedArray.find(item => item[property] === propertyResult);
+    if (/zzz [0-9]{1,}/.test(object[property])) object[property] = null;
     return object;
   });
 };
