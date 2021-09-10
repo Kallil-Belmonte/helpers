@@ -121,6 +121,11 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
+  'Barão de Grajaú': {
+    name: 'Barão de Grajaú',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
   'Barra do Corda': {
     name: 'Barra do Corda',
     state: 'Maranhão',
@@ -128,11 +133,6 @@ const MA: Cities = {
   },
   Barreirinhas: {
     name: 'Barreirinhas',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'Barão de Grajaú': {
-    name: 'Barão de Grajaú',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
@@ -231,6 +231,11 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
+  'Cândido Mendes': {
+    name: 'Cândido Mendes',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
   Cantanhede: {
     name: 'Cantanhede',
     state: 'Maranhão',
@@ -316,11 +321,6 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
-  'Cândido Mendes': {
-    name: 'Cândido Mendes',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
   Davinópolis: {
     name: 'Davinópolis',
     state: 'Maranhão',
@@ -371,53 +371,13 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
-  'MAdofredo Viana': {
-    name: 'MAdofredo Viana',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'MAnçalves Dias': {
-    name: 'MAnçalves Dias',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'MAvernador Archer': {
-    name: 'MAvernador Archer',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'MAvernador Edison Lobão': {
-    name: 'MAvernador Edison Lobão',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'MAvernador Eugênio Barros': {
-    name: 'MAvernador Eugênio Barros',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'MAvernador Luiz Rocha': {
-    name: 'MAvernador Luiz Rocha',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'MAvernador Newton Bello': {
-    name: 'MAvernador Newton Bello',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'MAvernador Nunes Freire': {
-    name: 'MAvernador Nunes Freire',
+  'Graça Aranha': {
+    name: 'Graça Aranha',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
   Grajaú: {
     name: 'Grajaú',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'Graça Aranha': {
-    name: 'Graça Aranha',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
@@ -476,13 +436,13 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
-  Joselândia: {
-    name: 'Joselândia',
+  'João Lisboa': {
+    name: 'João Lisboa',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
-  'João Lisboa': {
-    name: 'João Lisboa',
+  Joselândia: {
+    name: 'Joselândia',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
@@ -538,6 +498,46 @@ const MA: Cities = {
   },
   'Luís Domingues': {
     name: 'Luís Domingues',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'MAdofredo Viana': {
+    name: 'MAdofredo Viana',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'MAnçalves Dias': {
+    name: 'MAnçalves Dias',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'MAvernador Archer': {
+    name: 'MAvernador Archer',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'MAvernador Edison Lobão': {
+    name: 'MAvernador Edison Lobão',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'MAvernador Eugênio Barros': {
+    name: 'MAvernador Eugênio Barros',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'MAvernador Luiz Rocha': {
+    name: 'MAvernador Luiz Rocha',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'MAvernador Newton Bello': {
+    name: 'MAvernador Newton Bello',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'MAvernador Nunes Freire': {
+    name: 'MAvernador Nunes Freire',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
@@ -601,13 +601,13 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
-  'Montes Altos': {
-    name: 'Montes Altos',
+  Monção: {
+    name: 'Monção',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
-  Monção: {
-    name: 'Monção',
+  'Montes Altos': {
+    name: 'Montes Altos',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
@@ -646,6 +646,11 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
+  'Paço do Lumiar': {
+    name: 'Paço do Lumiar',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
   Palmeirândia: {
     name: 'Palmeirândia',
     state: 'Maranhão',
@@ -678,11 +683,6 @@ const MA: Cities = {
   },
   'Paulo Ramos': {
     name: 'Paulo Ramos',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'Paço do Lumiar': {
-    name: 'Paço do Lumiar',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
@@ -731,6 +731,11 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
+  'Poção de Pedras': {
+    name: 'Poção de Pedras',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
   'Porto Franco': {
     name: 'Porto Franco',
     state: 'Maranhão',
@@ -738,11 +743,6 @@ const MA: Cities = {
   },
   'Porto Rico do Maranhão': {
     name: 'Porto Rico do Maranhão',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'Poção de Pedras': {
-    name: 'Poção de Pedras',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
@@ -851,36 +851,6 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
-  Satubinha: {
-    name: 'Satubinha',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'Senador Alexandre Costa': {
-    name: 'Senador Alexandre Costa',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'Senador La Rocque': {
-    name: 'Senador La Rocque',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'Serrano do Maranhão': {
-    name: 'Serrano do Maranhão',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'Sucupira do Norte': {
-    name: 'Sucupira do Norte',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'Sucupira do Riachão': {
-    name: 'Sucupira do Riachão',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
   'São Benedito do Rio Preto': {
     name: 'São Benedito do Rio Preto',
     state: 'Maranhão',
@@ -906,6 +876,11 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
+  'São Félix de Balsas': {
+    name: 'São Félix de Balsas',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
   'São Francisco do Brejão': {
     name: 'São Francisco do Brejão',
     state: 'Maranhão',
@@ -913,21 +888,6 @@ const MA: Cities = {
   },
   'São Francisco do Maranhão': {
     name: 'São Francisco do Maranhão',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'São Félix de Balsas': {
-    name: 'São Félix de Balsas',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'São José de Ribamar': {
-    name: 'São José de Ribamar',
-    state: 'Maranhão',
-    stateInitials: 'MA',
-  },
-  'São José dos Basílios': {
-    name: 'São José dos Basílios',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
@@ -953,6 +913,16 @@ const MA: Cities = {
   },
   'São João dos Patos': {
     name: 'São João dos Patos',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'São José de Ribamar': {
+    name: 'São José de Ribamar',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'São José dos Basílios': {
+    name: 'São José dos Basílios',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
@@ -1001,8 +971,38 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
+  Satubinha: {
+    name: 'Satubinha',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'Senador Alexandre Costa': {
+    name: 'Senador Alexandre Costa',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'Senador La Rocque': {
+    name: 'Senador La Rocque',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'Serrano do Maranhão': {
+    name: 'Serrano do Maranhão',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
   'Sítio Novo': {
     name: 'Sítio Novo',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'Sucupira do Norte': {
+    name: 'Sucupira do Norte',
+    state: 'Maranhão',
+    stateInitials: 'MA',
+  },
+  'Sucupira do Riachão': {
+    name: 'Sucupira do Riachão',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
@@ -1071,13 +1071,13 @@ const MA: Cities = {
     state: 'Maranhão',
     stateInitials: 'MA',
   },
-  'Vitorino Freire': {
-    name: 'Vitorino Freire',
+  'Vitória do Mearim': {
+    name: 'Vitória do Mearim',
     state: 'Maranhão',
     stateInitials: 'MA',
   },
-  'Vitória do Mearim': {
-    name: 'Vitória do Mearim',
+  'Vitorino Freire': {
+    name: 'Vitorino Freire',
     state: 'Maranhão',
     stateInitials: 'MA',
   },

@@ -166,13 +166,13 @@ const MS: Cities = {
     state: 'Mato Grosso do Sul',
     stateInitials: 'MS',
   },
-  Figueirão: {
-    name: 'Figueirão',
+  'Fátima do Sul': {
+    name: 'Fátima do Sul',
     state: 'Mato Grosso do Sul',
     stateInitials: 'MS',
   },
-  'Fátima do Sul': {
-    name: 'Fátima do Sul',
+  Figueirão: {
+    name: 'Figueirão',
     state: 'Mato Grosso do Sul',
     stateInitials: 'MS',
   },
@@ -286,6 +286,11 @@ const MS: Cities = {
     state: 'Mato Grosso do Sul',
     stateInitials: 'MS',
   },
+  'Paraíso das Águas': {
+    name: 'Paraíso das Águas',
+    state: 'Mato Grosso do Sul',
+    stateInitials: 'MS',
+  },
   Paranaíba: {
     name: 'Paranaíba',
     state: 'Mato Grosso do Sul',
@@ -293,11 +298,6 @@ const MS: Cities = {
   },
   Paranhos: {
     name: 'Paranhos',
-    state: 'Mato Grosso do Sul',
-    stateInitials: 'MS',
-  },
-  'Paraíso das Águas': {
-    name: 'Paraíso das Águas',
     state: 'Mato Grosso do Sul',
     stateInitials: 'MS',
   },
@@ -346,6 +346,11 @@ const MS: Cities = {
     state: 'Mato Grosso do Sul',
     stateInitials: 'MS',
   },
+  'São Gabriel do Oeste': {
+    name: 'São Gabriel do Oeste',
+    state: 'Mato Grosso do Sul',
+    stateInitials: 'MS',
+  },
   Selvíria: {
     name: 'Selvíria',
     state: 'Mato Grosso do Sul',
@@ -363,11 +368,6 @@ const MS: Cities = {
   },
   Sonora: {
     name: 'Sonora',
-    state: 'Mato Grosso do Sul',
-    stateInitials: 'MS',
-  },
-  'São Gabriel do Oeste': {
-    name: 'São Gabriel do Oeste',
     state: 'Mato Grosso do Sul',
     stateInitials: 'MS',
   },

@@ -21,6 +21,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  Açucena: {
+    name: 'Açucena',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   'Água Boa': {
     name: 'Água Boa',
     state: 'Minas Gerais',
@@ -63,6 +68,11 @@ const MG: Cities = {
   },
   Albertina: {
     name: 'Albertina',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Além Paraíba': {
+    name: 'Além Paraíba',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -126,11 +136,6 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  'Além Paraíba': {
-    name: 'Além Paraíba',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   'Amparo da Serra': {
     name: 'Amparo da Serra',
     state: 'Minas Gerais',
@@ -166,8 +171,18 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  Araçaí: {
+    name: 'Araçaí',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Aracitaba: {
     name: 'Aracitaba',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Araçuaí: {
+    name: 'Araçuaí',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -196,23 +211,13 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Araxá: {
-    name: 'Araxá',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Araçaí: {
-    name: 'Araçaí',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Araçuaí: {
-    name: 'Araçuaí',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   Araújos: {
     name: 'Araújos',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Araxá: {
+    name: 'Araxá',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -261,11 +266,6 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Açucena: {
-    name: 'Açucena',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   Baependi: {
     name: 'Baependi',
     state: 'Minas Gerais',
@@ -291,6 +291,16 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  'Barão de Cocais': {
+    name: 'Barão de Cocais',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Barão de Monte Alto': {
+    name: 'Barão de Monte Alto',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Barbacena: {
     name: 'Barbacena',
     state: 'Minas Gerais',
@@ -303,16 +313,6 @@ const MG: Cities = {
   },
   Barroso: {
     name: 'Barroso',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Barão de Cocais': {
-    name: 'Barão de Cocais',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Barão de Monte Alto': {
-    name: 'Barão de Monte Alto',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -456,6 +456,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  'Brás Pires': {
+    name: 'Brás Pires',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   'Brasilândia de Minas': {
     name: 'Brasilândia de Minas',
     state: 'Minas Gerais',
@@ -466,23 +471,18 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Brazópolis: {
-    name: 'Brazópolis',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   Braúnas: {
     name: 'Braúnas',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Brumadinho: {
-    name: 'Brumadinho',
+  Brazópolis: {
+    name: 'Brazópolis',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  'Brás Pires': {
-    name: 'Brás Pires',
+  Brumadinho: {
+    name: 'Brumadinho',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -576,23 +576,23 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Cambuquira: {
-    name: 'Cambuquira',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   Cambuí: {
     name: 'Cambuí',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Campanha: {
-    name: 'Campanha',
+  Cambuquira: {
+    name: 'Cambuquira',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
   Campanário: {
     name: 'Campanário',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Campanha: {
+    name: 'Campanha',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -646,6 +646,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  Canápolis: {
+    name: 'Canápolis',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Candeias: {
     name: 'Candeias',
     state: 'Minas Gerais',
@@ -653,11 +658,6 @@ const MG: Cities = {
   },
   Cantagalo: {
     name: 'Cantagalo',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Canápolis: {
-    name: 'Canápolis',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -711,6 +711,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  Caraí: {
+    name: 'Caraí',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Caranaíba: {
     name: 'Caranaíba',
     state: 'Minas Gerais',
@@ -731,11 +736,6 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Caraí: {
-    name: 'Caraí',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   Carbonita: {
     name: 'Carbonita',
     state: 'Minas Gerais',
@@ -748,6 +748,11 @@ const MG: Cities = {
   },
   'Carlos Chagas': {
     name: 'Carlos Chagas',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Carmésia: {
+    name: 'Carmésia',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -781,11 +786,6 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Carmésia: {
-    name: 'Carmésia',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   'Carmópolis de Minas': {
     name: 'Carmópolis de Minas',
     state: 'Minas Gerais',
@@ -801,13 +801,13 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Carvalhos: {
-    name: 'Carvalhos',
+  Carvalhópolis: {
+    name: 'Carvalhópolis',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Carvalhópolis: {
-    name: 'Carvalhópolis',
+  Carvalhos: {
+    name: 'Carvalhos',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -818,6 +818,11 @@ const MG: Cities = {
   },
   'Cascalho Rico': {
     name: 'Cascalho Rico',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Cássia: {
+    name: 'Cássia',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -866,6 +871,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  Chácara: {
+    name: 'Chácara',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Chalé: {
     name: 'Chalé',
     state: 'Minas Gerais',
@@ -883,11 +893,6 @@ const MG: Cities = {
   },
   Chiador: {
     name: 'Chiador',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Chácara: {
-    name: 'Chácara',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -973,6 +978,11 @@ const MG: Cities = {
   },
   'Conceição dos Ouros': {
     name: 'Conceição dos Ouros',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Cônego Marinho': {
+    name: 'Cônego Marinho',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1076,13 +1086,43 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  'Córrego Danta': {
+    name: 'Córrego Danta',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Córrego Fundo': {
+    name: 'Córrego Fundo',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Córrego Novo': {
+    name: 'Córrego Novo',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Córrego do Bom Jesus': {
+    name: 'Córrego do Bom Jesus',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   'Couto de Magalhães de Minas': {
     name: 'Couto de Magalhães de Minas',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  Crisólita: {
+    name: 'Crisólita',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Cristais: {
     name: 'Cristais',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Cristália: {
+    name: 'Cristália',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1093,16 +1133,6 @@ const MG: Cities = {
   },
   Cristina: {
     name: 'Cristina',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Cristália: {
-    name: 'Cristália',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Crisólita: {
-    name: 'Crisólita',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1133,36 +1163,6 @@ const MG: Cities = {
   },
   Curvelo: {
     name: 'Curvelo',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Cássia: {
-    name: 'Cássia',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Córrego Danta': {
-    name: 'Córrego Danta',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Córrego Fundo': {
-    name: 'Córrego Fundo',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Córrego Novo': {
-    name: 'Córrego Novo',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Córrego do Bom Jesus': {
-    name: 'Córrego do Bom Jesus',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Cônego Marinho': {
-    name: 'Cônego Marinho',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1216,6 +1216,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  Divinésia: {
+    name: 'Divinésia',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Divino: {
     name: 'Divino',
     state: 'Minas Gerais',
@@ -1228,11 +1233,6 @@ const MG: Cities = {
   },
   'Divinolândia de Minas': {
     name: 'Divinolândia de Minas',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Divinésia: {
-    name: 'Divinésia',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1416,6 +1416,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  'Felício dos Santos': {
+    name: 'Felício dos Santos',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Felisburgo: {
     name: 'Felisburgo',
     state: 'Minas Gerais',
@@ -1423,11 +1428,6 @@ const MG: Cities = {
   },
   Felixlândia: {
     name: 'Felixlândia',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Felício dos Santos': {
-    name: 'Felício dos Santos',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1556,13 +1556,13 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Gonzaga: {
-    name: 'Gonzaga',
+  Gonçalves: {
+    name: 'Gonçalves',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Gonçalves: {
-    name: 'Gonçalves',
+  Gonzaga: {
+    name: 'Gonzaga',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1576,13 +1576,13 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Grupiara: {
-    name: 'Grupiara',
+  'Grão Mogol': {
+    name: 'Grão Mogol',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  'Grão Mogol': {
-    name: 'Grão Mogol',
+  Grupiara: {
+    name: 'Grupiara',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1606,13 +1606,13 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Guarani: {
-    name: 'Guarani',
+  Guaranésia: {
+    name: 'Guaranésia',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Guaranésia: {
-    name: 'Guaranésia',
+  Guarani: {
+    name: 'Guarani',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1666,6 +1666,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  Ibiá: {
+    name: 'Ibiá',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Ibiaí: {
     name: 'Ibiaí',
     state: 'Minas Gerais',
@@ -1693,11 +1698,6 @@ const MG: Cities = {
   },
   Ibituruna: {
     name: 'Ibituruna',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Ibiá: {
-    name: 'Ibiá',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1906,11 +1906,6 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Itaverava: {
-    name: 'Itaverava',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   'Itaú de Minas': {
     name: 'Itaú de Minas',
     state: 'Minas Gerais',
@@ -1918,6 +1913,11 @@ const MG: Cities = {
   },
   Itaúna: {
     name: 'Itaúna',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Itaverava: {
+    name: 'Itaverava',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1961,18 +1961,23 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Jacutinga: {
-    name: 'Jacutinga',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   Jacuí: {
     name: 'Jacuí',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  Jacutinga: {
+    name: 'Jacutinga',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Jaguaraçu: {
     name: 'Jaguaraçu',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Jaíba: {
+    name: 'Jaíba',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -1998,11 +2003,6 @@ const MG: Cities = {
   },
   Japonvar: {
     name: 'Japonvar',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Jaíba: {
-    name: 'Jaíba',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -2041,8 +2041,23 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  Joaíma: {
+    name: 'Joaíma',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Joanésia: {
     name: 'Joanésia',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'João Monlevade': {
+    name: 'João Monlevade',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'João Pinheiro': {
+    name: 'João Pinheiro',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -2051,18 +2066,8 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Joaíma: {
-    name: 'Joaíma',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   Jordânia: {
     name: 'Jordânia',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Josenópolis: {
-    name: 'Josenópolis',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -2076,13 +2081,8 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  'João Monlevade': {
-    name: 'João Monlevade',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'João Pinheiro': {
-    name: 'João Pinheiro',
+  Josenópolis: {
+    name: 'Josenópolis',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -2306,6 +2306,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  'Mário Campos': {
+    name: 'Mário Campos',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   'Maripá de Minas': {
     name: 'Maripá de Minas',
     state: 'Minas Gerais',
@@ -2426,13 +2431,13 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Miravânia: {
-    name: 'Miravânia',
+  Miraí: {
+    name: 'Miraí',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Miraí: {
-    name: 'Miraí',
+  Miravânia: {
+    name: 'Miravânia',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -2538,11 +2543,6 @@ const MG: Cities = {
   },
   Muzambinho: {
     name: 'Muzambinho',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Mário Campos': {
-    name: 'Mário Campos',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -2656,6 +2656,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  'Olímpio Noronha': {
+    name: 'Olímpio Noronha',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Oliveira: {
     name: 'Oliveira',
     state: 'Minas Gerais',
@@ -2663,11 +2668,6 @@ const MG: Cities = {
   },
   'Oliveira Fortes': {
     name: 'Oliveira Fortes',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Olímpio Noronha': {
-    name: 'Olímpio Noronha',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -2751,6 +2751,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  'Pará de Minas': {
+    name: 'Pará de Minas',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Paracatu: {
     name: 'Paracatu',
     state: 'Minas Gerais',
@@ -2768,11 +2773,6 @@ const MG: Cities = {
   },
   Paraopeba: {
     name: 'Paraopeba',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Pará de Minas': {
-    name: 'Pará de Minas',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -2833,6 +2833,11 @@ const MG: Cities = {
   },
   Pavão: {
     name: 'Pavão',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Peçanha: {
+    name: 'Peçanha',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -2921,11 +2926,6 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Peçanha: {
-    name: 'Peçanha',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   Piau: {
     name: 'Piau',
     state: 'Minas Gerais',
@@ -2981,13 +2981,13 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Piranguinho: {
-    name: 'Piranguinho',
+  Piranguçu: {
+    name: 'Piranguçu',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Piranguçu: {
-    name: 'Piranguçu',
+  Piranguinho: {
+    name: 'Piranguinho',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -3018,6 +3018,16 @@ const MG: Cities = {
   },
   Planura: {
     name: 'Planura',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Poço Fundo': {
+    name: 'Poço Fundo',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Poços de Caldas': {
+    name: 'Poços de Caldas',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -3071,16 +3081,6 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  'Poço Fundo': {
-    name: 'Poço Fundo',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Poços de Caldas': {
-    name: 'Poços de Caldas',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   Prados: {
     name: 'Prados',
     state: 'Minas Gerais',
@@ -3091,13 +3091,13 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Pratinha: {
-    name: 'Pratinha',
+  Pratápolis: {
+    name: 'Pratápolis',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Pratápolis: {
-    name: 'Pratápolis',
+  Pratinha: {
+    name: 'Pratinha',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -3536,156 +3536,6 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  'Sapucaí-Mirim': {
-    name: 'Sapucaí-Mirim',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Sardoá: {
-    name: 'Sardoá',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Sarzedo: {
-    name: 'Sarzedo',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Sem-Peixe': {
-    name: 'Sem-Peixe',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Senador Amaral': {
-    name: 'Senador Amaral',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Senador Cortes': {
-    name: 'Senador Cortes',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Senador Firmino': {
-    name: 'Senador Firmino',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Senador José Bento': {
-    name: 'Senador José Bento',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Senador Modestino Gonçalves': {
-    name: 'Senador Modestino Gonçalves',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Senhora de Oliveira': {
-    name: 'Senhora de Oliveira',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Senhora do Porto': {
-    name: 'Senhora do Porto',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Senhora dos Remédios': {
-    name: 'Senhora dos Remédios',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Sericita: {
-    name: 'Sericita',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Seritinga: {
-    name: 'Seritinga',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Serra Azul de Minas': {
-    name: 'Serra Azul de Minas',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Serra da Saudade': {
-    name: 'Serra da Saudade',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Serra do Salitre': {
-    name: 'Serra do Salitre',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Serra dos Aimorés': {
-    name: 'Serra dos Aimorés',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Serrania: {
-    name: 'Serrania',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Serranos: {
-    name: 'Serranos',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Serranópolis de Minas': {
-    name: 'Serranópolis de Minas',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Serro: {
-    name: 'Serro',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Sete Lagoas': {
-    name: 'Sete Lagoas',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Setubinha: {
-    name: 'Setubinha',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Silveirânia: {
-    name: 'Silveirânia',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Silvianópolis: {
-    name: 'Silvianópolis',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Simonésia: {
-    name: 'Simonésia',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Simão Pereira': {
-    name: 'Simão Pereira',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Sobrália: {
-    name: 'Sobrália',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Soledade de Minas': {
-    name: 'Soledade de Minas',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   'São Bento Abade': {
     name: 'São Bento Abade',
     state: 'Minas Gerais',
@@ -3706,6 +3556,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  'São Félix de Minas': {
+    name: 'São Félix de Minas',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   'São Francisco': {
     name: 'São Francisco',
     state: 'Minas Gerais',
@@ -3723,11 +3578,6 @@ const MG: Cities = {
   },
   'São Francisco do Glória': {
     name: 'São Francisco do Glória',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'São Félix de Minas': {
-    name: 'São Félix de Minas',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -3773,56 +3623,6 @@ const MG: Cities = {
   },
   'São Gotardo': {
     name: 'São Gotardo',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'São Joaquim de Bicas': {
-    name: 'São Joaquim de Bicas',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'São José da Barra': {
-    name: 'São José da Barra',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'São José da Lapa': {
-    name: 'São José da Lapa',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'São José da Safira': {
-    name: 'São José da Safira',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'São José da Varginha': {
-    name: 'São José da Varginha',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'São José do Alegre': {
-    name: 'São José do Alegre',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'São José do Divino': {
-    name: 'São José do Divino',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'São José do Goiabal': {
-    name: 'São José do Goiabal',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'São José do Jacuri': {
-    name: 'São José do Jacuri',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'São José do Mantimento': {
-    name: 'São José do Mantimento',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -3888,6 +3688,56 @@ const MG: Cities = {
   },
   'São João do Paraíso': {
     name: 'São João do Paraíso',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'São Joaquim de Bicas': {
+    name: 'São Joaquim de Bicas',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'São José da Barra': {
+    name: 'São José da Barra',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'São José da Lapa': {
+    name: 'São José da Lapa',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'São José da Safira': {
+    name: 'São José da Safira',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'São José da Varginha': {
+    name: 'São José da Varginha',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'São José do Alegre': {
+    name: 'São José do Alegre',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'São José do Divino': {
+    name: 'São José do Divino',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'São José do Goiabal': {
+    name: 'São José do Goiabal',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'São José do Jacuri': {
+    name: 'São José do Jacuri',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'São José do Mantimento': {
+    name: 'São José do Mantimento',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -3983,6 +3833,156 @@ const MG: Cities = {
   },
   'São Vicente de Minas': {
     name: 'São Vicente de Minas',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Sapucaí-Mirim': {
+    name: 'Sapucaí-Mirim',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Sardoá: {
+    name: 'Sardoá',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Sarzedo: {
+    name: 'Sarzedo',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Sem-Peixe': {
+    name: 'Sem-Peixe',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Senador Amaral': {
+    name: 'Senador Amaral',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Senador Cortes': {
+    name: 'Senador Cortes',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Senador Firmino': {
+    name: 'Senador Firmino',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Senador José Bento': {
+    name: 'Senador José Bento',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Senador Modestino Gonçalves': {
+    name: 'Senador Modestino Gonçalves',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Senhora de Oliveira': {
+    name: 'Senhora de Oliveira',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Senhora do Porto': {
+    name: 'Senhora do Porto',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Senhora dos Remédios': {
+    name: 'Senhora dos Remédios',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Sericita: {
+    name: 'Sericita',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Seritinga: {
+    name: 'Seritinga',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Serra Azul de Minas': {
+    name: 'Serra Azul de Minas',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Serra da Saudade': {
+    name: 'Serra da Saudade',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Serra do Salitre': {
+    name: 'Serra do Salitre',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Serra dos Aimorés': {
+    name: 'Serra dos Aimorés',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Serrania: {
+    name: 'Serrania',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Serranópolis de Minas': {
+    name: 'Serranópolis de Minas',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Serranos: {
+    name: 'Serranos',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Serro: {
+    name: 'Serro',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Sete Lagoas': {
+    name: 'Sete Lagoas',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Setubinha: {
+    name: 'Setubinha',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Silveirânia: {
+    name: 'Silveirânia',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Silvianópolis: {
+    name: 'Silvianópolis',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Simão Pereira': {
+    name: 'Simão Pereira',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Simonésia: {
+    name: 'Simonésia',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Sobrália: {
+    name: 'Sobrália',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  'Soledade de Minas': {
+    name: 'Soledade de Minas',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -4101,13 +4101,18 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Ubaporanga: {
-    name: 'Ubaporanga',
+  Ubá: {
+    name: 'Ubá',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
   Ubaí: {
     name: 'Ubaí',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Ubaporanga: {
+    name: 'Ubaporanga',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -4118,11 +4123,6 @@ const MG: Cities = {
   },
   Uberlândia: {
     name: 'Uberlândia',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  Ubá: {
-    name: 'Ubá',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -4146,13 +4146,13 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Urucuia: {
-    name: 'Urucuia',
+  Urucânia: {
+    name: 'Urucânia',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Urucânia: {
-    name: 'Urucânia',
+  Urucuia: {
+    name: 'Urucuia',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -4181,6 +4181,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  'Várzea da Palma': {
+    name: 'Várzea da Palma',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Varzelândia: {
     name: 'Varzelândia',
     state: 'Minas Gerais',
@@ -4201,18 +4206,23 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  'Vermelho Novo': {
-    name: 'Vermelho Novo',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   Veríssimo: {
     name: 'Veríssimo',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  'Vermelho Novo': {
+    name: 'Vermelho Novo',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Vespasiano: {
     name: 'Vespasiano',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
+  Viçosa: {
+    name: 'Viçosa',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
@@ -4226,6 +4236,11 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
+  Virgínia: {
+    name: 'Virgínia',
+    state: 'Minas Gerais',
+    stateInitials: 'MG',
+  },
   Virginópolis: {
     name: 'Virginópolis',
     state: 'Minas Gerais',
@@ -4236,28 +4251,13 @@ const MG: Cities = {
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Virgínia: {
-    name: 'Virgínia',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   'Visconde do Rio Branco': {
     name: 'Visconde do Rio Branco',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },
-  Viçosa: {
-    name: 'Viçosa',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
   'Volta Grande': {
     name: 'Volta Grande',
-    state: 'Minas Gerais',
-    stateInitials: 'MG',
-  },
-  'Várzea da Palma': {
-    name: 'Várzea da Palma',
     state: 'Minas Gerais',
     stateInitials: 'MG',
   },

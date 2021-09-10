@@ -181,13 +181,13 @@ const CE: Cities = {
     state: 'Ceará',
     stateInitials: 'CE',
   },
-  Caririaçu: {
-    name: 'Caririaçu',
+  Cariré: {
+    name: 'Cariré',
     state: 'Ceará',
     stateInitials: 'CE',
   },
-  Cariré: {
-    name: 'Cariré',
+  Caririaçu: {
+    name: 'Caririaçu',
     state: 'Ceará',
     stateInitials: 'CE',
   },
@@ -231,13 +231,13 @@ const CE: Cities = {
     state: 'Ceará',
     stateInitials: 'CE',
   },
-  Chorozinho: {
-    name: 'Chorozinho',
+  Choró: {
+    name: 'Choró',
     state: 'Ceará',
     stateInitials: 'CE',
   },
-  Choró: {
-    name: 'Choró',
+  Chorozinho: {
+    name: 'Chorozinho',
     state: 'Ceará',
     stateInitials: 'CE',
   },
@@ -311,6 +311,11 @@ const CE: Cities = {
     state: 'Ceará',
     stateInitials: 'CE',
   },
+  Graça: {
+    name: 'Graça',
+    state: 'Ceará',
+    stateInitials: 'CE',
+  },
   Granja: {
     name: 'Granja',
     state: 'Ceará',
@@ -318,11 +323,6 @@ const CE: Cities = {
   },
   Granjeiro: {
     name: 'Granjeiro',
-    state: 'Ceará',
-    stateInitials: 'CE',
-  },
-  Graça: {
-    name: 'Graça',
     state: 'Ceará',
     stateInitials: 'CE',
   },
@@ -421,13 +421,13 @@ const CE: Cities = {
     state: 'Ceará',
     stateInitials: 'CE',
   },
-  Itaitinga: {
-    name: 'Itaitinga',
+  Itaiçaba: {
+    name: 'Itaiçaba',
     state: 'Ceará',
     stateInitials: 'CE',
   },
-  Itaiçaba: {
-    name: 'Itaiçaba',
+  Itaitinga: {
+    name: 'Itaitinga',
     state: 'Ceará',
     stateInitials: 'CE',
   },
@@ -801,26 +801,6 @@ const CE: Cities = {
     state: 'Ceará',
     stateInitials: 'CE',
   },
-  'Senador Pompeu': {
-    name: 'Senador Pompeu',
-    state: 'Ceará',
-    stateInitials: 'CE',
-  },
-  'Senador Sá': {
-    name: 'Senador Sá',
-    state: 'Ceará',
-    stateInitials: 'CE',
-  },
-  Sobral: {
-    name: 'Sobral',
-    state: 'Ceará',
-    stateInitials: 'CE',
-  },
-  Solonópole: {
-    name: 'Solonópole',
-    state: 'Ceará',
-    stateInitials: 'CE',
-  },
   'São Benedito': {
     name: 'São Benedito',
     state: 'Ceará',
@@ -838,6 +818,26 @@ const CE: Cities = {
   },
   'São Luís do Curu': {
     name: 'São Luís do Curu',
+    state: 'Ceará',
+    stateInitials: 'CE',
+  },
+  'Senador Pompeu': {
+    name: 'Senador Pompeu',
+    state: 'Ceará',
+    stateInitials: 'CE',
+  },
+  'Senador Sá': {
+    name: 'Senador Sá',
+    state: 'Ceará',
+    stateInitials: 'CE',
+  },
+  Sobral: {
+    name: 'Sobral',
+    state: 'Ceará',
+    stateInitials: 'CE',
+  },
+  Solonópole: {
+    name: 'Solonópole',
     state: 'Ceará',
     stateInitials: 'CE',
   },
@@ -911,13 +911,13 @@ const CE: Cities = {
     state: 'Ceará',
     stateInitials: 'CE',
   },
-  'Viçosa do Ceará': {
-    name: 'Viçosa do Ceará',
+  'Várzea Alegre': {
+    name: 'Várzea Alegre',
     state: 'Ceará',
     stateInitials: 'CE',
   },
-  'Várzea Alegre': {
-    name: 'Várzea Alegre',
+  'Viçosa do Ceará': {
+    name: 'Viçosa do Ceará',
     state: 'Ceará',
     stateInitials: 'CE',
   },

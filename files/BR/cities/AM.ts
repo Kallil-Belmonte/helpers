@@ -256,11 +256,6 @@ const AM: Cities = {
     state: 'Amazonas',
     stateInitials: 'AM',
   },
-  Silves: {
-    name: 'Silves',
-    state: 'Amazonas',
-    stateInitials: 'AM',
-  },
   'São Gabriel da Cachoeira': {
     name: 'São Gabriel da Cachoeira',
     state: 'Amazonas',
@@ -273,6 +268,11 @@ const AM: Cities = {
   },
   'São Sebastião do Uatumã': {
     name: 'São Sebastião do Uatumã',
+    state: 'Amazonas',
+    stateInitials: 'AM',
+  },
+  Silves: {
+    name: 'Silves',
     state: 'Amazonas',
     stateInitials: 'AM',
   },

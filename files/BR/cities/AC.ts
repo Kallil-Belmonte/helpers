@@ -46,6 +46,11 @@ const AC: Cities = {
     state: 'Acre',
     stateInitials: 'AC',
   },
+  'Mâncio Lima': {
+    name: 'Mâncio Lima',
+    state: 'Acre',
+    stateInitials: 'AC',
+  },
   'Manoel Urbano': {
     name: 'Manoel Urbano',
     state: 'Acre',
@@ -53,11 +58,6 @@ const AC: Cities = {
   },
   'Marechal Thaumaturgo': {
     name: 'Marechal Thaumaturgo',
-    state: 'Acre',
-    stateInitials: 'AC',
-  },
-  'Mâncio Lima': {
-    name: 'Mâncio Lima',
     state: 'Acre',
     stateInitials: 'AC',
   },

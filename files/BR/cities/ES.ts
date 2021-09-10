@@ -6,6 +6,16 @@ const ES: Cities = {
     state: 'Espírito Santo',
     stateInitials: 'ES',
   },
+  'Água Doce do Norte': {
+    name: 'Água Doce do Norte',
+    state: 'Espírito Santo',
+    stateInitials: 'ES',
+  },
+  'Águia Branca': {
+    name: 'Águia Branca',
+    state: 'Espírito Santo',
+    stateInitials: 'ES',
+  },
   Alegre: {
     name: 'Alegre',
     state: 'Espírito Santo',
@@ -126,13 +136,13 @@ const ES: Cities = {
     state: 'Espírito Santo',
     stateInitials: 'ES',
   },
-  Guarapari: {
-    name: 'Guarapari',
+  Guaçuí: {
+    name: 'Guaçuí',
     state: 'Espírito Santo',
     stateInitials: 'ES',
   },
-  Guaçuí: {
-    name: 'Guaçuí',
+  Guarapari: {
+    name: 'Guarapari',
     state: 'Espírito Santo',
     stateInitials: 'ES',
   },
@@ -311,16 +321,6 @@ const ES: Cities = {
     state: 'Espírito Santo',
     stateInitials: 'ES',
   },
-  Serra: {
-    name: 'Serra',
-    state: 'Espírito Santo',
-    stateInitials: 'ES',
-  },
-  Sooretama: {
-    name: 'Sooretama',
-    state: 'Espírito Santo',
-    stateInitials: 'ES',
-  },
   'São Domingos do Norte': {
     name: 'São Domingos do Norte',
     state: 'Espírito Santo',
@@ -343,6 +343,16 @@ const ES: Cities = {
   },
   'São Roque do Canaã': {
     name: 'São Roque do Canaã',
+    state: 'Espírito Santo',
+    stateInitials: 'ES',
+  },
+  Serra: {
+    name: 'Serra',
+    state: 'Espírito Santo',
+    stateInitials: 'ES',
+  },
+  Sooretama: {
+    name: 'Sooretama',
     state: 'Espírito Santo',
     stateInitials: 'ES',
   },
@@ -378,16 +388,6 @@ const ES: Cities = {
   },
   Vitória: {
     name: 'Vitória',
-    state: 'Espírito Santo',
-    stateInitials: 'ES',
-  },
-  'Água Doce do Norte': {
-    name: 'Água Doce do Norte',
-    state: 'Espírito Santo',
-    stateInitials: 'ES',
-  },
-  'Águia Branca': {
-    name: 'Águia Branca',
     state: 'Espírito Santo',
     stateInitials: 'ES',
   },

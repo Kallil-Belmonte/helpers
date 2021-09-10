@@ -36,13 +36,13 @@ const AL: Cities = {
     state: 'Alagoas',
     stateInitials: 'AL',
   },
-  'Belo Monte': {
-    name: 'Belo Monte',
+  Belém: {
+    name: 'Belém',
     state: 'Alagoas',
     stateInitials: 'AL',
   },
-  Belém: {
-    name: 'Belém',
+  'Belo Monte': {
+    name: 'Belo Monte',
     state: 'Alagoas',
     stateInitials: 'AL',
   },
@@ -336,6 +336,11 @@ const AL: Cities = {
     state: 'Alagoas',
     stateInitials: 'AL',
   },
+  'Pão de Açúcar': {
+    name: 'Pão de Açúcar',
+    state: 'Alagoas',
+    stateInitials: 'AL',
+  },
   Pariconha: {
     name: 'Pariconha',
     state: 'Alagoas',
@@ -381,6 +386,11 @@ const AL: Cities = {
     state: 'Alagoas',
     stateInitials: 'AL',
   },
+  'Poço das Trincheiras': {
+    name: 'Poço das Trincheiras',
+    state: 'Alagoas',
+    stateInitials: 'AL',
+  },
   'Porto Calvo': {
     name: 'Porto Calvo',
     state: 'Alagoas',
@@ -393,16 +403,6 @@ const AL: Cities = {
   },
   'Porto de Pedras': {
     name: 'Porto de Pedras',
-    state: 'Alagoas',
-    stateInitials: 'AL',
-  },
-  'Poço das Trincheiras': {
-    name: 'Poço das Trincheiras',
-    state: 'Alagoas',
-    stateInitials: 'AL',
-  },
-  'Pão de Açúcar': {
-    name: 'Pão de Açúcar',
     state: 'Alagoas',
     stateInitials: 'AL',
   },
@@ -433,16 +433,6 @@ const AL: Cities = {
   },
   'Santana do Mundaú': {
     name: 'Santana do Mundaú',
-    state: 'Alagoas',
-    stateInitials: 'AL',
-  },
-  Satuba: {
-    name: 'Satuba',
-    state: 'Alagoas',
-    stateInitials: 'AL',
-  },
-  'Senador Rui Palmeira': {
-    name: 'Senador Rui Palmeira',
     state: 'Alagoas',
     stateInitials: 'AL',
   },
@@ -478,6 +468,16 @@ const AL: Cities = {
   },
   'São Sebastião': {
     name: 'São Sebastião',
+    state: 'Alagoas',
+    stateInitials: 'AL',
+  },
+  Satuba: {
+    name: 'Satuba',
+    state: 'Alagoas',
+    stateInitials: 'AL',
+  },
+  'Senador Rui Palmeira': {
+    name: 'Senador Rui Palmeira',
     state: 'Alagoas',
     stateInitials: 'AL',
   },

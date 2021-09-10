@@ -6,6 +6,11 @@ const MT: Cities = {
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
+  'Água Boa': {
+    name: 'Água Boa',
+    state: 'Mato Grosso',
+    stateInitials: 'MT',
+  },
   'Alta Floresta': {
     name: 'Alta Floresta',
     state: 'Mato Grosso',
@@ -66,6 +71,11 @@ const MT: Cities = {
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
+  'Barão de Melgaço': {
+    name: 'Barão de Melgaço',
+    state: 'Mato Grosso',
+    stateInitials: 'MT',
+  },
   'Barra do Bugres': {
     name: 'Barra do Bugres',
     state: 'Mato Grosso',
@@ -76,11 +86,6 @@ const MT: Cities = {
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
-  'Barão de Melgaço': {
-    name: 'Barão de Melgaço',
-    state: 'Mato Grosso',
-    stateInitials: 'MT',
-  },
   'Bom Jesus do Araguaia': {
     name: 'Bom Jesus do Araguaia',
     state: 'Mato Grosso',
@@ -88,6 +93,11 @@ const MT: Cities = {
   },
   Brasnorte: {
     name: 'Brasnorte',
+    state: 'Mato Grosso',
+    stateInitials: 'MT',
+  },
+  Cáceres: {
+    name: 'Cáceres',
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
@@ -146,13 +156,13 @@ const MT: Cities = {
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
-  Colniza: {
-    name: 'Colniza',
+  Colíder: {
+    name: 'Colíder',
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
-  Colíder: {
-    name: 'Colíder',
+  Colniza: {
+    name: 'Colniza',
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
@@ -183,11 +193,6 @@ const MT: Cities = {
   },
   Curvelândia: {
     name: 'Curvelândia',
-    state: 'Mato Grosso',
-    stateInitials: 'MT',
-  },
-  Cáceres: {
-    name: 'Cáceres',
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
@@ -286,6 +291,11 @@ const MT: Cities = {
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
+  Juína: {
+    name: 'Juína',
+    state: 'Mato Grosso',
+    stateInitials: 'MT',
+  },
   Juruena: {
     name: 'Juruena',
     state: 'Mato Grosso',
@@ -293,11 +303,6 @@ const MT: Cities = {
   },
   Juscimeira: {
     name: 'Juscimeira',
-    state: 'Mato Grosso',
-    stateInitials: 'MT',
-  },
-  Juína: {
-    name: 'Juína',
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
@@ -436,13 +441,13 @@ const MT: Cities = {
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
-  Paranatinga: {
-    name: 'Paranatinga',
+  Paranaíta: {
+    name: 'Paranaíta',
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
-  Paranaíta: {
-    name: 'Paranaíta',
+  Paranatinga: {
+    name: 'Paranatinga',
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
@@ -591,26 +596,6 @@ const MT: Cities = {
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
-  Sapezal: {
-    name: 'Sapezal',
-    state: 'Mato Grosso',
-    stateInitials: 'MT',
-  },
-  'Serra Nova Dourada': {
-    name: 'Serra Nova Dourada',
-    state: 'Mato Grosso',
-    stateInitials: 'MT',
-  },
-  Sinop: {
-    name: 'Sinop',
-    state: 'Mato Grosso',
-    stateInitials: 'MT',
-  },
-  Sorriso: {
-    name: 'Sorriso',
-    state: 'Mato Grosso',
-    stateInitials: 'MT',
-  },
   'São Félix do Araguaia': {
     name: 'São Félix do Araguaia',
     state: 'Mato Grosso',
@@ -638,6 +623,26 @@ const MT: Cities = {
   },
   'São Pedro da Cipa': {
     name: 'São Pedro da Cipa',
+    state: 'Mato Grosso',
+    stateInitials: 'MT',
+  },
+  Sapezal: {
+    name: 'Sapezal',
+    state: 'Mato Grosso',
+    stateInitials: 'MT',
+  },
+  'Serra Nova Dourada': {
+    name: 'Serra Nova Dourada',
+    state: 'Mato Grosso',
+    stateInitials: 'MT',
+  },
+  Sinop: {
+    name: 'Sinop',
+    state: 'Mato Grosso',
+    stateInitials: 'MT',
+  },
+  Sorriso: {
+    name: 'Sorriso',
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
@@ -681,6 +686,11 @@ const MT: Cities = {
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },
+  'Várzea Grande': {
+    name: 'Várzea Grande',
+    state: 'Mato Grosso',
+    stateInitials: 'MT',
+  },
   Vera: {
     name: 'Vera',
     state: 'Mato Grosso',
@@ -693,16 +703,6 @@ const MT: Cities = {
   },
   'Vila Rica': {
     name: 'Vila Rica',
-    state: 'Mato Grosso',
-    stateInitials: 'MT',
-  },
-  'Várzea Grande': {
-    name: 'Várzea Grande',
-    state: 'Mato Grosso',
-    stateInitials: 'MT',
-  },
-  'Água Boa': {
-    name: 'Água Boa',
     state: 'Mato Grosso',
     stateInitials: 'MT',
   },

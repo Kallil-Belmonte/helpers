@@ -1,13 +1,13 @@
 import { Cities } from './_types';
 
 const BA: Cities = {
-  Abaré: {
-    name: 'Abaré',
+  Abaíra: {
+    name: 'Abaíra',
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Abaíra: {
-    name: 'Abaíra',
+  Abaré: {
+    name: 'Abaré',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -18,6 +18,11 @@ const BA: Cities = {
   },
   Adustina: {
     name: 'Adustina',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'Água Fria': {
+    name: 'Água Fria',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -106,6 +111,11 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
+  Araçás: {
+    name: 'Araçás',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
   Aracatu: {
     name: 'Aracatu',
     state: 'Bahia',
@@ -128,11 +138,6 @@ const BA: Cities = {
   },
   Aratuípe: {
     name: 'Aratuípe',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  Araçás: {
-    name: 'Araçás',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -256,13 +261,13 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Brejolândia: {
-    name: 'Brejolândia',
+  Brejões: {
+    name: 'Brejões',
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Brejões: {
-    name: 'Brejões',
+  Brejolândia: {
+    name: 'Brejolândia',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -306,6 +311,11 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
+  Caém: {
+    name: 'Caém',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
   Caetanos: {
     name: 'Caetanos',
     state: 'Bahia',
@@ -336,13 +346,13 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Camamu: {
-    name: 'Camamu',
+  Camaçari: {
+    name: 'Camaçari',
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Camaçari: {
-    name: 'Camaçari',
+  Camamu: {
+    name: 'Camamu',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -353,6 +363,11 @@ const BA: Cities = {
   },
   'Campo Formoso': {
     name: 'Campo Formoso',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  Canápolis: {
+    name: 'Canápolis',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -381,6 +396,11 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
+  'Cândido Sales': {
+    name: 'Cândido Sales',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
   Cansanção: {
     name: 'Cansanção',
     state: 'Bahia',
@@ -388,11 +408,6 @@ const BA: Cities = {
   },
   Canudos: {
     name: 'Canudos',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  Canápolis: {
-    name: 'Canápolis',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -406,13 +421,13 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Caravelas: {
-    name: 'Caravelas',
+  Caraíbas: {
+    name: 'Caraíbas',
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Caraíbas: {
-    name: 'Caraíbas',
+  Caravelas: {
+    name: 'Caravelas',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -451,11 +466,6 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Caém: {
-    name: 'Caém',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
   Central: {
     name: 'Central',
     state: 'Bahia',
@@ -463,6 +473,11 @@ const BA: Cities = {
   },
   Chorrochó: {
     name: 'Chorrochó',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'Cícero Dantas': {
+    name: 'Cícero Dantas',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -551,13 +566,13 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Cristópolis: {
-    name: 'Cristópolis',
+  Crisópolis: {
+    name: 'Crisópolis',
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Crisópolis: {
-    name: 'Crisópolis',
+  Cristópolis: {
+    name: 'Cristópolis',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -571,13 +586,8 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  'Cândido Sales': {
-    name: 'Cândido Sales',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'Cícero Dantas': {
-    name: 'Cícero Dantas',
+  'Dário Meira': {
+    name: 'Dário Meira',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -596,11 +606,6 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  'Dário Meira': {
-    name: 'Dário Meira',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
   'Elísio Medrado': {
     name: 'Elísio Medrado',
     state: 'Bahia',
@@ -616,6 +621,11 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
+  'Érico Cardoso': {
+    name: 'Érico Cardoso',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
   Esplanada: {
     name: 'Esplanada',
     state: 'Bahia',
@@ -628,6 +638,11 @@ const BA: Cities = {
   },
   Eunápolis: {
     name: 'Eunápolis',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  Fátima: {
+    name: 'Fátima',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -658,11 +673,6 @@ const BA: Cities = {
   },
   'Formosa do Rio Preto': {
     name: 'Formosa do Rio Preto',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  Fátima: {
-    name: 'Fátima',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -946,6 +956,11 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
+  Itapé: {
+    name: 'Itapé',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
   Itapebi: {
     name: 'Itapebi',
     state: 'Bahia',
@@ -963,11 +978,6 @@ const BA: Cities = {
   },
   Itapitanga: {
     name: 'Itapitanga',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  Itapé: {
-    name: 'Itapé',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -1116,6 +1126,11 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
+  Lajedão: {
+    name: 'Lajedão',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
   Lajedinho: {
     name: 'Lajedinho',
     state: 'Bahia',
@@ -1123,11 +1138,6 @@ const BA: Cities = {
   },
   'Lajedo do Tabocal': {
     name: 'Lajedo do Tabocal',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  Lajedão: {
-    name: 'Lajedão',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -1461,13 +1471,18 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  'Pedro Alexandre': {
-    name: 'Pedro Alexandre',
+  'Pé de Serra': {
+    name: 'Pé de Serra',
     state: 'Bahia',
     stateInitials: 'BA',
   },
   Pedrão: {
     name: 'Pedrão',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'Pedro Alexandre': {
+    name: 'Pedro Alexandre',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -1521,6 +1536,11 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
+  Poções: {
+    name: 'Poções',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
   Pojuca: {
     name: 'Pojuca',
     state: 'Bahia',
@@ -1541,11 +1561,6 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Poções: {
-    name: 'Poções',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
   Prado: {
     name: 'Prado',
     state: 'Bahia',
@@ -1563,11 +1578,6 @@ const BA: Cities = {
   },
   'Presidente Tancredo Neves': {
     name: 'Presidente Tancredo Neves',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'Pé de Serra': {
-    name: 'Pé de Serra',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -1601,11 +1611,6 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  'Riacho de Santana': {
-    name: 'Riacho de Santana',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
   'Riachão das Neves': {
     name: 'Riachão das Neves',
     state: 'Bahia',
@@ -1613,6 +1618,11 @@ const BA: Cities = {
   },
   'Riachão do Jacuípe': {
     name: 'Riachão do Jacuípe',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'Riacho de Santana': {
+    name: 'Riacho de Santana',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -1671,13 +1681,13 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  'Santa Brígida': {
-    name: 'Santa Brígida',
+  'Santa Bárbara': {
+    name: 'Santa Bárbara',
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  'Santa Bárbara': {
-    name: 'Santa Bárbara',
+  'Santa Brígida': {
+    name: 'Santa Brígida',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -1746,8 +1756,73 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
+  'São Desidério': {
+    name: 'São Desidério',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'São Domingos': {
+    name: 'São Domingos',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'São Felipe': {
+    name: 'São Felipe',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'São Félix': {
+    name: 'São Félix',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'São Félix do Coribe': {
+    name: 'São Félix do Coribe',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'São Francisco do Conde': {
+    name: 'São Francisco do Conde',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'São Gabriel': {
+    name: 'São Gabriel',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'São Gonçalo dos Campos': {
+    name: 'São Gonçalo dos Campos',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'São José da Vitória': {
+    name: 'São José da Vitória',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'São José do Jacuípe': {
+    name: 'São José do Jacuípe',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'São Miguel das Matas': {
+    name: 'São Miguel das Matas',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'São Sebastião do Passé': {
+    name: 'São Sebastião do Passé',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
   Sapeaçu: {
     name: 'Sapeaçu',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'Sátiro Dias': {
+    name: 'Sátiro Dias',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -1811,81 +1886,6 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Sobradinho: {
-    name: 'Sobradinho',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'Souto Soares': {
-    name: 'Souto Soares',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'Sátiro Dias': {
-    name: 'Sátiro Dias',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São Desidério': {
-    name: 'São Desidério',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São Domingos': {
-    name: 'São Domingos',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São Felipe': {
-    name: 'São Felipe',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São Francisco do Conde': {
-    name: 'São Francisco do Conde',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São Félix': {
-    name: 'São Félix',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São Félix do Coribe': {
-    name: 'São Félix do Coribe',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São Gabriel': {
-    name: 'São Gabriel',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São Gonçalo dos Campos': {
-    name: 'São Gonçalo dos Campos',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São José da Vitória': {
-    name: 'São José da Vitória',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São José do Jacuípe': {
-    name: 'São José do Jacuípe',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São Miguel das Matas': {
-    name: 'São Miguel das Matas',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'São Sebastião do Passé': {
-    name: 'São Sebastião do Passé',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
   'Sítio do Mato': {
     name: 'Sítio do Mato',
     state: 'Bahia',
@@ -1893,6 +1893,16 @@ const BA: Cities = {
   },
   'Sítio do Quinto': {
     name: 'Sítio do Quinto',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  Sobradinho: {
+    name: 'Sobradinho',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'Souto Soares': {
+    name: 'Souto Soares',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -1966,6 +1976,11 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
+  Ubaíra: {
+    name: 'Ubaíra',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
   Ubaitaba: {
     name: 'Ubaitaba',
     state: 'Bahia',
@@ -1973,11 +1988,6 @@ const BA: Cities = {
   },
   Ubatã: {
     name: 'Ubatã',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  Ubaíra: {
-    name: 'Ubaíra',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -2011,13 +2021,28 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
+  Valença: {
+    name: 'Valença',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
   Valente: {
     name: 'Valente',
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  Valença: {
-    name: 'Valença',
+  'Várzea Nova': {
+    name: 'Várzea Nova',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'Várzea da Roça': {
+    name: 'Várzea da Roça',
+    state: 'Bahia',
+    stateInitials: 'BA',
+  },
+  'Várzea do Poço': {
+    name: 'Várzea do Poço',
     state: 'Bahia',
     stateInitials: 'BA',
   },
@@ -2041,21 +2066,6 @@ const BA: Cities = {
     state: 'Bahia',
     stateInitials: 'BA',
   },
-  'Várzea Nova': {
-    name: 'Várzea Nova',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'Várzea da Roça': {
-    name: 'Várzea da Roça',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'Várzea do Poço': {
-    name: 'Várzea do Poço',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
   Wagner: {
     name: 'Wagner',
     state: 'Bahia',
@@ -2073,16 +2083,6 @@ const BA: Cities = {
   },
   'Xique-Xique': {
     name: 'Xique-Xique',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'Água Fria': {
-    name: 'Água Fria',
-    state: 'Bahia',
-    stateInitials: 'BA',
-  },
-  'Érico Cardoso': {
-    name: 'Érico Cardoso',
     state: 'Bahia',
     stateInitials: 'BA',
   },
