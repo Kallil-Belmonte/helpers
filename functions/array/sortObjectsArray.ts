@@ -4,20 +4,13 @@
  */
 
 const sortObjectsArray = (array: any[], property: string, reverse = false) => {
-  const sortBy = (key: string, reverseValue: boolean) => {
-    const moveSmaller = reverseValue ? 1 : -1;
-    const moveLarger = reverseValue ? -1 : 1;
+  const propertiesSorted = array.map(item => item[property]).sort();
+  const properetiesResult = reverse ? propertiesSorted.reverse() : propertiesSorted;
 
-    function move(a: any, b: any) {
-      if (a[key] < b[key]) return moveSmaller;
-      if (a[key] > b[key]) return moveLarger;
-      return 0;
-    }
-
-    return move;
-  };
-
-  return array.sort(sortBy(property, reverse));
+  return properetiesResult.map(item => {
+    const object = array.find(arrayItem => arrayItem[property] === item);
+    return object;
+  });
 };
 
 export default sortObjectsArray;
