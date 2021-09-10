@@ -3,7 +3,7 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/PdxGbP }
  */
 
-const sortObjectsArray = (array: any[], property: string, reverse = false) => {
+const sortObjectsArray = (array: any[], property: string, reverse?: boolean) => {
   const modifiedArray = array.map((item, index) => {
     const copiedItem = { ...item };
     if (!copiedItem[property]) copiedItem[property] = `zzz ${index}`;
