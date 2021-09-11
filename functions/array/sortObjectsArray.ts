@@ -14,7 +14,7 @@ const sortObjectsArray = (array: any[], property: string, reverse?: boolean) => 
 
   return propertiesResult.map(propertyResult => {
     const object = modifiedArray.find(item => item[property] === propertyResult);
-    if (/zzz [0-9]{1,}/.test(object[property])) object[property] = null;
+    if (/zzz [0-9]+/.test(object[property])) object[property] = null;
     return object;
   });
 };
