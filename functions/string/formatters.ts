@@ -30,8 +30,8 @@ export const formatDate = (date: string | Date, dateFormat: string, outputFormat
     const formatArray = date instanceof Date ? ['Y', 'M', 'D'] : getArray(dateFormat, /[^DMY]/g);
 
     const { D, M, Y } = dateArray.reduce(
-      (accumulator, currentValue, index) => {
-        accumulator[formatArray[index].charAt(0)] = currentValue.replace(/^0/g, '');
+      (accumulator, value, index) => {
+        accumulator[formatArray[index].charAt(0)] = value.replace(/^0/g, '');
         return accumulator;
       },
       { D: '', M: '', Y: '' },

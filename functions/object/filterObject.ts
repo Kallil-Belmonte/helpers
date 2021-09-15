@@ -10,9 +10,9 @@ const filterObject = (
   propertiesToFilter: string[],
   removeProperties = true,
 ): ObjectType =>
-  Object.keys(object).reduce((accumulator, currentValue) => {
-    if (propertiesToFilter.includes(currentValue) !== removeProperties) {
-      accumulator[currentValue] = object[currentValue];
+  Object.keys(object).reduce((accumulator, value) => {
+    if (propertiesToFilter.includes(value) !== removeProperties) {
+      accumulator[value] = object[value];
     }
 
     return accumulator;

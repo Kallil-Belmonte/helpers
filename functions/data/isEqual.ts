@@ -25,8 +25,8 @@ const isEqual = (firstValue: Value, secondValue: Value, checkOrder?: boolean) =>
       const orderedObject = (object: any): ObjectType =>
         keys(object)
           .sort()
-          .reduce((accumulator, currentValue) => {
-            accumulator[currentValue] = object[currentValue];
+          .reduce((accumulator, value) => {
+            accumulator[value] = object[value];
             return accumulator;
           }, {});
       return stringify(orderedObject(firstValue)) === stringify(orderedObject(secondValue));
