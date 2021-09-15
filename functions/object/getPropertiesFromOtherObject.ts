@@ -3,7 +3,7 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/mdwVeGX }
  */
 
-type ObjectType = { [key: string | number]: any };
+type ObjectType = { [key: string]: any };
 
 const getPropertiesFromOtherObject = (
   objectToCopyProps: ObjectType,
@@ -11,7 +11,7 @@ const getPropertiesFromOtherObject = (
   objectToGetProps: ObjectType,
   secondValueProp: string,
   properties: string[],
-) => {
+): ObjectType => {
   const { keys, values } = Object;
   const result = { ...objectToGetProps };
 

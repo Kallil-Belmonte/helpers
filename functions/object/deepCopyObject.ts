@@ -3,9 +3,9 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/rNNdEdB }
  */
 
-type ObjectType = { [key: string | number]: any };
+type ObjectType = { [key: string]: any };
 
-const deepCopyObject = (object: ObjectType) => {
+const deepCopyObject = (object: ObjectType): ObjectType => {
   const objectCopy = {};
 
   for (const property in object) {

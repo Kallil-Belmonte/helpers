@@ -3,7 +3,7 @@
  * @see { @link https://codepen.io/kallil-belmonte/full/PXdZKE }
  */
 
-type ObjectType = { [key: string | number]: any };
+type ObjectType = { [key: string]: any };
 
 const someObjectHasValue = (objects: ObjectType[], property: string, value: any) =>
   objects.some(item => JSON.stringify(item[property]) === JSON.stringify(value));
