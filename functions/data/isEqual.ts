@@ -1,6 +1,8 @@
 /**
+ * @name isEqual
  * @description Checks if two arrays or two objects are equal.
- * @see { @link https://codepen.io/kallil-belmonte/full/oNwzzQw }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/oNwzzQw }
  */
 
 type ObjectType = { [key: string]: any };

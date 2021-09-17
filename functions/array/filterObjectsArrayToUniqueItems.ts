@@ -1,6 +1,8 @@
 /**
+ * @name filterObjectsArrayToUniqueItems
  * @description Returns just the unique objects from an objects array.
- * @see { @link https://codepen.io/kallil-belmonte/full/zQpadE }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/zQpadE }
  */
 
 const filterObjectsArrayToUniqueItems = (array: any[], propertyToFilter: string) =>

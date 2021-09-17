@@ -1,6 +1,8 @@
 /**
+ * @name sortObjectProperties
  * @description Sorts the object properties by ascending or descending order.
- * @see { @link https://codepen.io/kallil-belmonte/full/XWgzraV }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/XWgzraV }
  */
 
 type ObjectType = { [key: string]: any };

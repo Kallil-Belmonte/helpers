@@ -1,6 +1,8 @@
 /**
+ * @name removeItemsFromArray
  * @description Removes items from an array, using the index of the items or the items itself.
- * @see { @link https://codepen.io/kallil-belmonte/full/gEoqXP }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/gEoqXP }
  */
 
 const removeItemsFromArray = (array: any[], itemsToRemove: any[], useIndex?: boolean) =>

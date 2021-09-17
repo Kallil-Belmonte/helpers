@@ -1,6 +1,8 @@
 /**
+ * @name checkValueDifference
  * @description Checks the difference between two values.
- * @see { @link https://codepen.io/kallil-belmonte/full/vYNQdMr }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/vYNQdMr }
  */
 
 type Options = {

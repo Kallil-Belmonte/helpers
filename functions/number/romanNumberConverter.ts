@@ -1,6 +1,8 @@
 /**
+ * @name romanNumberConverter
  * @description Roman number conversion.
- * @see { @link https://codepen.io/kallil-belmonte/full/PoodqoB }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/PoodqoB }
  */
 
 export const toRoman = (number: number) => {

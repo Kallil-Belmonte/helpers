@@ -1,6 +1,8 @@
 /**
+ * @name seperateNumbersArrayInArrays
  * @description Creates multiples arrays where the numbers are separated by sequence.
- * @see { @link https://codepen.io/kallil-belmonte/full/KKpQQMg }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/KKpQQMg }
  */
 
 const seperateNumbersArrayInArrays = (array: number[], isArrayCrescent = true) => {

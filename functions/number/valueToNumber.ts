@@ -1,6 +1,8 @@
 /**
+ * @name valueToNumber
  * @description Converts a string of monetary/percentage value to a number.
- * @see { @link https://codepen.io/kallil-belmonte/full/RwwYdYw }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/RwwYdYw }
  */
 
 const valueToNumber = (value: string, decimalSymbol = ',') => {

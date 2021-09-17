@@ -1,6 +1,8 @@
 /**
+ * @name getSingleValuesArrayFromArrays
  * @description Returns just the unique items from two arrays.
- * @see { @link https://codepen.io/kallil-belmonte/full/bGdgLxV }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/bGdgLxV }
  */
 
 const getSingleValuesArrayFromArrays = (array: any[], arrayToAddOrRemove: any[]) => {

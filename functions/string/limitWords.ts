@@ -1,6 +1,8 @@
 /**
+ * @name limitWords
  * @description Limits the number of words in a text.
- * @see { @link https://codepen.io/kallil-belmonte/full/ePYrQj }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/ePYrQj }
  */
 
 const limitWords = (text: string | null, numberOfWords: number) =>

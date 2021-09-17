@@ -1,6 +1,8 @@
 /**
+ * @name hasDuplicatedValue
  * @description Checks if an array has a duplicated value.
- * @see { @link https://codepen.io/kallil-belmonte/full/zYrrqMX }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/zYrrqMX }
  */
 
 const hasDuplicatedValue = (array: any[], valueToCheck?: any) => {

@@ -1,6 +1,8 @@
 /**
+ * @name getPercentage
  * @description Gets the percentage of a base value.
- * @see { @link https://codepen.io/kallil-belmonte/full/MWmRGLJ }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/MWmRGLJ }
  */
 
 const getPercentage = (

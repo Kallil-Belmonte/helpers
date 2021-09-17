@@ -1,6 +1,8 @@
 /**
+ * @name getPropertiesFromOtherObject
  * @description Copies the properties from one object to another.
- * @see { @link https://codepen.io/kallil-belmonte/full/mdwVeGX }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/mdwVeGX }
  */
 
 type ObjectType = { [key: string]: any };

@@ -1,6 +1,8 @@
 /**
+ * @name validate
  * @description Validates a string with multiple options.
- * @see { @link https://codepen.io/kallil-belmonte/full/OJpMRYp }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/OJpMRYp }
  */
 
 type ConfigItem = { message: string };

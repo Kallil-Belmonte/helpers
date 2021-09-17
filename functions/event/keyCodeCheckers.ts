@@ -1,6 +1,8 @@
 /**
+ * @name keyCodeCheckers
  * @description Some functions that checks the type of the key provided.
- * @see { @link https://codepen.io/kallil-belmonte/full/QWbyGYo }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/QWbyGYo }
  */
 
 export const isKeyCodeLetter = (keyCode: number) => {

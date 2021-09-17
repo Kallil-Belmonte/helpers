@@ -1,6 +1,8 @@
 /**
+ * @name checkIfImageExists
  * @description Checks if image exists in the URL address provided in the first parameter.
- * @see { @link https://codepen.io/kallil-belmonte/full/KKKRoyx }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/KKKRoyx }
  */
 
 const checkIfImageExists = (url: string, callback: (exists: boolean) => void) => {
@@ -13,6 +15,7 @@ const checkIfImageExists = (url: string, callback: (exists: boolean) => void) =>
     img.onload = () => {
       callback(true);
     };
+
     img.onerror = () => {
       callback(false);
     };

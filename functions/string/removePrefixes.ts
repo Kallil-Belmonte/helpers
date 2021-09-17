@@ -1,6 +1,8 @@
 /**
+ * @name removePrefixes
  * @description Returns the value without the prefix defined in the second parameter.
- * @see { @link https://codepen.io/kallil-belmonte/full/ZEBpvLy }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/ZEBpvLy }
  */
 
 const removePrefixes = (value: string, prefix = '0') => {

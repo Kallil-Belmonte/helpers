@@ -1,6 +1,8 @@
 /**
+ * @name formatters
  * @description A collection of usefull formatters.
- * @see { @link https://codepen.io/kallil-belmonte/full/bZZOoQ }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/bZZOoQ }
  */
 
 export const removeSpecialCharacters = (text: string) =>

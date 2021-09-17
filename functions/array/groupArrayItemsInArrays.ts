@@ -1,6 +1,8 @@
 /**
+ * @name groupArrayItemsInArrays
  * @description Rearranges the array items into groups of arrays, based on the quantity specified.
- * @see { @link https://codepen.io/kallil-belmonte/full/JmmEdz }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/JmmEdz }
  */
 
 const groupArrayItemsInArrays = (array: any[], itemsQuantity: number, repeatLastItem?: boolean) => {

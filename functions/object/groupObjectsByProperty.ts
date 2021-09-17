@@ -1,6 +1,8 @@
 /**
+ * @name groupObjectsByProperty
  * @description Takes an objects array and create one array for each property value of its objects.
- * @see { @link https://codepen.io/kallil-belmonte/full/GXgEgo }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/GXgEgo }
  */
 
 const groupObjectsByProperty = (array: any[], property: string, ascending = true) => {

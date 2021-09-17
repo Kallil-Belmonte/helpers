@@ -1,6 +1,8 @@
 /**
+ * @name filterObject
  * @description Returns a new object with or without the properties provided in the second parameter.
- * @see { @link https://codepen.io/kallil-belmonte/full/xxxpKxv }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/xxxpKxv  }
  */
 
 type ObjectType = { [key: string]: any };

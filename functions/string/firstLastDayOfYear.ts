@@ -1,6 +1,8 @@
 /**
+ * @name firstLastDayOfYear
  * @description Gets the first and last day of the current year.
- * @see { @link https://codepen.io/kallil-belmonte/full/PdMREw }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/PdMREw }
  */
 
 export const getFirstDayOfYear = () =>

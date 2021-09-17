@@ -1,6 +1,8 @@
 /**
+ * @name capitalizeText
  * @description Capitalizes all words of a text, except the words in the array of the second parameter.
- * @see { @link https://codepen.io/kallil-belmonte/full/VRRxEQ }
+ * @author Kallil Belmonte
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/VRRxEQ }
  */
 
 const capitalizeText = (text: string | null, exceptionWords: string[] = []) =>
