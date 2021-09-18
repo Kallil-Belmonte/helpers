@@ -1,14 +1,7 @@
-//---------- SUMMARY ----------//
-// EM
-// REM
-//---------- END SUMMARY ----------//
-
-// EM
 @function em($target, $context: 16px) {
   @return ($target / $context) * 1em;
 }
 
-// REM
 @function rem($target) {
   @return ($target / 16px) * 1rem;
 }

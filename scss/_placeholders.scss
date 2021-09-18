@@ -1,17 +1,9 @@
-//---------- SUMMARY ----------//
-// TEXT CONTINUED
-// CENTER ALIGNMENT
-// BACKGROUND IMAGE
-//---------- END SUMMARY ----------//
-
-// TEXT CONTINUED
 %text-continued {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-// CENTER ALIGNMENT
 %center-absolute,
 %center-absolute-y,
 %center-absolute-x {
@@ -34,7 +26,6 @@
   transform: translateX(-50%);
 }
 
-// BACKGROUND IMAGE
 %background-image-contain,
 %background-image-cover {
   background-repeat: no-repeat;
