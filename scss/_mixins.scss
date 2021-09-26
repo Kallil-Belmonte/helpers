@@ -1,8 +1,7 @@
 @mixin size($width, $height, $radius: '') {
   width: $width;
   height: $height;
-
-  @if $radius {
+  @if $radius != '' {
     border-radius: $radius;
   }
 }
@@ -10,8 +9,7 @@
 @mixin square($size, $radius: '') {
   width: $size;
   height: $size;
-
-  @if $radius {
+  @if $radius != '' {
     border-radius: $radius;
   }
 }
