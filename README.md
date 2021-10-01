@@ -30,7 +30,7 @@ General helpers free to use.
   - [isEqual](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/isEqual.ts)
   - [typeCheckers](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/typeCheckers.ts)
 - [event](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/event)
-  - [keyCodeCheckers](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/event/keyCodeCheckers.ts)
+  - [keyCheckers](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/event/keyCheckers.ts)
 - [image](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/image)
   - [checkIfImageExists](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/image/checkIfImageExists.ts)
 - [number](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/number)
