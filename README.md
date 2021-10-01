@@ -58,6 +58,5 @@ General helpers free to use.
 ## SCSS
 
 - [ \_functions](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_functions.scss)
-- [\_helpers](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_helpers.scss)
 - [ \_mixins](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_mixins.scss)
 - [\_placeholders](https://github.com/Kallil-Belmonte/helpers/tree/main/scss/_placeholders.scss)
