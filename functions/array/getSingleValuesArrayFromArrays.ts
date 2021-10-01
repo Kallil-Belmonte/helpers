@@ -12,7 +12,7 @@ const getSingleValuesArrayFromArrays = (array: any[], arrayToAddOrRemove: any[])
 
   arrayToAddOrRemove.forEach(item => {
     if (base.includes(stringify(item))) {
-      result = result.filter(el => el !== item);
+      result = result.filter(el => stringify(el) !== stringify(item));
     } else {
       result.push(item);
     }
