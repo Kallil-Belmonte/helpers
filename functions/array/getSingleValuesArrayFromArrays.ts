@@ -6,10 +6,12 @@
  */
 
 const getSingleValuesArrayFromArrays = (array: any[], arrayToAddOrRemove: any[]) => {
+  const { stringify } = JSON;
+  const base = array.map(item => stringify(item));
   let result = [...array];
 
   arrayToAddOrRemove.forEach(item => {
-    if (array.includes(item)) {
+    if (base.includes(stringify(item))) {
       result = result.filter(el => el !== item);
     } else {
       result.push(item);
