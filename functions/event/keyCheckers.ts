@@ -6,7 +6,7 @@
  * @see KeyValues { @link https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values }
  */
 
-export const isKeyLetter = (key: string) => {
+export const isLetterKey = (key: string) => {
   const lettersKeys = [
     'a',
     'b',
@@ -40,7 +40,7 @@ export const isKeyLetter = (key: string) => {
   return lettersKeys.includes(key);
 };
 
-export const isKeySpecialCharacter = (key: string) => {
+export const isSpecialCharacterKey = (key: string) => {
   const specialCharactersKeys = [
     '+',
     '\\',
@@ -63,13 +63,13 @@ export const isKeySpecialCharacter = (key: string) => {
   return specialCharactersKeys.includes(key);
 };
 
-const isKeyNumber = (key: string) => {
+export const isNumberKey = (key: string) => {
   const numbersKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
   return numbersKeys.includes(key);
 };
 
-export const isKeySpecialKey = (key: string) => {
+export const isSpecialKey = (key: string) => {
   const specialKeys = [
     'Alt',
     'Backspace',
