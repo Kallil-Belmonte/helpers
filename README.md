@@ -31,6 +31,7 @@ General helpers free to use.
   - [typeCheckers](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/typeCheckers.ts)
 - [date](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date)
   - [firstLastDayOfYear](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/firstLastDayOfYear.ts)
+  - [getDaysDifference](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getDaysDifference.ts)
   - [getDayShift](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getDayShift.ts)
   - [getPastFutureDate](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getPastFutureDate.ts)
 - [event](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/event)
