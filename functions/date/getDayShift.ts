@@ -1,6 +1,6 @@
 /**
  * @name getDayShift
- * @description Gets the day shift to be use in a greeting for example..
+ * @description Gets the day shift to be use in a greeting for example.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/LYjRLNN }
  */
