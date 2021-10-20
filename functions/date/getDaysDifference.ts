@@ -2,7 +2,7 @@
  * @name getDaysDifference
  * @description Gets the difference between two dates.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/ }
+ * @see CodePen { @link https://codepen.io/kallil-belmonte/full/rNzMzyy }
  */
 
 const getDaysDifference = (date: string | Date, dateBase?: string | Date) => {
