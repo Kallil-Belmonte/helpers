@@ -1,3 +1,7 @@
+/**
+ * @see RESTCountries { @link https://restcountries.com }
+ */
+
 type Country = {
   nameUS: string;
   nameBR: string;
