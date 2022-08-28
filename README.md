@@ -29,6 +29,7 @@ General helpers free to use.
 - [data](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data)
   - [isEqual](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/isEqual.ts)
   - [typeCheckers](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/typeCheckers.ts)
+  - [uid](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/uid.ts)
 - [date](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date)
   - [firstLastDayOfYear](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/firstLastDayOfYear.ts)
   - [getDaysDifference](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getDaysDifference.ts)
