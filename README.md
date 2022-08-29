@@ -53,6 +53,7 @@ General helpers free to use.
 - [string](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string)
   - [capitalizeText](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/capitalizeText.ts)
   - [colorConverter](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/colorConverter.ts)
+  - [firstLetterToUpperCase](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/firstLetterToUpperCase.ts)
   - [formatters](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/formatters.ts)
   - [getPercentage](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/getPercentage.ts)
   - [limitWords](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/limitWords.ts)
