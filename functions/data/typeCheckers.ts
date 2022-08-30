@@ -13,7 +13,7 @@ export const isString = (value: any) => typeof value === 'string';
 
 export const isNumber = (value: any) => typeof value === 'number';
 
-export const isArray = (value: any) => !!value && value.constructor === Array;
+export const isArray = (value: any) => !!value && Array.isArray(value);;
 
 export const isObject = (value: any) => !!value && value.constructor === Object;
 
