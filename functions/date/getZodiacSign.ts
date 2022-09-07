@@ -12,18 +12,8 @@ type Params = {
 };
 
 const getZodiacSign = ({ date, day: dayParam, month: monthParam }: Params) => {
-  let day: number = 1;
-  let month: number = 1;
-
-  if (date) {
-    day = date.getDay();
-    month = date.getMonth() + 1;
-  }
-
-  if (dayParam && monthParam) {
-    day = dayParam;
-    month = monthParam;
-  }
+  const day = date ? date.getDay() : dayParam || 1;
+  const month = date ? date.getMonth() + 1 : monthParam || 1;
 
   if ((day >= 20 && month === 1) || (day <= 18 && month === 2)) return 'Aquarius';
   if ((day >= 19 && month === 2) || (day <= 20 && month === 3)) return 'Pisces';
