@@ -60,6 +60,8 @@ General helpers free to use.
   - [limitWords](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/limitWords.ts)
   - [removePrefixes](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/removePrefixes.ts)
   - [validate](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/validate.ts)
+- [time](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/time)
+  - [getMilliseconds](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/time/getMilliseconds.ts)
 
 ## SCSS
 
