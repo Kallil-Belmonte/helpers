@@ -5,10 +5,10 @@
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/oNdzNyy }
  */
 
-type Config = { week?: number; day?: number; hour?: number; minute?: number; second?: number };
+type Config = { second?: number; minute?: number; hour?: number; day?: number; week?: number };
 
 const getMilliseconds = (config: Config) => {
-  const { week, day, hour, minute, second } = config;
+  const { second, minute, hour, day, week } = config;
 
   const secondBase = 1000;
   const minuteBase = secondBase * 60;
