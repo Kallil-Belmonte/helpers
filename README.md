@@ -32,7 +32,6 @@ General helpers free to use.
   - [uuid](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/uuid.ts)
 - [date](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date)
   - [firstLastDayOfYear](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/firstLastDayOfYear.ts)
-  - [getDaysDifference](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getDaysDifference.ts)
   - [getDayShift](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getDayShift.ts)
   - [getPastFutureDate](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getPastFutureDate.ts)
   - [getZodiacSign](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getZodiacSign.ts)
@@ -62,6 +61,7 @@ General helpers free to use.
   - [validate](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/validate.ts)
 - [time](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/time)
   - [getMilliseconds](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/time/getMilliseconds.ts)
+  - [getTimeDifference](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/time/getTimeDifference.ts)
 
 ## SCSS
 
