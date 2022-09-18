@@ -11,6 +11,7 @@ type ConfigItemNumber = ConfigItem & { check: number };
 type ConfigItemRegex = ConfigItem & { check: RegExp };
 
 type Config = {
+  required?: ConfigItemBoolean;
   regex?: ConfigItemRegex;
   email?: ConfigItemBoolean;
   phone?: ConfigItemBoolean;
@@ -26,6 +27,7 @@ type Config = {
 type ValidationItem = { isValid: boolean; message: string };
 
 type Validations = {
+  required?: ValidationItem;
   regex?: ValidationItem;
   email?: ValidationItem;
   phone?: ValidationItem;
@@ -40,8 +42,19 @@ type Validations = {
 
 const validate = (value: string, config: Config = {}) => {
   const { values } = Object;
-  const { regex, email, phone, min, max, number, lowercase, uppercase, specialCharacter, space } =
-    config;
+  const {
+    required,
+    regex,
+    email,
+    phone,
+    min,
+    max,
+    number,
+    lowercase,
+    uppercase,
+    specialCharacter,
+    space,
+  } = config;
   const validations: Validations = {};
 
   const getValidation = (isValid: boolean, message: string): ValidationItem => ({
@@ -50,6 +63,12 @@ const validate = (value: string, config: Config = {}) => {
   });
   const getIsValid = (item: any): boolean => item.isValid;
   const getMessage = (item: any): string => item.message;
+
+  // Required
+  if (required?.check) {
+    const { message = 'Value required.' } = required;
+    validations.required = getValidation(!!value, message);
+  }
 
   // Regex
   if (regex?.check) {
