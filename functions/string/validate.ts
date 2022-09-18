@@ -5,7 +5,7 @@
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/OJpMRYp }
  */
 
-type ConfigItem = { message: string };
+type ConfigItem = { message?: string };
 type ConfigItemBoolean = ConfigItem & { check: boolean };
 type ConfigItemNumber = ConfigItem & { check: number };
 type ConfigItemRegex = ConfigItem & { check: RegExp };
