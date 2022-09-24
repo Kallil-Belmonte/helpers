@@ -10,7 +10,8 @@ type ConfigItemBoolean = ConfigItem & { check: boolean };
 type ConfigItemNumber = ConfigItem & { check: number };
 type ConfigItemRegex = ConfigItem & { check: RegExp };
 
-type Config = {
+export type Config = {
+  custom?: Required<ConfigItemBoolean>;
   required?: ConfigItemBoolean;
   regex?: ConfigItemRegex;
   email?: ConfigItemBoolean;
@@ -26,7 +27,8 @@ type Config = {
 
 type ValidationItem = { isValid: boolean; message: string };
 
-type Validations = {
+export type Validations = {
+  custom?: ValidationItem;
   required?: ValidationItem;
   regex?: ValidationItem;
   email?: ValidationItem;
@@ -43,6 +45,7 @@ type Validations = {
 const validate = (value: string, config: Config = {}) => {
   const { values } = Object;
   const {
+    custom,
     required,
     regex,
     email,
@@ -63,6 +66,12 @@ const validate = (value: string, config: Config = {}) => {
   });
   const getIsValid = (item: any): boolean => item.isValid;
   const getMessage = (item: any): string => item.message;
+
+  // Custom
+  if (typeof custom?.check === 'boolean') {
+    const { check, message } = custom;
+    validations.required = getValidation(check, message);
+  }
 
   // Required
   if (required?.check) {
@@ -87,7 +96,7 @@ const validate = (value: string, config: Config = {}) => {
   // Phone
   if (phone?.check) {
     const { message = 'Invalid phone.' } = phone;
-    const formattedValue = value.replace(/[^0-9]/g, '');
+    const formattedValue = value?.replace(/[^0-9]/g, '');
     const phoneRegex = /^[0-9]{10,11}$/;
     validations.phone = getValidation(phoneRegex.test(formattedValue), message);
   }
@@ -95,13 +104,13 @@ const validate = (value: string, config: Config = {}) => {
   // Min
   if (min?.check) {
     const { check, message = `Minimum ${min.check} characters.` } = min;
-    validations.min = getValidation(value.length >= check, message);
+    validations.min = getValidation(value?.length >= check, message);
   }
 
   // Max
   if (max?.check) {
     const { check, message = `Maximum ${max.check} character${max.check > 1 ? 's' : ''}.` } = max;
-    validations.max = getValidation(value.length <= check, message);
+    validations.max = getValidation(value?.length <= check, message);
   }
 
   // Number
