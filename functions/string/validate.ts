@@ -70,7 +70,7 @@ const validate = (value: string, config: Config = {}) => {
   // Custom
   if (typeof custom?.check === 'boolean') {
     const { check, message } = custom;
-    validations.required = getValidation(check, message);
+    validations.custom = getValidation(check, message);
   }
 
   // Required
