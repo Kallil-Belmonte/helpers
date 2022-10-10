@@ -55,8 +55,17 @@ export const formatDate = (date: string | Date, dateFormat: string, outputFormat
   return date;
 };
 
-export const formatCPF = (cpf: string) =>
-  cpf ? cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4') : cpf;
+export const formatCPF = (cpf: string) => {
+  if (cpf) {
+    let result = cpf.replace(/\D/g, '').split('').slice(0, 11);
+    if (result[3]) result.splice(3, 0, '.');
+    if (result[7]) result.splice(7, 0, '.');
+    if (result[11]) result.splice(11, 0, '-');
+    return result.join('');
+  }
+
+  return cpf;
+};
 
 export const formatCNPJ = (cnpj: string) =>
   cnpj ? cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5') : cnpj;
