@@ -90,9 +90,17 @@ export const formatPrice = (price: number) =>
 
 export const formatTelephoneNumber = (telephoneNumber: string) => {
   if (telephoneNumber) {
-    return telephoneNumber.length > 10
-      ? telephoneNumber.replace(/^(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')
-      : telephoneNumber.replace(/^(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+    let result = telephoneNumber.replace(/\D/g, '').split('').slice(0, 11);
+    result.unshift('(');
+    if (result[3]) result.splice(3, 0, ')');
+    if (result[4]) result.splice(4, 0, ' ');
+    if (telephoneNumber.length === 10 && result[9]) {
+      result.splice(9, 0, ' ');
+    } else if (result[10]) {
+      result.splice(10, 0, ' ');
+    }
+
+    return result.join('');
   }
 
   return telephoneNumber;
