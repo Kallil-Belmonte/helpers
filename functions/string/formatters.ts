@@ -67,8 +67,18 @@ export const formatCPF = (cpf: string) => {
   return cpf;
 };
 
-export const formatCNPJ = (cnpj: string) =>
-  cnpj ? cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5') : cnpj;
+export const formatCNPJ = (cnpj: string) => {
+  if (cnpj) {
+    let result = cnpj.replace(/\D/g, '').split('').slice(0, 14);
+    if (result[2]) result.splice(2, 0, '.');
+    if (result[6]) result.splice(6, 0, '.');
+    if (result[10]) result.splice(10, 0, '-');
+    if (result[15]) result.splice(15, 0, '-');
+    return result.join('');
+  }
+
+  return cnpj;
+};
 
 export const formatPrice = (price: number) =>
   price
