@@ -5,29 +5,28 @@
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/mdmYVNo }
  */
 
-export const getPastDate = (daysQuantity: number, date?: string, config = {}, locale = 'pt-BR') => {
-  const d = date ? new Date(date) : new Date();
-  const pastDate = new Date(d.getFullYear(), d.getMonth(), d.getDate() - daysQuantity);
-  return pastDate.toLocaleDateString(locale, {
-    day: 'numeric',
-    month: 'numeric',
-    year: 'numeric',
-    ...config,
-  });
+type Config = {
+  date?: string | Date;
+  days?: number;
+  months?: number;
+  years?: number;
 };
 
-export const getFutureDate = (
-  daysQuantity: number,
-  date?: string,
-  config = {},
-  locale = 'pt-BR',
-) => {
+export const getPastDate = (config: Config) => {
+  const { date, days, months, years } = config;
   const d = date ? new Date(date) : new Date();
-  const pastDate = new Date(d.getFullYear(), d.getMonth(), d.getDate() + daysQuantity);
-  return pastDate.toLocaleDateString(locale, {
-    day: 'numeric',
-    month: 'numeric',
-    year: 'numeric',
-    ...config,
-  });
+  if (years) d.setFullYear(d.getFullYear() - years);
+  if (months) d.setMonth(d.getMonth() - months);
+  if (days) d.setDate(d.getDate() - days);
+  return d;
+};
+
+// GET FUTURE DATE
+export const getFutureDate = (config: Config) => {
+  const { date, days, months, years } = config;
+  const d = date ? new Date(date) : new Date();
+  if (years) d.setFullYear(d.getFullYear() + years);
+  if (months) d.setMonth(d.getMonth() + months);
+  if (days) d.setDate(d.getDate() + days);
+  return d;
 };
