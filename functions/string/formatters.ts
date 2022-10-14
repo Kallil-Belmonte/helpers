@@ -23,6 +23,8 @@ export const removeHTML = (html: string, keepNewLines?: boolean) => {
 
 export const formatDate = (date: string | Date, dateFormat: string, outputFormat: string) => {
   if (date) {
+    type DateBase = { D: string; M: string; Y: string };
+
     const getArray = (d: string, regex: RegExp) =>
       d.replace(regex, ' ').replace(/\s+/g, ' ').split(' ');
     const quantDigits = (id: string) => outputFormat.split(id).length - 1;
@@ -31,13 +33,11 @@ export const formatDate = (date: string | Date, dateFormat: string, outputFormat
     const dateArray = getArray(dateBase, /[^0-9]/g);
     const formatArray = date instanceof Date ? ['Y', 'M', 'D'] : getArray(dateFormat, /[^DMY]/g);
 
-    const { D, M, Y } = dateArray.reduce(
-      (accumulator, value, index) => {
-        accumulator[formatArray[index].charAt(0)] = value.replace(/^0/g, '');
-        return accumulator;
-      },
-      { D: '', M: '', Y: '' },
-    );
+    const { D, M, Y } = dateArray.reduce((accumulator, value, index) => {
+      const property = formatArray[index].charAt(0) as keyof DateBase;
+      accumulator[property] = value.replace(/^0/g, '');
+      return accumulator;
+    }, {} as DateBase);
 
     let result = outputFormat;
     result = result.replace(/D?D/g, D);
