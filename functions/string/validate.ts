@@ -75,7 +75,7 @@ const validate = (value: string, config: Config = {}) => {
 
   // Required
   if (required?.check) {
-    const { message = 'Value required.' } = required;
+    const { message = 'Required value.' } = required;
     validations.required = getValidation(!!value, message);
   }
 
