@@ -21,7 +21,6 @@ export const getPastDate = (config: Config) => {
   return d;
 };
 
-// GET FUTURE DATE
 export const getFutureDate = (config: Config) => {
   const { date, days, months, years } = config;
   const d = date ? new Date(date) : new Date();
