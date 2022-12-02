@@ -40,11 +40,12 @@ export const formatDate = (date: string | Date, dateFormat: string, outputFormat
     }, {} as DateBase);
 
     let result = outputFormat;
-    result = result.replace(/D?D/g, D);
-    if (quantDigits('D') === 2 && D.length === 1) result = result.replace(D, `0${D}`);
 
-    result = result.replace(/M?M/g, M);
-    if (quantDigits('M') === 2 && M.length === 1) result = result.replace(M, `0${M}`);
+    const dayWithZero = quantDigits('D') === 2 && D.length === 1;
+    result = result.replace(/D?D/g, dayWithZero ? `0${D}` : D);
+
+    const monthWithZero = quantDigits('M') === 2 && M.length === 1;
+    result = result.replace(/M?M/g, monthWithZero ? `0${M}` : M);
 
     result = result.replace(/YY?Y?Y?/g, Y);
     if (quantDigits('Y') <= 2) result = result.replace(Y, Y.slice(Y.length - 2, Y.length));
