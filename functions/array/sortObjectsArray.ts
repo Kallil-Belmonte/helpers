@@ -5,20 +5,39 @@
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/PdxGbP }
  */
 
-const sortObjectsArray = (array: any[], property: string, reverse?: boolean) => {
-  const modifiedArray = array.map((item, index) => {
-    const copiedItem = { ...item };
-    if (!copiedItem[property]) copiedItem[property] = `zzz ${index}`;
-    return copiedItem;
-  });
-  const propertiesSorted = modifiedArray.map(item => item[property]).sort();
-  const propertiesResult = reverse ? propertiesSorted.reverse() : propertiesSorted;
+type ObjectType = { [key: string]: any };
 
-  return propertiesResult.map(propertyResult => {
-    const object = modifiedArray.find(item => item[property] === propertyResult);
-    if (/zzz [0-9]+/.test(object[property])) object[property] = null;
-    return object;
-  });
+const sortObjectsArray = (array: any[], property: string, reverse?: boolean) => {
+  const isNumber = (item: ObjectType) => typeof item[property] === 'number';
+  const isString = (item: ObjectType) => typeof item[property] === 'string';
+  const isNullOrUndefined = (item: ObjectType) =>
+    item[property] === undefined || item[property] === null;
+  const mapProperty = (item: ObjectType) => item[property];
+  const findItem = (item: ObjectType, value: any) => item[property] === value;
+  const numbers = array
+    .filter(item => isNumber(item))
+    .map(mapProperty)
+    .sort((a, b) => a - b);
+  const strings = array
+    .filter(item => isString(item))
+    .map(mapProperty)
+    .sort();
+  const valids = array.filter(
+    item => !isNumber(item) && !isString(item) && !isNullOrUndefined(item),
+  );
+  const invalids = array.filter(item => isNullOrUndefined(item));
+
+  if (reverse) {
+    numbers.reverse();
+    strings.reverse();
+  }
+
+  return [
+    ...numbers.map(value => array.find(item => findItem(item, value))),
+    ...strings.map(value => array.find(item => findItem(item, value))),
+    ...valids,
+    ...invalids,
+  ];
 };
 
 export default sortObjectsArray;
