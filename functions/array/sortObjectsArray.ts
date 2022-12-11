@@ -14,6 +14,7 @@ const sortObjectsArray = (array: any[], property: string, reverse?: boolean) => 
     item[property] === undefined || item[property] === null;
   const mapProperty = (item: ObjectType) => item[property];
   const findItem = (item: ObjectType, value: any) => item[property] === value;
+
   const numbers = array
     .filter(item => isNumber(item))
     .map(mapProperty)
