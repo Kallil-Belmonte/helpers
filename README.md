@@ -44,7 +44,6 @@ General helpers free to use.
   - [romanNumberConverter](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/number/romanNumberConverter.ts)
   - [valueToNumber](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/number/valueToNumber.ts)
 - [object](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/object)
-  - [deepCopyObject](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/object/deepCopyObject.ts)
   - [filterObject](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/object/filterObject.ts)
   - [getPropertiesFromOtherObject](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/object/getPropertiesFromOtherObject.ts)
   - [groupObjectsByProperty](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/object/groupObjectsByProperty.ts)

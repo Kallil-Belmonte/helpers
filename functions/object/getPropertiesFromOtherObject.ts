@@ -1,6 +1,11 @@
 /**
  * @function getPropertiesFromOtherObject
  * @description Copies the properties from one object to another.
+ * @param { Object } objectToCopyProps - Object to copy properties.
+ * @param { string } firstValueProp - First property value.
+ * @param { Object } objectToGetProps - Object to get the copied properties.
+ * @param { string } secondValueProp - Second property value.
+ * @param { Array } properties - Properties.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/mdwVeGX }
  */
