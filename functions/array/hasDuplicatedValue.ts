@@ -1,7 +1,7 @@
 /**
  * @function hasDuplicatedValue
  * @description Checks if an array has a duplicated value.
- * @param { Array } array - Values array.
+ * @param { any[] } array - Values array.
  * @param { any } [valueToCheck] - Value to check.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/zYrrqMX }

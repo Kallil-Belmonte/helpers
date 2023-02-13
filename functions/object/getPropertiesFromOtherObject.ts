@@ -5,7 +5,7 @@
  * @param { string } firstValueProp - First property value.
  * @param { Object } objectToGetProps - Object to get the copied properties.
  * @param { string } secondValueProp - Second property value.
- * @param { Array } properties - Properties.
+ * @param { string[] } properties - Properties.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/mdwVeGX }
  */

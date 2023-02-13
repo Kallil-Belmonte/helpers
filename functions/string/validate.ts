@@ -1,6 +1,8 @@
 /**
  * @function validate
  * @description Validates a string with multiple options.
+ * @param { string } value - Text to be validated.
+ * @param { Object } config - Validation configuration.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/OJpMRYp }
  */
@@ -42,7 +44,7 @@ export type Validations = {
   space?: ValidationItem;
 };
 
-const validate = (value: string, config: Config = {}) => {
+const validate = (value: string, config: Config) => {
   const { values } = Object;
   const {
     custom,
@@ -57,7 +59,7 @@ const validate = (value: string, config: Config = {}) => {
     uppercase,
     specialCharacter,
     space,
-  } = config;
+  } = config || {};
   const validations: Validations = {};
 
   const getValidation = (isValid: boolean, message: string): ValidationItem => ({

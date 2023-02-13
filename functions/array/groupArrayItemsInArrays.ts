@@ -1,7 +1,7 @@
 /**
  * @function groupArrayItemsInArrays
  * @description Rearranges the array items into groups of arrays, based on the quantity specified.
- * @param { Array } array - Values array.
+ * @param { any[] } array - Values array.
  * @param { number } itemsQuantity - Items quantity.
  * @param { boolean } [repeatLastItem] - If true, repeats the last item.
  * @author Kallil Belmonte

@@ -1,6 +1,8 @@
 /**
  * @function removePrefixes
  * @description Returns the value without the prefix defined in the second parameter.
+ * @param { string } value - Text.
+ * @param { string } [prefix=0] - Prefix to be removed from text.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/ZEBpvLy }
  */

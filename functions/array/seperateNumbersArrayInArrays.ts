@@ -1,7 +1,7 @@
 /**
  * @function seperateNumbersArrayInArrays
  * @description Creates multiples arrays where the numbers are separated by sequence.
- * @param { Array } array - Numbers array.
+ * @param { number[] } array - Numbers array.
  * @param { boolean } [isArrayCrescent=true] - True if the array is crescent.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/KKpQQMg }
