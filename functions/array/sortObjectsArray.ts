@@ -1,6 +1,9 @@
 /**
  * @function sortObjectsArray
  * @description Sorts the objects inside an array by one property (in ascending or descending order).
+ * @param { Array } array - Values array.
+ * @param { string } property - Property to sort.
+ * @param { boolean } [reverse] - If true, reverts the array order.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/PdxGbP }
  */

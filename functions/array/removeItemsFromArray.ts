@@ -1,6 +1,9 @@
 /**
  * @function removeItemsFromArray
  * @description Removes items from an array, using the index of the items or the items itself.
+ * @param { Array } array - Values array.
+ * @param { Array } itemsToRemove - Items to remove.
+ * @param { boolean } [useIndex] - If true, uses the index to remove items.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/gEoqXP }
  */

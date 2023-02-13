@@ -1,6 +1,9 @@
 /**
  * @function isEqual
  * @description Checks if two arrays or two objects are equal.
+ * @param { Array | Object } firstValue - First value.
+ * @param { Array | Object } secondValue - Second value.
+ * @param { boolean } [checkOrder] - If true, also checks the values order.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/oNwzzQw }
  */
@@ -11,7 +14,7 @@ type Value = any[] | ObjectType;
 
 const isEqual = (firstValue: Value, secondValue: Value, checkOrder?: boolean) => {
   const { stringify, parse } = JSON;
-  const { keys, values } = Object;
+  const { keys } = Object;
 
   const isArray = (value: any) => !!value && value.constructor === Array;
   const isObject = (value: any) =>

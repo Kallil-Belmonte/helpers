@@ -1,11 +1,13 @@
 /**
  * @function seperateNumbersArrayInArrays
  * @description Creates multiples arrays where the numbers are separated by sequence.
+ * @param { Array } array - Numbers array.
+ * @param { boolean } [isArrayCrescent=true] - True if the array is crescent.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/KKpQQMg }
  */
 
-const seperateNumbersArrayInArrays = (array: number[], isArrayCrescent = true) => {
+const seperateNumbersArrayInArrays = (array: number[], isArrayCrescent: boolean = true) => {
   const result: number[][] = [[]];
 
   array.forEach(item => {
