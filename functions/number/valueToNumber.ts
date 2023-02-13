@@ -1,5 +1,5 @@
 /**
- * @name valueToNumber
+ * @function valueToNumber
  * @description Converts a string of monetary/percentage value to a number.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/RwwYdYw }

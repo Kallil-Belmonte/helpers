@@ -1,5 +1,5 @@
 /**
- * @name firstLastDayOfYear
+ * @function firstLastDayOfYear
  * @description Gets the first and last day of the current year.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/PdMREw }

@@ -1,5 +1,5 @@
 /**
- * @name sortObjectProperties
+ * @function sortObjectProperties
  * @description Sorts the object properties by ascending or descending order.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/XWgzraV }

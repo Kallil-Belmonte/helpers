@@ -1,5 +1,5 @@
 /**
- * @name getZodiacSign
+ * @function getZodiacSign
  * @description Gets the zodiac sign based on date or day and month.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/bGMVXJQ }

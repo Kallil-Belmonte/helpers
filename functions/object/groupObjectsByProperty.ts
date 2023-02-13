@@ -1,5 +1,5 @@
 /**
- * @name groupObjectsByProperty
+ * @function groupObjectsByProperty
  * @description Takes an objects array and create one array for each property value of its objects.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/GXgEgo }

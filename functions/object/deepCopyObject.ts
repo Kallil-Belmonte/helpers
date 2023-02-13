@@ -1,5 +1,5 @@
 /**
- * @name deepCopyObject
+ * @function deepCopyObject
  * @description Creates a deep copy of an object.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/rNNdEdB }

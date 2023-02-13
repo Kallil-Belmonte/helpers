@@ -1,5 +1,5 @@
 /**
- * @name someObjectHasValue
+ * @function someObjectHasValue
  * @description Checks if some object in an array has a specific value.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/PXdZKE }

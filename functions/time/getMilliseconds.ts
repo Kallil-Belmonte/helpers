@@ -1,5 +1,5 @@
 /**
- * @name getMilliseconds
+ * @function getMilliseconds
  * @description Gets the milliseconds from a specified period.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/oNdzNyy }

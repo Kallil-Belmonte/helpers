@@ -1,5 +1,5 @@
 /**
- * @name limitWords
+ * @function limitWords
  * @description Limits the number of words in a text.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/ePYrQj }

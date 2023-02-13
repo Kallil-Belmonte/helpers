@@ -1,5 +1,5 @@
 /**
- * @name capitalizeText
+ * @function capitalizeText
  * @description Capitalizes all words of a text, except the words in the array of the second parameter.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/VRRxEQ }

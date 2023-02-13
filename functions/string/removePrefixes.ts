@@ -1,5 +1,5 @@
 /**
- * @name removePrefixes
+ * @function removePrefixes
  * @description Returns the value without the prefix defined in the second parameter.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/ZEBpvLy }

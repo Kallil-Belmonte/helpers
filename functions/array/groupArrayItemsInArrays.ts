@@ -1,5 +1,5 @@
 /**
- * @name groupArrayItemsInArrays
+ * @function groupArrayItemsInArrays
  * @description Rearranges the array items into groups of arrays, based on the quantity specified.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/JmmEdz }

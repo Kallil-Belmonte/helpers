@@ -1,5 +1,5 @@
 /**
- * @name checkValueDifference
+ * @function checkValueDifference
  * @description Checks the difference between two values.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/vYNQdMr }

@@ -1,5 +1,5 @@
 /**
- * @name getPropertiesFromOtherObject
+ * @function getPropertiesFromOtherObject
  * @description Copies the properties from one object to another.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/mdwVeGX }

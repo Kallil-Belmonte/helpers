@@ -1,5 +1,5 @@
 /**
- * @name checkIfImageExists
+ * @function checkIfImageExists
  * @description Checks if image exists in the URL address provided in the first parameter.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/KKKRoyx }

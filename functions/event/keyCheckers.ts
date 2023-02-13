@@ -1,5 +1,5 @@
 /**
- * @name keyCheckers
+ * @function keyCheckers
  * @description Some functions that checks the type of the key provided.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/QWbyGYo }

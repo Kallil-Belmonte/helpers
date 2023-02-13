@@ -1,5 +1,5 @@
 /**
- * @name firstLetterToUpperCase
+ * @function firstLetterToUpperCase
  * @description Converts the first letter to uppercase.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/JjLQqbd }

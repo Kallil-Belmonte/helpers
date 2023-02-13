@@ -1,5 +1,5 @@
 /**
- * @name isEqual
+ * @function isEqual
  * @description Checks if two arrays or two objects are equal.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/oNwzzQw }

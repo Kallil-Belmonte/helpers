@@ -1,5 +1,5 @@
 /**
- * @name hasDuplicatedValue
+ * @function hasDuplicatedValue
  * @description Checks if an array has a duplicated value.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/zYrrqMX }

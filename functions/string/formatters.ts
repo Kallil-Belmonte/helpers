@@ -1,5 +1,5 @@
 /**
- * @name formatters
+ * @function formatters
  * @description A collection of usefull formatters.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/bZZOoQ }

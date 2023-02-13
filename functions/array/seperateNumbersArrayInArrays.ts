@@ -1,5 +1,5 @@
 /**
- * @name seperateNumbersArrayInArrays
+ * @function seperateNumbersArrayInArrays
  * @description Creates multiples arrays where the numbers are separated by sequence.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/KKpQQMg }

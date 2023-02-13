@@ -1,5 +1,5 @@
 /**
- * @name getSingleValuesArrayFromArrays
+ * @function getSingleValuesArrayFromArrays
  * @description Returns just the unique items from two arrays.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/bGdgLxV }

@@ -1,5 +1,5 @@
 /**
- * @name getPercentage
+ * @function getPercentage
  * @description Gets the percentage of a base value.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/MWmRGLJ }

@@ -1,5 +1,5 @@
 /**
- * @name getPastFutureDate
+ * @function getPastFutureDate
  * @description Gets the past and future dates.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/mdmYVNo }

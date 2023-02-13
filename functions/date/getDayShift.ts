@@ -1,5 +1,5 @@
 /**
- * @name getDayShift
+ * @function getDayShift
  * @description Gets the day shift to be used in a greeting for example.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/LYjRLNN }

@@ -1,5 +1,5 @@
 /**
- * @name removeItemsFromArray
+ * @function removeItemsFromArray
  * @description Removes items from an array, using the index of the items or the items itself.
  * @author Kallil Belmonte
  * @see CodePen { @link https://codepen.io/kallil-belmonte/full/gEoqXP }
