@@ -4,7 +4,7 @@
  * @param { number[] } array - Numbers array.
  * @param { boolean } [isArrayCrescent=true] - True if the array is crescent.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/KKpQQMg }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/KKpQQMg}
  */
 
 const seperateNumbersArrayInArrays = (array: number[], isArrayCrescent: boolean = true) => {

@@ -4,7 +4,7 @@
  * @param { any[] } array - Objects array.
  * @param { string } propertyToFilter - Property to filter.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/zQpadE }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/zQpadE}
  */
 
 const filterObjectsArrayToUniqueItems = (array: any[], propertyToFilter: string) =>

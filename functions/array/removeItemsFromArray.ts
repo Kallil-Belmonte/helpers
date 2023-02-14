@@ -5,7 +5,7 @@
  * @param { any[] } itemsToRemove - Items to remove.
  * @param { boolean } [useIndex] - If true, uses the index to remove items.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/gEoqXP }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/gEoqXP}
  */
 
 const removeItemsFromArray = (array: any[], itemsToRemove: any[], useIndex?: boolean) =>

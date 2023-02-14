@@ -5,7 +5,7 @@
  * @param { Object } propertiesToFilter - Properties to filter.
  * @param { boolean } [removeProperties=true] - If true, removes the properties to filter.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/xxxpKxv  }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/xxxpKxv}
  */
 
 type ObjectType = { [key: string]: any };

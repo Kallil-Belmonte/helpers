@@ -2,7 +2,7 @@
  * @function romanNumberConverter
  * @description Roman number conversion.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/PoodqoB }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/PoodqoB}
  */
 
 export const toRoman = (number: number) => {

@@ -2,7 +2,7 @@
  * @function typeCheckers
  * @description Checks the type of the data.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/dyRpNyr }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/dyRpNyr}
  */
 
 const { keys } = Object;

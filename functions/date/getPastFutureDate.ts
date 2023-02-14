@@ -3,7 +3,7 @@
  * @description Gets the past and future dates.
  * @param { Object } config - Date information.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/mdmYVNo }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/mdmYVNo}
  */
 
 type Config = {

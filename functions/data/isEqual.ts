@@ -5,7 +5,7 @@
  * @param { Array | Object } secondValue - Second value.
  * @param { boolean } [checkOrder] - If true, also checks the values order.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/oNwzzQw }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/oNwzzQw}
  */
 
 type ObjectType = { [key: string]: any };

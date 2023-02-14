@@ -4,7 +4,7 @@
  * @param { Object } objects - Object to sort properties.
  * @param { boolean } [reverse] - If true, reverts the properties order.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/XWgzraV }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/XWgzraV}
  */
 
 type ObjectType = { [key: string]: any };

@@ -5,7 +5,7 @@
  * @param { string } property - Property to check.
  * @param { any } value - Value to check.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/PXdZKE }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/PXdZKE}
  */
 
 type ObjectType = { [key: string]: any };

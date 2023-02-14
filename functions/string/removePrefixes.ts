@@ -4,7 +4,7 @@
  * @param { string } value - Text.
  * @param { string } [prefix=0] - Prefix to be removed from text.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/ZEBpvLy }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/ZEBpvLy}
  */
 
 const removePrefixes = (value: string, prefix = '0') => {

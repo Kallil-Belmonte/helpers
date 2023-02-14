@@ -4,7 +4,7 @@
  * @param { any[] } array - Values array.
  * @param { any } [valueToCheck] - Value to check.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/zYrrqMX }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/zYrrqMX}
  */
 
 const hasDuplicatedValue = (array: any[], valueToCheck?: any) => {

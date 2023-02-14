@@ -4,7 +4,7 @@
  * @param { string } value - Text to be validated.
  * @param { Object } config - Validation configuration.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/OJpMRYp }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/OJpMRYp}
  */
 
 type ConfigItem = { message?: string };

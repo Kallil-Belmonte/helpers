@@ -3,7 +3,7 @@
  * @description Gets the milliseconds from a specified period.
  * @param { Object } config - Configuration.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/oNdzNyy }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/oNdzNyy}
  */
 
 type Config = { second?: number; minute?: number; hour?: number; day?: number; week?: number };

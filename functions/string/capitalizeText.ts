@@ -4,7 +4,7 @@
  * @param { string } text - Text to be capitalized.
  * @param { string[] } [exceptionWords=[]] - Words not to be capitalized.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/VRRxEQ }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/VRRxEQ}
  */
 
 const capitalizeText = (text: string, exceptionWords: string[] = []) =>

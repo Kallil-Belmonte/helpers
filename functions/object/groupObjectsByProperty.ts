@@ -5,7 +5,7 @@
  * @param { string } property - Property to group.
  * @param { boolean } [ascending=true] - If true, the order will be ascending.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/GXgEgo }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/GXgEgo}
  */
 
 type ObjectType = { [key: string]: any };

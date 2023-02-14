@@ -5,7 +5,7 @@
  * @param { number } secondValue - Second value.
  * @param { Object } [options={}] - Check options.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/vYNQdMr }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/vYNQdMr}
  */
 
 type Options = {

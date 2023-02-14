@@ -5,7 +5,7 @@
  * @param { number | string } total - Total value.
  * @param { string } [locale=pt-BR] - Locale.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/MWmRGLJ }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/MWmRGLJ}
  */
 
 const getPercentage = (

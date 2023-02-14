@@ -4,7 +4,7 @@
  * @param { string } text - Text.
  * @param { number } numberOfWords - Number of words to limit the text.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/ePYrQj }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/ePYrQj}
  */
 
 const limitWords = (text: string, numberOfWords: number) =>

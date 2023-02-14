@@ -4,7 +4,7 @@
  * @param { any[] } array - Values array.
  * @param { any[] } arrayToAddOrRemove - Array to add or remove.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/bGdgLxV }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/bGdgLxV}
  */
 
 const getSingleValuesArrayFromArrays = (array: any[], arrayToAddOrRemove: any[]) => {

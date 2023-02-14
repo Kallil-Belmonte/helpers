@@ -1,5 +1,5 @@
 /**
- * @see RESTCountries { @link https://restcountries.com }
+ * @see RESTCountries {@link https://restcountries.com}
  */
 
 type Country = {

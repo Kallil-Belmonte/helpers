@@ -2,7 +2,7 @@
  * @function colorConverter
  * @description Converts the color format.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/wvovgGp }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/wvovgGp}
  */
 
 export const hexToRgb = (hex: string, opacity = '1') => {

@@ -7,7 +7,7 @@
  * @param { string } secondValueProp - Second property value.
  * @param { string[] } properties - Properties.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/mdwVeGX }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/mdwVeGX}
  */
 
 type ObjectType = { [key: string]: any };

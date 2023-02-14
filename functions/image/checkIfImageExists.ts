@@ -4,7 +4,7 @@
  * @param { string } url - Url.
  * @param { Function } callback - Callback.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/KKKRoyx }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/KKKRoyx}
  */
 
 const checkIfImageExists = (url: string, callback: (exists: boolean) => void) => {

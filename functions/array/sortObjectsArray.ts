@@ -5,7 +5,7 @@
  * @param { string } property - Property to sort.
  * @param { boolean } [reverse] - If true, reverts the array order.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/PdxGbP }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/PdxGbP}
  */
 
 type ObjectType = { [key: string]: any };

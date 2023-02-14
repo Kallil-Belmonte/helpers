@@ -4,7 +4,7 @@
  * @param { string | Date } dateFrom - Start date.
  * @param { string | Date } dateTo - End date.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/rNzMzyy }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/rNzMzyy}
  */
 
 const getTimeDifference = (dateFrom: string | Date, dateTo?: string | Date) => {

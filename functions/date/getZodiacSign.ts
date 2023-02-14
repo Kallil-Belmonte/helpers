@@ -3,7 +3,7 @@
  * @description Gets the zodiac sign based on date or day and month.
  * @param { Object } config - Date information.
  * @author Kallil Belmonte
- * @see CodePen { @link https://codepen.io/kallil-belmonte/full/bGMVXJQ }
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/bGMVXJQ}
  */
 
 type Config = {
