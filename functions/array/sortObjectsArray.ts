@@ -15,17 +15,11 @@ const sortObjectsArray = (array: any[], property: string, reverse?: boolean) => 
   const isString = (item: ObjectType) => typeof item[property] === 'string';
   const isNullOrUndefined = (item: ObjectType) =>
     item[property] === undefined || item[property] === null;
-  const mapProperty = (item: ObjectType) => item[property];
-  const findItem = (item: ObjectType, value: any) => item[property] === value;
 
-  const numbers = array
-    .filter(item => isNumber(item))
-    .map(mapProperty)
-    .sort((a, b) => a - b);
+  const numbers = array.filter(item => isNumber(item)).sort((a, b) => a[property] - b[property]);
   const strings = array
     .filter(item => isString(item))
-    .map(mapProperty)
-    .sort();
+    .sort((a, b) => a[property].localeCompare(b[property]));
   const valids = array.filter(
     item => !isNumber(item) && !isString(item) && !isNullOrUndefined(item),
   );
@@ -36,12 +30,7 @@ const sortObjectsArray = (array: any[], property: string, reverse?: boolean) => 
     strings.reverse();
   }
 
-  return [
-    ...numbers.map(value => array.find(item => findItem(item, value))),
-    ...strings.map(value => array.find(item => findItem(item, value))),
-    ...valids,
-    ...invalids,
-  ];
+  return [...numbers, ...strings, ...valids, ...invalids];
 };
 
 export default sortObjectsArray;
