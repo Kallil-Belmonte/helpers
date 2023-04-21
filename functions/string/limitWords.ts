@@ -7,7 +7,10 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/ePYrQj}
  */
 
-const limitWords = (text: string, numberOfWords: number) =>
-  text ? text.split(' ').splice(0, numberOfWords).join(' ') : text;
+const limitWords = (text: string, numberOfWords: number, ellipses = true) => {
+  if (!text) return text;
+  const hasEllipses = ellipses && text.split(' ').length > numberOfWords;
+  return `${text.split(' ').splice(0, numberOfWords).join(' ')}${hasEllipses ? '...' : ''}`;
+};
 
 export default limitWords;
