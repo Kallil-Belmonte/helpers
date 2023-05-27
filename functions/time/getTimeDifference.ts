@@ -18,6 +18,10 @@ const getTimeDifference = (dateFrom: string | Date, dateTo?: string | Date) => {
   const hours = floor(minutes / 60);
   const days = floor(hours / 24);
   const weeks = floor(days / 7);
+  const months =
+    (dateToResult.getFullYear() - dateFromResult.getFullYear()) * 12 +
+    (dateToResult.getMonth() - dateFromResult.getMonth());
+  const years = Math.floor(days / 365);
 
   return {
     milliseconds,
@@ -26,6 +30,8 @@ const getTimeDifference = (dateFrom: string | Date, dateTo?: string | Date) => {
     hours,
     days,
     weeks,
+    months,
+    years,
   };
 };
 
