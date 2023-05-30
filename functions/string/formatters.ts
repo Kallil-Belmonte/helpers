@@ -81,7 +81,7 @@ export const formatCNPJ = (cnpj: string) => {
   return cnpj;
 };
 
-export const formatPrice = (value: number) =>
+export const formatCurrency = (value: number) =>
   value
     ? new Intl.NumberFormat('pt-BR', {
         style: 'currency',
