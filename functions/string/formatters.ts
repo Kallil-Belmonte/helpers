@@ -58,7 +58,7 @@ export const formatDate = (date: string | Date, dateFormat: string, outputFormat
 
 export const formatCPF = (cpf: string) => {
   if (cpf) {
-    let result = cpf.replace(/\D/g, '').split('').slice(0, 11);
+    const result = cpf.replace(/\D/g, '').split('').slice(0, 11);
     if (result[3]) result.splice(3, 0, '.');
     if (result[7]) result.splice(7, 0, '.');
     if (result[11]) result.splice(11, 0, '-');
@@ -70,7 +70,7 @@ export const formatCPF = (cpf: string) => {
 
 export const formatCNPJ = (cnpj: string) => {
   if (cnpj) {
-    let result = cnpj.replace(/\D/g, '').split('').slice(0, 14);
+    const result = cnpj.replace(/\D/g, '').split('').slice(0, 14);
     if (result[2]) result.splice(2, 0, '.');
     if (result[6]) result.splice(6, 0, '.');
     if (result[10]) result.splice(10, 0, '-');
@@ -81,17 +81,17 @@ export const formatCNPJ = (cnpj: string) => {
   return cnpj;
 };
 
-export const formatPrice = (price: number) =>
-  price
+export const formatPrice = (value: number) =>
+  value
     ? new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL',
-      }).format(price)
-    : price;
+      }).format(value)
+    : value;
 
 export const formatTelephoneNumber = (telephoneNumber: string) => {
   if (telephoneNumber) {
-    let result = telephoneNumber.replace(/\D/g, '').split('').slice(0, 11);
+    const result = telephoneNumber.replace(/\D/g, '').split('').slice(0, 11);
     result.unshift('(');
     if (result[3]) result.splice(3, 0, ')');
     if (result[4]) result.splice(4, 0, ' ');
@@ -107,4 +107,12 @@ export const formatTelephoneNumber = (telephoneNumber: string) => {
   return telephoneNumber;
 };
 
-export const formatCEP = (cep: string) => (cep ? cep.replace(/^(\d{5})(\d{3})/, '$1-$2') : cep);
+export const formatCEP = (cep: string) => {
+  if (cep) {
+    const result = cep.replace(/\D/g, '').split('').slice(0, 8);
+    if (result[5]) result.splice(5, 0, '-');
+    return result.join('');
+  }
+
+  return cep;
+};
