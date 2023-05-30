@@ -95,9 +95,9 @@ export const formatTelephone = (telephone: string) => {
     result.unshift('(');
     if (result[3]) result.splice(3, 0, ')');
     if (result[4]) result.splice(4, 0, ' ');
-    if (telephone.length === 10 && result[9]) {
+    if (result.length > 9 && result.length < 14) {
       result.splice(9, 0, ' ');
-    } else if (result[10]) {
+    } else if (result.length >= 14) {
       result.splice(10, 0, ' ');
     }
 
