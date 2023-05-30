@@ -89,13 +89,13 @@ export const formatCurrency = (value: number) =>
       }).format(value)
     : value;
 
-export const formatTelephoneNumber = (telephoneNumber: string) => {
-  if (telephoneNumber) {
-    const result = telephoneNumber.replace(/\D/g, '').split('').slice(0, 11);
+export const formatTelephone = (telephone: string) => {
+  if (telephone) {
+    const result = telephone.replace(/\D/g, '').split('').slice(0, 11);
     result.unshift('(');
     if (result[3]) result.splice(3, 0, ')');
     if (result[4]) result.splice(4, 0, ' ');
-    if (telephoneNumber.length === 10 && result[9]) {
+    if (telephone.length === 10 && result[9]) {
       result.splice(9, 0, ' ');
     } else if (result[10]) {
       result.splice(10, 0, ' ');
@@ -104,7 +104,7 @@ export const formatTelephoneNumber = (telephoneNumber: string) => {
     return result.join('');
   }
 
-  return telephoneNumber;
+  return telephone;
 };
 
 export const formatCEP = (cep: string) => {
