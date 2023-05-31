@@ -57,7 +57,7 @@ export const formatDate = (date: string | Date, dateFormat: string, outputFormat
 };
 
 export const formatText = (value: string) =>
-  value ? value.replace(/[^a-zà-ÿ\s]/gi, '').replace(/\s+/g, ' ') : value;
+  value ? value.replace(/[^a-zà-ÿ\s]/gi, '').replace(/\s+/g, ' ').trim() : value;
 
 export const formatNumbers = (value: string) => (value ? value.replace(/[^\d]/g, '') : value);
 
