@@ -56,8 +56,8 @@ export const formatDate = (date: string | Date, dateFormat: string, outputFormat
   return date;
 };
 
-export const formatLetters = (value: string) =>
-  value ? value.replace(/[^a-zà-ÿ\s]/gi, '') : value;
+export const formatText = (value: string) =>
+  value ? value.replace(/[^a-zà-ÿ\s]/gi, '').replace(/\s+/g, ' ') : value;
 
 export const formatNumbers = (value: string) => (value ? value.replace(/[^\d]/g, '') : value);
 
