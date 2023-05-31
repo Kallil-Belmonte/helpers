@@ -81,13 +81,29 @@ export const formatCNPJ = (cnpj: string) => {
   return cnpj;
 };
 
-export const formatCurrency = (value: number) =>
-  value
-    ? new Intl.NumberFormat('pt-BR', {
-        style: 'currency',
-        currency: 'BRL',
-      }).format(value)
-    : value;
+export const formatCurrency = (
+  value: string,
+  currency = 'R$',
+  decimalSeparator = ',',
+  thousandSeparator = '.',
+) => {
+  if (value) {
+    const result = value.replace(/\D/g, '').split('');
+    result.reverse();
+    if (result[2]) result.splice(2, 0, decimalSeparator);
+    if (result[6]) {
+      let index = 6;
+      while (result[index]) {
+        result.splice(index, 0, thousandSeparator);
+        index += 4;
+      }
+    }
+    result.reverse();
+    return `${currency} ${result.join('')}`;
+  }
+
+  return value;
+};
 
 export const formatTelephone = (telephone: string) => {
   if (telephone) {
