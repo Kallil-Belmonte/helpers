@@ -78,7 +78,7 @@ export const formatCNPJ = (cnpj: string) => {
     const result = cnpj.replace(/\D/g, '').split('').slice(0, 14);
     if (result[2]) result.splice(2, 0, '.');
     if (result[6]) result.splice(6, 0, '.');
-    if (result[10]) result.splice(10, 0, '-');
+    if (result[10]) result.splice(10, 0, '/');
     if (result[15]) result.splice(15, 0, '-');
     return result.join('');
   }
