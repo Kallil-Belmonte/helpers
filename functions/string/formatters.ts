@@ -56,6 +56,11 @@ export const formatDate = (date: string | Date, dateFormat: string, outputFormat
   return date;
 };
 
+export const formatLetters = (value: string) =>
+  value ? value.replace(/[^a-zà-ÿ\s]/gi, '') : value;
+
+export const formatNumbers = (value: string) => (value ? value.replace(/[^\d]/g, '') : value);
+
 export const formatCPF = (cpf: string) => {
   if (cpf) {
     const result = cpf.replace(/\D/g, '').split('').slice(0, 11);
