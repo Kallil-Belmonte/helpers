@@ -35,6 +35,7 @@ General helpers free to use.
   - [getDayShift](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getDayShift.ts)
   - [getPastFutureDate](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getPastFutureDate.ts)
   - [getZodiacSign](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getZodiacSign.ts)
+  - [isValidDate](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/isValidDate.ts)
 - [event](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/event)
   - [keyCheckers](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/event/keyCheckers.ts)
 - [image](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/image)
