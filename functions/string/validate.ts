@@ -13,7 +13,7 @@ type ConfigItemNumber = ConfigItem & { check: number };
 type ConfigItemRegex = ConfigItem & { check: RegExp };
 
 export type Config = {
-  custom?: Required<ConfigItemBoolean>;
+  custom?: Required<ConfigItem & { isValid: boolean }>;
   required?: ConfigItemBoolean;
   regex?: ConfigItemRegex;
   email?: ConfigItemBoolean;
@@ -70,9 +70,9 @@ const validate = (value: string, config: Config) => {
   const getMessage = (item: any): string => item.message;
 
   // Custom
-  if (typeof custom?.check === 'boolean') {
-    const { check, message } = custom;
-    validations.custom = getValidation(check, message);
+  if (typeof custom?.isValid === 'boolean') {
+    const { isValid, message } = custom;
+    validations.custom = getValidation(isValid, message);
   }
 
   // Required
