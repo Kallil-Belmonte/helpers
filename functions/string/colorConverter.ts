@@ -5,7 +5,7 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/wvovgGp}
  */
 
-export const hexToRgb = (hex: string, opacity = '1') => {
+export const hexToRgba = (hex: string, opacity = '1') => {
   let hexToConvert = hex.replace('#', '');
   if (hexToConvert.length === 3) hexToConvert = `${hexToConvert}${hexToConvert}`;
 
