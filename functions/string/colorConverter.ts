@@ -7,16 +7,18 @@
 
 export const hexToRgb = (hex: string, opacity = '1') => {
   let hexToConvert = hex.replace('#', '');
-  hexToConvert = hexToConvert.length === 3 ? `${hexToConvert}${hexToConvert}` : hexToConvert;
+  if (hexToConvert.length === 3) hexToConvert = `${hexToConvert}${hexToConvert}`;
 
-  const result = new RegExp('^#?([a-fd]{2})([a-fd]{2})([a-fd]{2})$', 'i').exec(hexToConvert);
-  if (!result) return '';
+  const hexRegex = /^[0-9A-Fa-f]{6}$/;
+  if (!hexRegex.test(hexToConvert)) {
+    throw new Error('A string fornecida não é um valor hexadecimal válido.');
+  }
 
-  const R = parseInt(result[1], 16);
-  const G = parseInt(result[2], 16);
-  const B = parseInt(result[3], 16);
+  const red = parseInt(hexToConvert.slice(0, 2), 16);
+  const green = parseInt(hexToConvert.slice(2, 4), 16);
+  const blue = parseInt(hexToConvert.slice(4, 6), 16);
 
-  return `rgba(${R}, ${G}, ${B}, ${opacity})`;
+  return `rgba(${red}, ${green}, ${blue}, ${opacity})`;
 };
 
 export const rgbToHex = (rgb: string) => {
