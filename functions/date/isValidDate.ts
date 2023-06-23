@@ -18,8 +18,7 @@ const isValidDate = (config: Config) => {
   const month = date.getMonth() + 1;
   const year = date.getFullYear();
 
-  if (day > 31) return false;
-  if (month !== monthParam || year !== yearParam) return false;
+  if (day > 31 || month !== monthParam || year !== yearParam) return false;
   return true;
 };
 
