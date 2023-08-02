@@ -7,6 +7,7 @@ type Config = {
 /**
  * @function isValidDate
  * @description Validates a date.
+ * @param { Config } config - Day, month and year.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/gOQboXz}
  */
