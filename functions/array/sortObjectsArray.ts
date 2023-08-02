@@ -1,3 +1,5 @@
+type ObjectType = { [key: string]: any };
+
 /**
  * @function sortObjectsArray
  * @description Sorts the objects inside an array by one property (in ascending or descending order).
@@ -7,8 +9,6 @@
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/PdxGbP}
  */
-
-type ObjectType = { [key: string]: any };
 
 const sortObjectsArray = (array: any[], property: string, reverse?: boolean) => {
   const isNumber = (item: ObjectType) => typeof item[property] === 'number';

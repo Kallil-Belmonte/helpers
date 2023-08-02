@@ -1,15 +1,15 @@
+type Config = {
+  day: number;
+  month: number;
+  year: number;
+};
+
 /**
  * @function isValidDate
  * @description Validates a date.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/gOQboXz}
  */
-
-type Config = {
-  day: number;
-  month: number;
-  year: number;
-};
 
 const isValidDate = (config: Config) => {
   const { day: dayParam, month: monthParam, year: yearParam } = config;

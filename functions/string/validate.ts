@@ -1,12 +1,3 @@
-/**
- * @function validate
- * @description Validates a string with multiple options.
- * @param { string } value - Text to be validated.
- * @param { Object } config - Validation configuration.
- * @author Kallil Belmonte
- * @see CodePen {@link https://codepen.io/kallil-belmonte/full/OJpMRYp}
- */
-
 type ConfigItem = { message?: string };
 type ConfigItemBoolean = ConfigItem & { check: boolean };
 type ConfigItemNumber = ConfigItem & { check: number };
@@ -43,6 +34,15 @@ export type Validations = {
   specialCharacter?: ValidationItem;
   space?: ValidationItem;
 };
+
+/**
+ * @function validate
+ * @description Validates a string with multiple options.
+ * @param { string } value - Text to be validated.
+ * @param { Object } config - Validation configuration.
+ * @author Kallil Belmonte
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/OJpMRYp}
+ */
 
 const validate = (value: string, config: Config) => {
   const { values } = Object;

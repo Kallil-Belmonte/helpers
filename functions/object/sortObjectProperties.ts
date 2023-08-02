@@ -1,3 +1,5 @@
+type ObjectType = { [key: string]: any };
+
 /**
  * @function sortObjectProperties
  * @description Sorts the object properties by ascending or descending order.
@@ -6,8 +8,6 @@
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/XWgzraV}
  */
-
-type ObjectType = { [key: string]: any };
 
 const sortObjectProperties = (object: ObjectType, reverse?: boolean): ObjectType => {
   const { keys } = Object;

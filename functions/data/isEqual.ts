@@ -1,3 +1,7 @@
+type ObjectType = { [key: string]: any };
+
+type Value = any[] | ObjectType;
+
 /**
  * @function isEqual
  * @description Checks if two arrays or two objects are equal.
@@ -7,10 +11,6 @@
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/oNwzzQw}
  */
-
-type ObjectType = { [key: string]: any };
-
-type Value = any[] | ObjectType;
 
 const isEqual = (firstValue: Value, secondValue: Value, checkOrder?: boolean) => {
   const { stringify, parse } = JSON;

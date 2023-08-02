@@ -1,3 +1,5 @@
+type Config = { second?: number; minute?: number; hour?: number; day?: number; week?: number };
+
 /**
  * @function getMilliseconds
  * @description Gets the milliseconds from a specified period.
@@ -5,8 +7,6 @@
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/oNdzNyy}
  */
-
-type Config = { second?: number; minute?: number; hour?: number; day?: number; week?: number };
 
 const getMilliseconds = (config: Config) => {
   const { second, minute, hour, day, week } = config;

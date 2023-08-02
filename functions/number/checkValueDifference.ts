@@ -1,3 +1,9 @@
+type Options = {
+  difference?: number;
+  strict?: boolean;
+  checkEqual?: boolean;
+};
+
 /**
  * @function checkValueDifference
  * @description Checks the difference between two values.
@@ -7,12 +13,6 @@
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/vYNQdMr}
  */
-
-type Options = {
-  difference?: number;
-  strict?: boolean;
-  checkEqual?: boolean;
-};
 
 const checkValueDifference = (firstValue: number, secondValue: number, options: Options = {}) => {
   const { difference = 0, strict = true, checkEqual = false } = options;

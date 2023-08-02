@@ -1,3 +1,5 @@
+type ObjectType = { [key: string]: any };
+
 /**
  * @function filterObject
  * @description Returns a new object with or without the properties provided in the second parameter.
@@ -7,8 +9,6 @@
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/xxxpKxv}
  */
-
-type ObjectType = { [key: string]: any };
 
 const filterObject = (
   object: ObjectType,
