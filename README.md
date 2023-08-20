@@ -40,6 +40,7 @@ General helpers free to use.
   - [isElementInCenterOfViewport](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/dom/isElementInCenterOfViewport.ts)
   - [isElementInViewport](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/dom/isElementInViewport.ts)
   - [isFullyElementInViewport](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/dom/isFullyElementInViewport.ts)
+  - [isMoreThanHalfInViewport](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/dom/isMoreThanHalfInViewport.ts)
 - [event](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/event)
   - [keyCheckers](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/event/keyCheckers.ts)
 - [image](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/image)

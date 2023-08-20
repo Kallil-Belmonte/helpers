@@ -4,7 +4,7 @@
  * @param { string } selector - Element selector.
  * @param { number } [acceptableMargin=50] - Acceptable margin in pixels.
  * @author Kallil Belmonte
- * @see CodePen {@link https://codepen.io/kallil-belmonte/full/}
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/JjwjqgK}
  */
 
 const isElementInCenterOfViewport = (selector: string, acceptableMargin = 50) => {
