@@ -3,7 +3,7 @@
  * @description Detects if element is in viewport.
  * @param { string } selector - Element selector.
  * @author Kallil Belmonte
- * @see CodePen {@link https://codepen.io/kallil-belmonte/full/}
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/PoXovvQ}
  */
 
 const isElementInViewport = (selector: string) => {
