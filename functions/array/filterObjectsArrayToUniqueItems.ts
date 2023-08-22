@@ -7,7 +7,7 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/zQpadE}
  */
 
-const filterObjectsArrayToUniqueItems = (array: any[], propertyToFilter: string) =>
+const filterObjectsArrayToUniqueItems = <Type = any>(array: Type[], propertyToFilter: string) =>
   array.filter(
     (object, index, self) =>
       self.findIndex(item => item[propertyToFilter] === object[propertyToFilter]) === index,

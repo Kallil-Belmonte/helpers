@@ -7,7 +7,7 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/bGdgLxV}
  */
 
-const getSingleValuesArrayFromArrays = (array: any[], arrayToAddOrRemove: any[]) => {
+const getSingleValuesArrayFromArrays = <Type = any>(array: Type[], arrayToAddOrRemove: Type[]) => {
   const { stringify } = JSON;
   const base = array.map(item => stringify(item));
   let result = [...array];

@@ -8,9 +8,13 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/gEoqXP}
  */
 
-const removeItemsFromArray = (array: any[], itemsToRemove: any[], useIndex?: boolean) =>
-  array.filter(item => {
-    if (useIndex) return !itemsToRemove.includes(array.indexOf(item));
+const removeItemsFromArray = <Type = any>(
+  array: Type[],
+  itemsToRemove: any[],
+  useIndex?: boolean,
+) =>
+  array.filter((item, index) => {
+    if (useIndex) return !itemsToRemove.includes(index);
     return !itemsToRemove.includes(item);
   });
 

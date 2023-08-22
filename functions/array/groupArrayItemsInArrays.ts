@@ -8,12 +8,12 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/JmmEdz}
  */
 
-const groupArrayItemsInArrays = (
-  array: any[],
+const groupArrayItemsInArrays = <Type = any>(
+  array: Type[],
   itemsQuantity: number,
   repeatLastItem?: boolean,
-): any[][] => {
-  const matrix: any[][] = [[]];
+) => {
+  const matrix: Type[][] = [[]];
 
   if (repeatLastItem && itemsQuantity > 1) {
     let counter = 0;
