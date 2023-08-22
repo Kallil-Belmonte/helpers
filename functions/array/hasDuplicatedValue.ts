@@ -7,7 +7,7 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/zYrrqMX}
  */
 
-const hasDuplicatedValue = <Type = any>(array: Type[], valueToCheck?: any) => {
+const hasDuplicatedValue = <Type = any>(array: Type[], valueToCheck?: Type) => {
   const { stringify } = JSON;
   const arrayFiltered = [...new Set(array.map(item => stringify(item)))];
 
