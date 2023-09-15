@@ -6,7 +6,7 @@ type ObjectType = { [key: string]: any };
  * @param { Object } object - Object to validate.
  * @param { Object } structure - Structure for validation.
  * @author Kallil Belmonte
- * @see CodePen {@link https://codepen.io/kallil-belmonte/full/}
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/PoXKGPe}
  */
 
 const validateObject = (object: ObjectType, structure: ObjectType) => {
