@@ -46,8 +46,8 @@ const validateObject = (object: ObjectType, structure: ObjectType) => {
       };
 
       if (isValidArray() || (struct[key] === 'object' && isDataObject)) return;
-      else if (isStructObject && isDataObject) loop(obj[key], struct[key]);
-      else if (typeOf !== struct[key]) propertiesWithWrongType.push(key);
+      if (isStructObject && isDataObject) loop(obj[key], struct[key]);
+      else if (!struct[key].split(' | ').includes(typeOf)) propertiesWithWrongType.push(key);
     });
   };
 
