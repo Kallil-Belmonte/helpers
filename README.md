@@ -55,6 +55,7 @@ General helpers free to use.
   - [groupObjectsByProperty](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/object/groupObjectsByProperty.ts)
   - [someObjectHasValue](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/object/someObjectHasValue.ts)
   - [sortObjectProperties](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/object/sortObjectProperties.ts)
+  - [validateObject](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/object/validateObject.ts)
 - [string](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string)
   - [capitalizeText](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/capitalizeText.ts)
   - [colorConverter](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/colorConverter.ts)
