@@ -13,12 +13,12 @@ const validateObject = (object: ObjectType, structure: ObjectType) => {
   const { keys } = Object;
   const { isArray } = Array;
 
-  const propertiesNotFound: string[] = [];
-  const propertiesWithWrongType: string[] = [];
+  const notFound: string[] = [];
+  const wrongType: string[] = [];
 
   const loop = (obj: ObjectType, struct: ObjectType) => {
     keys(struct).forEach(key => {
-      if (!(key in obj)) return propertiesNotFound.push(key);
+      if (!(key in obj)) return notFound.push(key);
 
       const typeOf: string = typeof obj[key];
       const isStructObject = typeof struct[key] === 'object' && !isArray(struct[key]);
@@ -47,16 +47,16 @@ const validateObject = (object: ObjectType, structure: ObjectType) => {
 
       if (isValidArray() || (struct[key] === 'object' && isDataObject)) return;
       if (isStructObject && isDataObject) loop(obj[key], struct[key]);
-      else if (!struct[key].split(' | ').includes(typeOf)) propertiesWithWrongType.push(key);
+      else if (!struct[key].split(' | ').includes(typeOf)) wrongType.push(key);
     });
   };
 
   loop(object, structure);
 
   return {
-    valid: !propertiesNotFound.length && !propertiesWithWrongType.length,
-    propertiesNotFound,
-    propertiesWithWrongType,
+    valid: !notFound.length && !wrongType.length,
+    notFound,
+    wrongType,
   };
 };
 
