@@ -14,9 +14,14 @@ const validateObject = (object: ObjectType, structure: ObjectType) => {
   const { isArray } = Array;
 
   const notFound: string[] = [];
+  const extra: string[] = [];
   const wrongType: string[] = [];
 
   const loop = (obj: ObjectType, struct: ObjectType) => {
+    keys(obj).forEach(key => {
+      if (!(key in struct)) extra.push(key);
+    });
+
     keys(struct).forEach(key => {
       if (!(key in obj)) return notFound.push(key);
 
@@ -54,8 +59,9 @@ const validateObject = (object: ObjectType, structure: ObjectType) => {
   loop(object, structure);
 
   return {
-    valid: !notFound.length && !wrongType.length,
+    valid: !notFound.length && !extra.length && !wrongType.length,
     notFound,
+    extra,
     wrongType,
   };
 };
