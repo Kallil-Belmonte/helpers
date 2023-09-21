@@ -66,7 +66,7 @@ General helpers free to use.
   - [removePrefixes](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/removePrefixes.ts)
   - [validate](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/string/validate.ts)
 - [time](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/time)
-  - [getMilliseconds](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/time/getMilliseconds.ts)
+  - [convertTime](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/time/convertTime.ts)
   - [getTimeDifference](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/time/getTimeDifference.ts)
 
 ## SCSS
