@@ -2,7 +2,7 @@
  * @function valueToNumber
  * @description Converts a string of monetary/percentage value to a number.
  * @param { string } value - String number to be converted.
- * @param { string } [decimalSymbol=,] - Decimal symbol.
+ * @param { string } [decimalSymbol=','] - Decimal symbol.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/RwwYdYw}
  */
