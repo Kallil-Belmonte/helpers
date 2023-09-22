@@ -1,6 +1,6 @@
 type Config = { second?: number; minute?: number; hour?: number; day?: number; week?: number };
 
-type Output = 'millisecond' | 'second' | 'minute' | 'hour';
+type Output = 'millisecond' | 'second' | 'minute' | 'hour' | 'day';
 
 /**
  * @function convertTime
