@@ -10,12 +10,8 @@ type ObjectType = { [key: string]: any };
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/xxxpKxv}
  */
 
-const filterObject = (
-  object: ObjectType,
-  propertiesToFilter: string[],
-  removeProperties = true,
-): ObjectType =>
-  Object.keys(object).reduce((accumulator, value) => {
+const filterObject = (object: ObjectType, propertiesToFilter: string[], removeProperties = true) =>
+  Object.keys(object).reduce((accumulator: ObjectType, value) => {
     if (propertiesToFilter.includes(value) !== removeProperties) {
       accumulator[value] = object[value];
     }
