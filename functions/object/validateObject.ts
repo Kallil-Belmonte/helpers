@@ -17,7 +17,6 @@ const validateObject = (object: ObjectType, structure: ObjectType) => {
   const extra: string[] = [];
   const wrongType: string[] = [];
   const filterKey = (key: string) => key.replace(/\?$/, '');
-  const isOptional = (key: string) => key.endsWith('?');
 
   const loop = (obj: ObjectType, struct: ObjectType) => {
     keys(obj).forEach(key => {
@@ -27,9 +26,10 @@ const validateObject = (object: ObjectType, structure: ObjectType) => {
 
     keys(struct).forEach(structKey => {
       const key = filterKey(structKey);
+      const isOptional = structKey.endsWith('?');
 
       if (!(key in obj)) {
-        if (isOptional(structKey)) return;
+        if (isOptional) return;
         return notFound.push(key);
       }
 
