@@ -16,26 +16,36 @@ const validateObject = (object: ObjectType, structure: ObjectType) => {
   const notFound: string[] = [];
   const extra: string[] = [];
   const wrongType: string[] = [];
+  const filterKey = (key: string) => key.replace(/\?$/, '');
+  const isOptional = (key: string) => key.endsWith('?');
 
   const loop = (obj: ObjectType, struct: ObjectType) => {
     keys(obj).forEach(key => {
-      if (!(key in struct)) extra.push(key);
+      const isExtra = keys(struct).every(structKey => filterKey(structKey) !== key);
+      if (isExtra) extra.push(key);
     });
 
-    keys(struct).forEach(key => {
-      if (!(key in obj)) return notFound.push(key);
+    keys(struct).forEach(structKey => {
+      const key = filterKey(structKey);
 
-      const typeOf: string = typeof obj[key];
-      const isStructObject = typeof struct[key] === 'object' && !isArray(struct[key]);
+      if (!(key in obj)) {
+        if (isOptional(structKey)) return;
+        return notFound.push(key);
+      }
+
+      const typeOf = typeof obj[key];
+      const isStructObject = typeof struct[structKey] === 'object' && !isArray(struct[structKey]);
       const isDataObject = typeof obj[key] === 'object' && !isArray(obj[key]);
-      const isStructArray = typeof struct[key] === 'string' && struct[key].includes('[]');
+      const isStructArray =
+        typeof struct[structKey] === 'string' && struct[structKey].includes('[]');
       const isDataArray = isArray(obj[key]);
 
       const isValidArray = () => {
-        if ((struct[key] === 'array' || struct[key] === '[]') && isDataArray) return true;
+        if ((struct[structKey] === 'array' || struct[structKey] === '[]') && isDataArray)
+          return true;
 
         if (isStructArray && isDataArray) {
-          const structureTypes: string[] = struct[key].replace(/[\[\]()]/g, '').split(' | ');
+          const structureTypes: string[] = struct[structKey].replace(/[\[\]()]/g, '').split(' | ');
           let objectTypes: string[] = [
             ...new Set<string>(obj[key].map((item: string) => typeof item)),
           ];
@@ -50,9 +60,9 @@ const validateObject = (object: ObjectType, structure: ObjectType) => {
         return false;
       };
 
-      if (isValidArray() || (struct[key] === 'object' && isDataObject)) return;
-      if (isStructObject && isDataObject) loop(obj[key], struct[key]);
-      else if (!struct[key].split(' | ').includes(typeOf)) wrongType.push(key);
+      if (isValidArray() || (struct[structKey] === 'object' && isDataObject)) return;
+      if (isStructObject && isDataObject) loop(obj[key], struct[structKey]);
+      else if (!struct[structKey].split(' | ').includes(typeOf)) wrongType.push(key);
     });
   };
 
