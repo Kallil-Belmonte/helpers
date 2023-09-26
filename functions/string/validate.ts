@@ -3,7 +3,7 @@ type ConfigItemBoolean = ConfigItem & { check: boolean };
 type ConfigItemNumber = ConfigItem & { check: number };
 type ConfigItemRegex = ConfigItem & { check: RegExp };
 
-export type Config = {
+export type ValidationConfig = {
   custom?: Required<ConfigItem & { isValid: boolean }>;
   required?: ConfigItemBoolean;
   regex?: ConfigItemRegex;
@@ -44,7 +44,7 @@ export type Validations = {
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/OJpMRYp}
  */
 
-const validate = (value: string, config: Config) => {
+const validate = (value: string, config: ValidationConfig) => {
   const { values } = Object;
   const {
     custom,
