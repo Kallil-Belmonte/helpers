@@ -6,7 +6,11 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/JjLQqbd}
  */
 
-const firstLetterToUpperCase = (text: string) =>
-  text ? `${text.charAt(0).toUpperCase()}${text.slice(1)}` : text;
+const firstLetterToUpperCase = (text: string, restToLowercase: boolean) => {
+  if (!text) return text;
+  const firstLetter = text.charAt(0).toUpperCase();
+  const rest = restToLowercase ? text.slice(1).toLowerCase() : text.slice(1);
+  return `${firstLetter}${rest}`;
+};
 
 export default firstLetterToUpperCase;
