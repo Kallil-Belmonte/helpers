@@ -27,6 +27,7 @@ General helpers free to use.
   - [seperateNumbersArrayInArrays](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/seperateNumbersArrayInArrays.ts)
   - [sortObjectsArray](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/sortObjectsArray.ts)
 - [data](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data)
+  - [getParams](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/getParams.ts)
   - [isEqual](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/isEqual.ts)
   - [typeCheckers](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/typeCheckers.ts)
   - [uuid](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/uuid.ts)
