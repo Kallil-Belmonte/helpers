@@ -29,6 +29,7 @@ General helpers free to use.
 - [data](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data)
   - [getParams](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/getParams.ts)
   - [isEqual](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/isEqual.ts)
+  - [objectToQueryString](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/objectToQueryString.ts)
   - [typeCheckers](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/typeCheckers.ts)
   - [uuid](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/uuid.ts)
 - [date](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date)
