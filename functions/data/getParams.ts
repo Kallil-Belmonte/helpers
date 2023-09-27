@@ -5,7 +5,7 @@ type ObjectType = { [key: string]: any };
  * @description Gets the params from a URL as a object.
  * @param { string } url - URL.
  * @author Kallil Belmonte
- * @see CodePen {@link https://codepen.io/kallil-belmonte/pen/oNJdrMe}
+ * @see CodePen {@link https://codepen.io/kallil-belmonte/full/oNJdrMe}
  */
 
 const getParams = <Type = ObjectType>(url: string): Type => {
