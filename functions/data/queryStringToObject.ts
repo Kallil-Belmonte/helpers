@@ -1,14 +1,14 @@
 type ObjectType = { [key: string]: any };
 
 /**
- * @function getParams
- * @description Gets the params from a URL as a object.
+ * @function queryStringToObject
+ * @description Converts a query string to object.
  * @param { string } url - URL.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/oNJdrMe}
  */
 
-const getParams = <Type = ObjectType>(url: string): Type => {
+const queryStringToObject = <Type = ObjectType>(url: string): Type => {
   const { search, searchParams } = new URL(url);
 
   return search.split('&').reduce((accumulator, currentValue) => {
@@ -20,4 +20,4 @@ const getParams = <Type = ObjectType>(url: string): Type => {
   }, {} as Type);
 };
 
-export default getParams;
+export default queryStringToObject;
