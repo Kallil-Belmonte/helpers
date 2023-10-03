@@ -4,7 +4,7 @@ type ConfigItemNumber = ConfigItem & { check: number };
 type ConfigItemRegex = ConfigItem & { check: RegExp };
 
 export type ValidationConfig = {
-  custom?: Required<ConfigItem & { isValid: (value: string) => boolean }>;
+  custom?: { isValid: (value: string) => boolean; message: string | ((value: string) => string) };
   required?: ConfigItemBoolean;
   regex?: ConfigItemRegex;
   email?: ConfigItemBoolean;
@@ -72,7 +72,10 @@ const validate = (value: string, config: ValidationConfig) => {
   // Custom
   if (typeof custom?.isValid === 'function') {
     const { isValid, message } = custom;
-    validations.custom = getValidation(isValid(value), message);
+    validations.custom = getValidation(
+      isValid(value),
+      typeof message === 'function' ? message(value) : message,
+    );
   }
 
   // Required
