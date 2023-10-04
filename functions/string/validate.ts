@@ -77,19 +77,19 @@ const validate = (value: string, config: ValidationConfig) => {
 
   // Required
   if (required?.check) {
-    const { message = 'Valor obrigatório.' } = required;
+    const { message = 'Required value.' } = required;
     validations.required = getValidation(!!value, message);
   }
 
   // Regex
   if (regex?.check) {
-    const { check, message = 'Valor inválido.' } = regex;
+    const { check, message = 'Invalid value.' } = regex;
     validations.regex = getValidation(check.test(value), message);
   }
 
   // E-mail
   if (email?.check) {
-    const { message = 'E-mail inválido.' } = email;
+    const { message = 'Invalid e-mail.' } = email;
     const emailRegex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     validations.email = getValidation(emailRegex.test(value), message);
@@ -97,7 +97,7 @@ const validate = (value: string, config: ValidationConfig) => {
 
   // Phone
   if (phone?.check) {
-    const { message = 'Telefone inválido.' } = phone;
+    const { message = 'Invalid phone.' } = phone;
     const formattedValue = value?.replace(/[^0-9]/g, '');
     const phoneRegex = /^[0-9]{10,11}$/;
     validations.phone = getValidation(phoneRegex.test(formattedValue), message);
@@ -105,47 +105,47 @@ const validate = (value: string, config: ValidationConfig) => {
 
   // Min
   if (min?.check) {
-    const { check, message = `Mínimo ${min.check} caracteres.` } = min;
+    const { check, message = `Minimum ${min.check} characters.` } = min;
     validations.min = getValidation(value?.length >= check, message);
   }
 
   // Max
   if (max?.check) {
-    const { check, message = `Máximo ${max.check} caractere${max.check > 1 ? 's' : ''}.` } = max;
+    const { check, message = `Maximum ${max.check} character${max.check > 1 ? 's' : ''}.` } = max;
     validations.max = getValidation(value?.length <= check, message);
   }
 
   // Number
   if (number?.check) {
-    const { message = 'Não contém nenhum número.' } = number;
+    const { message = 'Does not contain any number.' } = number;
     const numberRegex = /[0-9]/;
     validations.number = getValidation(numberRegex.test(value), message);
   }
 
   // Lowercase
   if (lowercase?.check) {
-    const { message = 'Não contém nenhuma letra minúscula.' } = lowercase;
+    const { message = 'Does not contain any lowercase.' } = lowercase;
     const lowercaseRegex = /[a-z]/;
     validations.lowercase = getValidation(lowercaseRegex.test(value), message);
   }
 
   // Uppercase
   if (uppercase?.check) {
-    const { message = 'Não contém nenhuma letra maiúscula.' } = uppercase;
+    const { message = 'Does not contain any uppercase.' } = uppercase;
     const uppercaseRegex = /[A-Z]/;
     validations.uppercase = getValidation(uppercaseRegex.test(value), message);
   }
 
   // Special Character
   if (specialCharacter?.check) {
-    const { message = 'Não contém nenhum caractere especial.' } = specialCharacter;
+    const { message = 'Does not contain any special character.' } = specialCharacter;
     const specialCharacterRegex = /[^\w\s]/;
     validations.specialCharacter = getValidation(specialCharacterRegex.test(value), message);
   }
 
   // Space
   if (space?.check) {
-    const { message = 'Não contém nenhum espaço.' } = space;
+    const { message = 'Does not contain any space.' } = space;
     const spaceRegex = /[ ]/;
     validations.space = getValidation(spaceRegex.test(value), message);
   }
