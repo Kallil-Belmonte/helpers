@@ -15,7 +15,7 @@ export const isNumber = (value: any) => typeof value === 'number';
 
 export const isArray = (value: any) => !!value && Array.isArray(value);
 
-export const isObject = (value: any) => !!value && value.constructor === Object;
+export const isObject = (value: any) => value?.constructor === Object;
 
 export const isFunction = (value: any) => typeof value === 'function';
 
