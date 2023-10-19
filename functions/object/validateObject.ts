@@ -34,8 +34,8 @@ const validateObject = (objectToValidate: ObjectType, schemaForValidation: Objec
       }
 
       const typeOf = typeof object[key];
-      const isSchemaObject = typeof schema[schemaKey] === 'object' && !isArray(schema[schemaKey]);
-      const isDataObject = typeof object[key] === 'object' && !isArray(object[key]);
+      const isSchemaObject = schema[schemaKey]?.constructor === Object;
+      const isDataObject = object[key]?.constructor === Object;
       const isSchemaArray =
         typeof schema[schemaKey] === 'string' && schema[schemaKey].includes('[]');
       const isDataArray = isArray(object[key]);
