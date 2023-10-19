@@ -3,13 +3,13 @@ type ObjectType = { [key: string]: any };
 /**
  * @function validateObject
  * @description Checks if an object has the same structure of another.
- * @param { Object } object - Object to validate.
- * @param { Object } structure - Structure for validation.
+ * @param { Object } objectToValidate - Object to validate.
+ * @param { Object } schemaForValidation - Schema for validation.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/PoXKGPe}
  */
 
-const validateObject = (object: ObjectType, structure: ObjectType) => {
+const validateObject = (objectToValidate: ObjectType, schemaForValidation: ObjectType) => {
   const { keys } = Object;
   const { isArray } = Array;
 
@@ -18,39 +18,39 @@ const validateObject = (object: ObjectType, structure: ObjectType) => {
   const wrongType: string[] = [];
   const filterKey = (key: string) => key.replace(/\?$/, '');
 
-  const loop = (obj: ObjectType, struct: ObjectType) => {
-    keys(obj).forEach(key => {
-      const isExtra = keys(struct).every(structKey => filterKey(structKey) !== key);
+  const loop = (object: ObjectType, schema: ObjectType) => {
+    keys(object).forEach(key => {
+      const isExtra = keys(schema).every(schemaKey => filterKey(schemaKey) !== key);
       if (isExtra) extra.push(key);
     });
 
-    keys(struct).forEach(structKey => {
-      const key = filterKey(structKey);
-      const isOptional = structKey.endsWith('?');
+    keys(schema).forEach(schemaKey => {
+      const key = filterKey(schemaKey);
+      const isOptional = schemaKey.endsWith('?');
 
-      if (!(key in obj)) {
+      if (!(key in object)) {
         if (isOptional) return;
         return notFound.push(key);
       }
 
-      const typeOf = typeof obj[key];
-      const isStructObject = typeof struct[structKey] === 'object' && !isArray(struct[structKey]);
-      const isDataObject = typeof obj[key] === 'object' && !isArray(obj[key]);
-      const isStructArray =
-        typeof struct[structKey] === 'string' && struct[structKey].includes('[]');
-      const isDataArray = isArray(obj[key]);
+      const typeOf = typeof object[key];
+      const isSchemaObject = typeof schema[schemaKey] === 'object' && !isArray(schema[schemaKey]);
+      const isDataObject = typeof object[key] === 'object' && !isArray(object[key]);
+      const isSchemaArray =
+        typeof schema[schemaKey] === 'string' && schema[schemaKey].includes('[]');
+      const isDataArray = isArray(object[key]);
 
       const isValidArray = () => {
-        if ((struct[structKey] === 'array' || struct[structKey] === '[]') && isDataArray)
+        if ((schema[schemaKey] === 'array' || schema[schemaKey] === '[]') && isDataArray)
           return true;
 
-        if (isStructArray && isDataArray) {
-          const structureTypes: string[] = struct[structKey].replace(/[\[\]()]/g, '').split(' | ');
+        if (isSchemaArray && isDataArray) {
+          const schemaTypes: string[] = schema[schemaKey].replace(/[\[\]()]/g, '').split(' | ');
           let objectTypes: string[] = [
-            ...new Set<string>(obj[key].map((item: string) => typeof item)),
+            ...new Set<string>(object[key].map((item: string) => typeof item)),
           ];
 
-          structureTypes.forEach(item => {
+          schemaTypes.forEach(item => {
             objectTypes = objectTypes.filter(itemType => itemType !== item);
           });
 
@@ -60,13 +60,13 @@ const validateObject = (object: ObjectType, structure: ObjectType) => {
         return false;
       };
 
-      if (isValidArray() || (struct[structKey] === 'object' && isDataObject)) return;
-      if (isStructObject && isDataObject) loop(obj[key], struct[structKey]);
-      else if (!struct[structKey].split(' | ').includes(typeOf)) wrongType.push(key);
+      if (isValidArray() || (schema[schemaKey] === 'object' && isDataObject)) return;
+      if (isSchemaObject && isDataObject) loop(object[key], schema[schemaKey]);
+      else if (!schema[schemaKey].split(' | ').includes(typeOf)) wrongType.push(key);
     });
   };
 
-  loop(object, structure);
+  loop(objectToValidate, schemaForValidation);
 
   return {
     valid: !notFound.length && !extra.length && !wrongType.length,
