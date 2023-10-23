@@ -9,15 +9,31 @@ type ObjectType = { [key: string]: any };
  */
 
 const queryStringToObject = <Type = ObjectType>(url: string): Type => {
-  const { search, searchParams } = new URL(url);
+  const { search } = new URL(url);
 
-  return search.split('&').reduce((accumulator, currentValue) => {
-    const param = currentValue.split('=')[0].replace(/\?/, '');
-    return {
-      ...accumulator,
-      [param]: searchParams.get(param),
-    };
-  }, {} as Type);
+  return search
+    .replace(/^\?/, '')
+    .split('&')
+    .reduce((accumulator, currentValue) => {
+      const [parameter, value] = currentValue.split('=');
+      const param = parameter.replace(/\[|\]/g, '');
+      let result: string | string[] = value;
+
+      if (parameter.endsWith('[]') || accumulator[param]) {
+        if (accumulator[param]) {
+          result = Array.isArray(accumulator[param])
+            ? [...accumulator[param], value]
+            : [accumulator[param], value];
+        } else {
+          result = [value];
+        }
+      }
+
+      return {
+        ...accumulator,
+        [param]: result,
+      };
+    }, {} as ObjectType) as Type;
 };
 
 export default queryStringToObject;
