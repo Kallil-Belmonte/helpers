@@ -10,12 +10,24 @@ type ObjectType = { [key: string]: any };
 
 const objectToQueryString = (params: ObjectType) => {
   const { keys } = Object;
+  const { isArray } = Array;
   let result = '?';
 
-  keys(params).forEach((key, index) => {
-    const isLast = keys(params).length === index + 1;
-    result += `${key}=${params[key]}`;
-    if (!isLast) result += '&';
+  keys(params).forEach((param, index) => {
+    const value = params[param];
+
+    if (isArray(value)) {
+      value.forEach((item, itemIndex) => {
+        result += `${param}[]=${item}`;
+        const isNotLast = value[itemIndex + 1];
+        if (isNotLast) result += '&';
+      });
+    } else {
+      result += `${param}=${value}`;
+    }
+
+    const isNotLast = keys(params)[index + 1];
+    if (isNotLast) result += '&';
   });
 
   return result;

@@ -9,6 +9,7 @@ type ObjectType = { [key: string]: any };
  */
 
 const queryStringToObject = <Type = ObjectType>(url: string): Type => {
+  const { isArray } = Array;
   const { search } = new URL(url);
 
   return search
@@ -21,7 +22,7 @@ const queryStringToObject = <Type = ObjectType>(url: string): Type => {
 
       if (parameter.endsWith('[]') || accumulator[param]) {
         if (accumulator[param]) {
-          result = Array.isArray(accumulator[param])
+          result = isArray(accumulator[param])
             ? [...accumulator[param], value]
             : [accumulator[param], value];
         } else {
