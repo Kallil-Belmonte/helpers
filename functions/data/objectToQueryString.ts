@@ -3,12 +3,14 @@ type ObjectType = { [key: string]: any };
 /**
  * @function objectToQueryString
  * @description Converts an object to query string.
- * @param { object } params - Params as an object.
+ * @param { object } [params] - Params as an object.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/rNovEgM}
  */
 
-const objectToQueryString = (params: ObjectType) => {
+const objectToQueryString = (params?: ObjectType) => {
+  if (!params) return '';
+
   const { keys } = Object;
   const { isArray } = Array;
   let result = '?';
