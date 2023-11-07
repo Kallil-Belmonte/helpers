@@ -5,8 +5,6 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/dyRpNyr}
  */
 
-const { keys } = Object;
-
 export const isBoolean = (value: any) => typeof value === 'boolean';
 
 export const isString = (value: any) => typeof value === 'string';
