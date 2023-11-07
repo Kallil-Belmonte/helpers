@@ -13,10 +13,12 @@ export const isString = (value: any) => typeof value === 'string';
 
 export const isNumber = (value: any) => typeof value === 'number';
 
+export const isFunction = (value: any) => typeof value === 'function';
+
 export const isArray = (value: any) => !!value && Array.isArray(value);
 
 export const isObject = (value: any) => value?.constructor === Object;
 
-export const isFunction = (value: any) => typeof value === 'function';
+export const isFormData = (value: any) => value instanceof FormData;
 
-export const isEvent = (value: any) => !!value && keys(value).includes('eventPhase');
+export const isEvent = (value: any) => value?.hasOwnProperty('type');
