@@ -73,6 +73,7 @@ export const isNumberKey = (key: string) => {
 export const isSpecialKey = (key: string) => {
   const specialKeys = [
     'Alt',
+    'AltGraph',
     'Backspace',
     'CapsLock',
     'Clear',
