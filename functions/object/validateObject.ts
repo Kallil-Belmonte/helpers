@@ -62,7 +62,7 @@ const validateObject = (objectToValidate: ObjectType, schemaForValidation: Objec
 
       if (isValidArray() || (schema[schemaKey] === 'object' && isDataObject)) return;
       if (isSchemaObject && isDataObject) loop(object[key], schema[schemaKey]);
-      else if (!schema[schemaKey].split(' | ').includes(typeOf)) wrongType.push(key);
+      else if (!schema[schemaKey].split?.(' | ').includes(typeOf)) wrongType.push(key);
     });
   };
 
