@@ -41,6 +41,7 @@ const validateObject = (objectToValidate: ObjectType, schemaForValidation: Objec
       const isDataArray = isArray(object[key]);
 
       const isValidArray = () => {
+        if (schema[schemaKey] === 'null' && object[key] === null) return true;
         if ((schema[schemaKey] === 'array' || schema[schemaKey] === '[]') && isDataArray)
           return true;
 
