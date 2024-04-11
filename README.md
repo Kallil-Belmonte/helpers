@@ -25,6 +25,7 @@ General helpers free to use.
   - [hasDuplicatedValue](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/hasDuplicatedValue.ts)
   - [removeItemsFromArray](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/removeItemsFromArray.ts)
   - [seperateNumbersArrayInArrays](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/seperateNumbersArrayInArrays.ts)
+  - [setPagination](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/setPagination.ts)
   - [sortObjectsArray](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/sortObjectsArray.ts)
 - [data](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data)
   - [isEqual](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/isEqual.ts)
