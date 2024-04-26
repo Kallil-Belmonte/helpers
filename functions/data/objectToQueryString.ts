@@ -9,10 +9,10 @@ type ObjectType = { [key: string]: any };
  */
 
 const objectToQueryString = (params?: ObjectType) => {
-  const { keys } = Object;
+  const { keys, values } = Object;
   const { isArray } = Array;
 
-  if (!params || !keys(params).length) return '';
+  if (!params || values(params).every(value => value === undefined)) return '';
 
   let result = '?';
 
