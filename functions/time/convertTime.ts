@@ -31,6 +31,7 @@ const convertTime = (config: Config, output: Output = 'millisecond') => {
   if (output === 'second') return result / secondBase;
   if (output === 'minute') return result / minuteBase;
   if (output === 'hour') return result / hourBase;
+  
   return result / dayBase;
 };
 
