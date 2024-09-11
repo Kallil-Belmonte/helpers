@@ -5,12 +5,12 @@ type ObjectType = { [key: string]: any };
  * @description Sorts the objects inside an array by one property (in ascending or descending order).
  * @param { any[] } array - Values array.
  * @param { string } property - Property to sort.
- * @param { boolean } [reverse] - If true, reverts the array order.
+ * @param { boolean } [reverse=false] - If true, reverts the array order.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/PdxGbP}
  */
 
-const sortObjectsArray = (array: any[], property: string, reverse?: boolean) => {
+const sortObjectsArray = (array: any[], property: string, reverse = false) => {
   const isNumber = (item: ObjectType) => typeof item[property] === 'number';
   const isString = (item: ObjectType) => typeof item[property] === 'string';
   const isNullOrUndefined = (item: ObjectType) =>
