@@ -1,21 +1,21 @@
-type ConfigItem = { message: string | ((value: string) => string) };
-type ConfigItemBoolean = Partial<ConfigItem> & { check: boolean };
-type ConfigItemNumber = Partial<ConfigItem> & { check: number };
-type ConfigItemRegex = Partial<ConfigItem> & { check: RegExp };
+type ParamItem = { message: string | ((value: string) => string) };
+type ParamItemBoolean = Partial<ParamItem> & { check: boolean };
+type ParamItemNumber = Partial<ParamItem> & { check: number };
+type ParamItemRegex = Partial<ParamItem> & { check: RegExp };
 
-export type ValidationConfig = {
-  custom?: ConfigItem & { isValid: (value: string) => boolean };
-  required?: ConfigItemBoolean;
-  regex?: ConfigItemRegex;
-  email?: ConfigItemBoolean;
-  phone?: ConfigItemBoolean;
-  min?: ConfigItemNumber;
-  max?: ConfigItemNumber;
-  number?: ConfigItemBoolean;
-  lowercase?: ConfigItemBoolean;
-  uppercase?: ConfigItemBoolean;
-  specialCharacter?: ConfigItemBoolean;
-  space?: ConfigItemBoolean;
+export type Params = {
+  custom?: ParamItem & { isValid: (value: string) => boolean };
+  required?: ParamItemBoolean;
+  regex?: ParamItemRegex;
+  email?: ParamItemBoolean;
+  phone?: ParamItemBoolean;
+  min?: ParamItemNumber;
+  max?: ParamItemNumber;
+  number?: ParamItemBoolean;
+  lowercase?: ParamItemBoolean;
+  uppercase?: ParamItemBoolean;
+  specialCharacter?: ParamItemBoolean;
+  space?: ParamItemBoolean;
 };
 
 type ValidationItem = { isValid: boolean; message: string };
@@ -39,12 +39,12 @@ export type Validations = {
  * @function validate
  * @description Validates a string with multiple options.
  * @param { string } value - Text to be validated.
- * @param { Object } config - Validation configuration.
+ * @param { Params } params - Validation parameters.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/OJpMRYp}
  */
 
-const validate = (value: string, config: ValidationConfig) => {
+const validate = (value: string, params: Params) => {
   const { values } = Object;
   const {
     custom,
@@ -59,10 +59,10 @@ const validate = (value: string, config: ValidationConfig) => {
     uppercase,
     specialCharacter,
     space,
-  } = config || {};
+  } = params || {};
   const validations: Validations = {};
 
-  const getValidation = (isValid: boolean, message: ConfigItem['message']): ValidationItem => {
+  const getValidation = (isValid: boolean, message: ParamItem['message']): ValidationItem => {
     const messageResult = typeof message === 'function' ? message(value) : message;
     return { isValid, message: isValid ? '' : messageResult };
   };

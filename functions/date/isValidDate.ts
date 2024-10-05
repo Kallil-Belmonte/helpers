@@ -1,4 +1,4 @@
-type Config = {
+type Params = {
   day: number;
   month: number;
   year: number;
@@ -7,13 +7,13 @@ type Config = {
 /**
  * @function isValidDate
  * @description Validates a date.
- * @param { Config } config - Day, month and year.
+ * @param { Params } params - Day, month and year.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/gOQboXz}
  */
 
-const isValidDate = (config: Config) => {
-  const { day: dayParam, month: monthParam, year: yearParam } = config;
+const isValidDate = (params: Params) => {
+  const { day: dayParam, month: monthParam, year: yearParam } = params;
   const date = new Date(`${yearParam}-${monthParam}-${dayParam}`);
   const day = date.getDate();
   const month = date.getMonth() + 1;

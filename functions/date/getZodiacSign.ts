@@ -1,4 +1,4 @@
-type Config = {
+type Params = {
   date?: Date;
   day?: number;
   month?: number;
@@ -7,13 +7,13 @@ type Config = {
 /**
  * @function getZodiacSign
  * @description Gets the zodiac sign based on date or day and month.
- * @param { Object } config - Date information.
+ * @param { Object } params - Date information.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/bGMVXJQ}
  */
 
-const getZodiacSign = (config: Config) => {
-  const { date, day: dayParam, month: monthParam } = config;
+const getZodiacSign = (params: Params) => {
+  const { date, day: dayParam, month: monthParam } = params;
   const day = date ? date.getDay() : dayParam || 1;
   const month = date ? date.getMonth() + 1 : monthParam || 1;
 

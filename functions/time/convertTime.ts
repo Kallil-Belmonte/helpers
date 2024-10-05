@@ -1,17 +1,17 @@
-type Config = { second?: number; minute?: number; hour?: number; day?: number; week?: number };
+type Params = { second?: number; minute?: number; hour?: number; day?: number; week?: number };
 
 type Output = 'millisecond' | 'second' | 'minute' | 'hour' | 'day';
 
 /**
  * @function convertTime
  * @description Converts the time on a specific output.
- * @param { Object } config - Configuration.
+ * @param { Object } params - Parameters.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/oNdzNyy}
  */
 
-const convertTime = (config: Config, output: Output = 'millisecond') => {
-  const { second, minute, hour, day, week } = config;
+const convertTime = (params: Params, output: Output = 'millisecond') => {
+  const { second, minute, hour, day, week } = params;
 
   const secondBase = 1000;
   const minuteBase = secondBase * 60;
@@ -31,7 +31,7 @@ const convertTime = (config: Config, output: Output = 'millisecond') => {
   if (output === 'second') return result / secondBase;
   if (output === 'minute') return result / minuteBase;
   if (output === 'hour') return result / hourBase;
-  
+
   return result / dayBase;
 };
 

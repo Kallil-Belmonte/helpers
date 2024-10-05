@@ -6,15 +6,15 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/mdmYVNo}
  */
 
-type Config = {
+type Params = {
   date?: string | Date;
   days?: number;
   months?: number;
   years?: number;
 };
 
-export const getPastDate = (config: Config) => {
-  const { date, days, months, years } = config;
+export const getPastDate = (params: Params) => {
+  const { date, days, months, years } = params;
   const d = date ? new Date(date) : new Date();
   if (years) d.setFullYear(d.getFullYear() - years);
   if (months) d.setMonth(d.getMonth() - months);
@@ -22,8 +22,8 @@ export const getPastDate = (config: Config) => {
   return d;
 };
 
-export const getFutureDate = (config: Config) => {
-  const { date, days, months, years } = config;
+export const getFutureDate = (params: Params) => {
+  const { date, days, months, years } = params;
   const d = date ? new Date(date) : new Date();
   if (years) d.setFullYear(d.getFullYear() + years);
   if (months) d.setMonth(d.getMonth() + months);
