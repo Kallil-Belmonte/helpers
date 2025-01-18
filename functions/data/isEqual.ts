@@ -1,12 +1,12 @@
 type ObjectType = { [key: string]: any };
 
-type Value = any[] | ObjectType;
+type Value = string | boolean | any[] | ObjectType;
 
 /**
  * @function isEqual
- * @description Checks if two arrays or two objects are equal.
- * @param { Array | Object } firstValue - First value.
- * @param { Array | Object } secondValue - Second value.
+ * @description Checks if two values are equal.
+ * @param { string | boolean | any[] | ObjectType } firstValue - First value.
+ * @param { string | boolean | any[] | ObjectType } secondValue - Second value.
  * @param { boolean } [checkOrder] - If true, also checks the values order.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/oNwzzQw}
