@@ -40,6 +40,7 @@ General helpers free to use.
   - [getZodiacSign](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/getZodiacSign.ts)
   - [isValidDate](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date/isValidDate.ts)
 - [dom](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/date)
+  - [getScrollStatus](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/dom/getScrollStatus.ts)
   - [isElementInCenterOfViewport](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/dom/isElementInCenterOfViewport.ts)
   - [isElementInViewport](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/dom/isElementInViewport.ts)
   - [isFullyElementInViewport](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/dom/isFullyElementInViewport.ts)
