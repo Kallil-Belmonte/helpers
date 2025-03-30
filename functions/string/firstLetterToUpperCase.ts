@@ -2,7 +2,7 @@
  * @function firstLetterToUpperCase
  * @description Converts the first letter to uppercase.
  * @param { string } text - Text capitalize the first letter.
- * @param { boolean } restToLowercase - If true, the rest of the world will be converted to lowercase.
+ * @param { boolean } [restToLowercase] - If true, the rest of the world will be converted to lowercase.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/JjLQqbd}
  */
