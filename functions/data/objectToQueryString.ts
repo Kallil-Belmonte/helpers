@@ -20,17 +20,18 @@ const objectToQueryString = (params?: ObjectType) => {
     const value = params[param];
 
     if (isArray(value)) {
-      value.forEach((item, itemIndex) => {
-        result += `${param}[]=${item}`;
-        const isNotLast = value[itemIndex + 1];
-        if (isNotLast) result += '&';
-      });
-    } else {
+      value
+        .filter(item => !!item)
+        .forEach((item, itemIndex) => {
+          result += `${param}[]=${item}`;
+          const isNotLast = value[itemIndex + 1];
+          if (isNotLast) result += '&';
+        });
+    } else if (value !== undefined && value !== null) {
       result += `${param}=${value}`;
+      const isNotLast = keys(params)[index + 1];
+      if (isNotLast) result += '&';
     }
-
-    const isNotLast = keys(params)[index + 1];
-    if (isNotLast) result += '&';
   });
 
   return result;
