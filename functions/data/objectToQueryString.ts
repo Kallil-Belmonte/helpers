@@ -9,28 +9,32 @@ type ObjectType = { [key: string]: any };
  */
 
 const objectToQueryString = (params?: ObjectType) => {
-  const { keys, values } = Object;
+  const { entries } = Object;
   const { isArray } = Array;
 
-  if (!params || values(params).every(value => value === undefined)) return '';
+  if (!params) return '';
+
+  const isNullOrUndefined = (value: any) => value === null || value === undefined;
+
+  const paramsFiltered = entries(params).filter(([, value]) =>
+    isArray(value) ? !!value.length : !isNullOrUndefined(value),
+  );
+  if (!paramsFiltered.length) return '';
 
   let result = '?';
 
-  keys(params).forEach((param, index) => {
-    const value = params[param];
+  paramsFiltered.forEach(([key, value], index) => {
+    if (index) result += '&';
 
     if (isArray(value)) {
       value
-        .filter(item => !!item)
+        .filter(item => !isNullOrUndefined(item))
         .forEach((item, itemIndex) => {
-          result += `${param}[]=${item}`;
-          const isNotLast = value[itemIndex + 1] || keys(params)[index + 1];
-          if (isNotLast) result += '&';
+          if (itemIndex) result += '&';
+          result += `${key}[]=${item}`;
         });
-    } else if (value !== undefined && value !== null) {
-      result += `${param}=${value}`;
-      const isNotLast = keys(params)[index + 1];
-      if (isNotLast) result += '&';
+    } else {
+      result += `${key}=${value}`;
     }
   });
 
