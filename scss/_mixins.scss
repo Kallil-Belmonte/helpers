@@ -1,14 +1,26 @@
-@mixin size($width, $height, $radius: '') {
-  width: $width;
-  height: $height;
+@mixin size($width, $height, $radius: '', $important: false) {
+  @if $important == true {
+    width: $width !important;
+    height: $height !important;
+  } @else {
+    width: $width;
+    height: $height;
+  }
+
   @if $radius != '' {
     border-radius: $radius;
   }
 }
 
-@mixin square($size, $radius: '') {
-  width: $size;
-  height: $size;
+@mixin square($size, $radius: '', $important: false) {
+  @if $important == true {
+    width: $size !important;
+    height: $size !important;
+  } @else {
+    width: $size;
+    height: $size;
+  }
+
   @if $radius != '' {
     border-radius: $radius;
   }

@@ -1,31 +1,76 @@
+// General
 %text-continued {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-%center-absolute,
-%center-absolute-y,
-%center-absolute-x {
+%infinite-spin {
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  animation: spin 0.8s linear infinite;
+}
+
+// Flex
+%flex-center,
+%flex-vertical-center,
+%flex-horizontal-center {
+  display: flex;
+}
+
+%inline-flex-center,
+%inline-flex-vertical-center,
+%inline-flex-horizontal-center {
+  display: inline-flex;
+}
+
+%flex-center,
+%inline-flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-vertical-center,
+%inline-flex-vertical-center {
+  align-items: center;
+}
+
+%flex-horizontal-center,
+%inline-flex-horizontal-center {
+  justify-content: center;
+}
+
+// Absolute center
+%absolute-center,
+%absolute-vertical-center,
+%absolute-horizontal-center {
   position: absolute;
 }
 
-%center-absolute {
+%absolute-center {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-%center-absolute-y {
+%absolute-vertical-center {
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(0, -50%);
 }
 
-%center-absolute-x {
+%absolute-horizontal-center {
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
 }
 
+// Background image
 %background-image-contain,
 %background-image-cover {
   background-repeat: no-repeat;
@@ -38,4 +83,22 @@
 
 %background-image-cover {
   background-size: cover;
+}
+
+// Scroll
+%styled-scroll {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: grey;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: black;
+
+    &:active {
+      background-color: blue;
+    }
+  }
 }
