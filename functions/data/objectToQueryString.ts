@@ -24,7 +24,7 @@ const objectToQueryString = (params?: ObjectType) => {
         .filter(item => !!item)
         .forEach((item, itemIndex) => {
           result += `${param}[]=${item}`;
-          const isNotLast = value[itemIndex + 1];
+          const isNotLast = value[itemIndex + 1] || keys(params)[index + 1];
           if (isNotLast) result += '&';
         });
     } else if (value !== undefined && value !== null) {
