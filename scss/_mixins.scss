@@ -1,3 +1,11 @@
+@mixin active-style {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
 @mixin size($width, $height, $radius: '', $important: false) {
   @if $important == true {
     width: $width !important;
