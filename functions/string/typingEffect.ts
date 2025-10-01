@@ -16,7 +16,7 @@ const typingEffect = async (selector: string, speed: number = 50) => {
   const elements: Element[] = [];
   const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-  const clear = (childNodes?: NodeListOf<ChildNode>) => {
+  const clear = async (childNodes?: NodeListOf<ChildNode>) => {
     if (!childNodes) return;
 
     for (const childNode of Array.from(childNodes)) {
@@ -40,7 +40,7 @@ const typingEffect = async (selector: string, speed: number = 50) => {
     }
   };
 
-  clear(document.querySelector(selector)?.childNodes);
+  await clear(document.querySelector(selector)?.childNodes);
   await animate();
 };
 
