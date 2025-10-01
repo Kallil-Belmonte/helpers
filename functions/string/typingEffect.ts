@@ -7,12 +7,12 @@ type Element = {
  * @function typingEffect
  * @description Adds a typing effect to a text.
  * @param { string } selector - Element selector.
- * @param { number } [duration=50] - Duration in miliseconds.
+ * @param { number } [speed=50] - Speed in miliseconds.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/NPxNRZp}
  */
 
-const typingEffect = (selector: string, duration: number = 50) => {
+const typingEffect = (selector: string, speed: number = 50) => {
   const elements: Element[] = [];
   const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -34,7 +34,7 @@ const typingEffect = (selector: string, duration: number = 50) => {
       const { text, node } = element;
       for (const [index, letter] of Object.entries(text)) {
         const isLastIndex = Number(index) === text.length - 1;
-        await delay(duration);
+        await delay(speed);
         node.textContent = `${node?.textContent?.slice(0, -1)}${letter}${isLastIndex ? '' : '|'}`;
       }
     }
