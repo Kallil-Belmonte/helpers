@@ -12,7 +12,7 @@ type Element = {
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/NPxNRZp}
  */
 
-const typingEffect = (selector: string, speed: number = 50) => {
+const typingEffect = async (selector: string, speed: number = 50) => {
   const elements: Element[] = [];
   const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -41,7 +41,7 @@ const typingEffect = (selector: string, speed: number = 50) => {
   };
 
   clear(document.querySelector(selector)?.childNodes);
-  animate();
+  await animate();
 };
 
 export default typingEffect;
