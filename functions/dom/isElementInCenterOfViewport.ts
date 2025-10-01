@@ -7,7 +7,7 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/JjwjqgK}
  */
 
-const isElementInCenterOfViewport = (selector: string, acceptableMargin = 50) => {
+const isElementInCenterOfViewport = (selector: string, acceptableMargin: number = 50) => {
   const rect = document.querySelector(selector)?.getBoundingClientRect();
   if (!rect) return false;
   const windowHeight = window.innerHeight;

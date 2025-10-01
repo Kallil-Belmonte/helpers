@@ -10,7 +10,7 @@ type ObjectType = { [key: string]: any };
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/PdxGbP}
  */
 
-const sortObjectsArray = (array: any[], property: string, reverse = false) => {
+const sortObjectsArray = (array: any[], property: string, reverse: boolean = false) => {
   const isNumber = (item: ObjectType) => typeof item[property] === 'number';
   const isString = (item: ObjectType) => typeof item[property] === 'string';
   const isNullOrUndefined = (item: ObjectType) =>

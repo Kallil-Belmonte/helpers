@@ -7,7 +7,7 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/ZEBpvLy}
  */
 
-const removePrefixes = (value: string, prefix = '0') => {
+const removePrefixes = (value: string, prefix: string = '0') => {
   let result = value;
 
   const removePrefix = () => {

@@ -13,7 +13,7 @@ type ObjectType = { [key: string]: any };
 const filterObject = <Type = ObjectType>(
   object: ObjectType,
   propertiesToFilter: string[],
-  removeProperties = true,
+  removeProperties: boolean = true,
 ) =>
   Object.keys(object).reduce((accumulator: ObjectType, value) => {
     if (propertiesToFilter.includes(value) !== removeProperties) {

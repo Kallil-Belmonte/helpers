@@ -3,13 +3,13 @@ type ObjectType = { [key: string]: any };
 /**
  * @function sortObjectProperties
  * @description Sorts the object properties by ascending or descending order.
- * @param { Object } objects - Object to sort properties.
+ * @param { Object } object - Object to sort properties.
  * @param { boolean } [reverse=false] - If true, reverts the properties order.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/XWgzraV}
  */
 
-const sortObjectProperties = (object: ObjectType, reverse = false): ObjectType => {
+const sortObjectProperties = (object: ObjectType, reverse: boolean = false): ObjectType => {
   const { keys } = Object;
   const format = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const propertiesResult = keys(object)

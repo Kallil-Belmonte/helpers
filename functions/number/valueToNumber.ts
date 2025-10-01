@@ -7,7 +7,7 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/RwwYdYw}
  */
 
-const valueToNumber = (value: string, decimalSymbol = ',') => {
+const valueToNumber = (value: string, decimalSymbol: string = ',') => {
   const comma = ',';
   const dot = '.';
 

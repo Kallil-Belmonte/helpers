@@ -10,7 +10,7 @@ type ObjectType = { [key: string]: any };
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/GXgEgo}
  */
 
-const groupObjectsByProperty = (array: ObjectType[], property: string, sort = true) => {
+const groupObjectsByProperty = (array: ObjectType[], property: string, sort: boolean = true) => {
   const allValues = array.map(item => item[property]);
   const uniqueValues = allValues.filter((item, index, self) => self.indexOf(item) === index);
   if (sort) uniqueValues.sort();
