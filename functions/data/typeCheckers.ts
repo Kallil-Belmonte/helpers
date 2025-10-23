@@ -15,7 +15,8 @@ export const isFunction = (value: any) => typeof value === 'function';
 
 export const isArray = (value: any) => Array.isArray(value);
 
-export const isObject = (value: any) => value?.constructor === Object;
+export const isObject = (value: any) =>
+  !!value && !Array.isArray(value) && JSON.parse(JSON.stringify(value)).constructor === Object;
 
 export const isFormData = (value: any) => value instanceof FormData;
 
