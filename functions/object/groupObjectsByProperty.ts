@@ -13,7 +13,7 @@ type ObjectType = { [key: string]: any };
 const groupObjectsByProperty = (array: ObjectType[], property: string, sort: boolean = true) => {
   const allValues = array.map(item => item[property]);
   const uniqueValues = allValues.filter((item, index, self) => self.indexOf(item) === index);
-  if (sort) uniqueValues.sort();
+  if (sort) uniqueValues.sort((a, b) => a.localeCompare(b));
   return uniqueValues.map(item => array.filter(object => object[property] === item)).flat();
 };
 

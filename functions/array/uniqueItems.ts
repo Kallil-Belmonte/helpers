@@ -9,7 +9,7 @@
 
 const uniqueItems = (array: any[], sort?: boolean) => {
   const result = array.filter((item, index, self) => self.indexOf(item) === index);
-  if (sort) result.sort();
+  if (sort) result.sort((a, b) => a.localeCompare(b));
   return result;
 };
 

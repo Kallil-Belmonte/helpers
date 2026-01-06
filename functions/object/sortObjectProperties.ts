@@ -14,7 +14,7 @@ const sortObjectProperties = (object: ObjectType, reverse: boolean = false): Obj
   const format = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const propertiesResult = keys(object)
     .map(key => format(key))
-    .sort();
+    .sort((a, b) => a.localeCompare(b));
   if (reverse) propertiesResult.reverse();
 
   return propertiesResult.reduce((accumulator, value) => {

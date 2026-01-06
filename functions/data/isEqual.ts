@@ -29,7 +29,7 @@ const isEqual = (firstValue: Value, secondValue: Value, checkOrder?: boolean) =>
     if (isObject(firstValue) && isObject(secondValue)) {
       const orderedObject = (object: any): ObjectType =>
         keys(object)
-          .sort()
+          .sort((a, b) => a.localeCompare(b))
           .reduce((accumulator, value) => {
             accumulator[value] = object[value];
             return accumulator;
