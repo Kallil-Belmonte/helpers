@@ -7,7 +7,7 @@
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/XJKdawg}
  */
 
-const uniqueItems = <Type = any>(array: Type[], sort?: boolean) => {
+const uniqueItems = (array: any[], sort?: boolean) => {
   const result = array.filter((item, index, self) => self.indexOf(item) === index);
   if (sort) result.sort();
   return result;
