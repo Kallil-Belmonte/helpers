@@ -22,7 +22,7 @@ const sortObjectProperties = (object: ObjectType, reverse: boolean = false): Obj
     const property = keys(object)[index];
     accumulator[property] = object[property];
     return accumulator;
-  }, {});
+  }, {} as ObjectType);
 };
 
 export default sortObjectProperties;
