@@ -19,7 +19,6 @@ General helpers free to use.
 ## Functions
 
 - [array](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array)
-  - [filterObjectsArrayToUniqueItems](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/filterObjectsArrayToUniqueItems.ts)
   - [getSingleValuesArrayFromArrays](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/getSingleValuesArrayFromArrays.ts)
   - [groupArrayItemsInArrays](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/groupArrayItemsInArrays.ts)
   - [hasDuplicatedValue](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/hasDuplicatedValue.ts)
@@ -27,6 +26,8 @@ General helpers free to use.
   - [seperateNumbersArrayInArrays](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/seperateNumbersArrayInArrays.ts)
   - [setPagination](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/setPagination.ts)
   - [sortObjectsArray](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/sortObjectsArray.ts)
+  - [uniqueItems](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/uniqueItems.ts)
+  - [uniqueObjects](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/array/uniqueObjects.ts)
 - [data](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data)
   - [isEqual](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/isEqual.ts)
   - [objectToQueryString](https://github.com/Kallil-Belmonte/helpers/tree/main/functions/data/objectToQueryString.ts)
