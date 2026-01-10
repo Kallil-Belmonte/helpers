@@ -1,7 +1,7 @@
 /**
  * @function isMoreThanHalfInViewport
  * @description Detects if more than half of the element is in viewport.
- * @param { string } selector - Element selector.
+ * @param selector - Element selector.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/MWZYYoo}
  */

@@ -1,8 +1,8 @@
 /**
  * @function uniqueItems
  * @description Returns just the unique items from an array.
- * @param { any[] } array - Values array.
- * @param { boolean } [sort] - If true, the response will be sorted.
+ * @param array - Values array.
+ * @param sort - If true, the response will be sorted.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/XJKdawg}
  */

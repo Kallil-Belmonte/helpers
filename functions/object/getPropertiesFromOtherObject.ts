@@ -3,11 +3,11 @@ type ObjectType = { [key: string]: any };
 /**
  * @function getPropertiesFromOtherObject
  * @description Copies the properties from one object to another.
- * @param { Object } objectToCopyProps - Object to copy properties.
- * @param { string } firstValueProp - First property value.
- * @param { Object } objectToGetProps - Object to get the copied properties.
- * @param { string } secondValueProp - Second property value.
- * @param { string[] } properties - Properties.
+ * @param objectToCopyProps - Object to copy properties.
+ * @param firstValueProp - First property value.
+ * @param objectToGetProps - Object to get the copied properties.
+ * @param secondValueProp - Second property value.
+ * @param properties - Properties.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/mdwVeGX}
  */

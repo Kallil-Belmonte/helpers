@@ -7,7 +7,7 @@ type Params = {
 /**
  * @function isValidDate
  * @description Validates a date.
- * @param { Params } params - Day, month and year.
+ * @param params - Day, month and year.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/gOQboXz}
  */

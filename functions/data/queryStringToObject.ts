@@ -3,7 +3,7 @@ type ObjectType = { [key: string]: any };
 /**
  * @function queryStringToObject
  * @description Converts a query string to object.
- * @param { string } url - URL.
+ * @param url - URL.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/oNJdrMe}
  */

@@ -3,8 +3,8 @@ type ObjectType = { [key: string]: any };
 /**
  * @function validateObject
  * @description Checks if an object has the same structure of another.
- * @param { Object } objectToValidate - Object to validate.
- * @param { Object } schemaForValidation - Schema for validation.
+ * @param objectToValidate - Object to validate.
+ * @param schemaForValidation - Schema for validation.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/PoXKGPe}
  */

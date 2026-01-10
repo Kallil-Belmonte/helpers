@@ -1,8 +1,8 @@
 /**
  * @function getTimeDifference
  * @description Gets the difference between two dates.
- * @param { string | Date } dateFrom - Start date.
- * @param { string | Date } [dateTo] - End date.
+ * @param dateFrom - Start date.
+ * @param dateTo - End date.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/rNzMzyy}
  */

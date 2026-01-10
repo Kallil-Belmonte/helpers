@@ -3,9 +3,9 @@ type ObjectType = { [key: string]: any };
 /**
  * @function groupObjectsByProperty
  * @description Takes an objects array and create one array for each property value of its objects.
- * @param { ObjectType[] } array - Objects array.
- * @param { string } property - Property to group.
- * @param { boolean } [sort=true] - If true, it will be sorted.
+ * @param array - Objects array.
+ * @param property - Property to group.
+ * @param sort - If true, it will be sorted.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/GXgEgo}
  */

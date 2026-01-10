@@ -1,7 +1,7 @@
 /**
  * @function keyCheckers
  * @description Some functions that checks the type of the key provided.
- * @param { string } key - Keyboard key.
+ * @param key - Keyboard key.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/QWbyGYo}
  * @see KeyValues {@link https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values}

@@ -1,7 +1,7 @@
 /**
  * @function getPastFutureDate
  * @description Gets the past and future dates.
- * @param { Object } config - Date information.
+ * @param config - Date information.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/mdmYVNo}
  */

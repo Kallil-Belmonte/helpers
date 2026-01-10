@@ -6,13 +6,13 @@ type Element = {
 /**
  * @function typingEffect
  * @description Adds a typing effect to a text.
- * @param { string } selector - Element selector.
- * @param { number } [speed=50] - Speed in miliseconds.
+ * @param selector - Element selector.
+ * @param speed - Speed in miliseconds.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/NPxNRZp}
  */
 
-const typingEffect = async (selector: string, speed: number = 50) => {
+const typingEffect = async (selector: string, speed = 50) => {
   const elements: Element[] = [];
   const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 

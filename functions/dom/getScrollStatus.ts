@@ -1,7 +1,7 @@
 /**
  * @function getScrollStatus
  * @description Gets the scroll status of an element.
- * @param { HTMLElement } element - Element.
+ * @param element - Element.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/YPKdvvw}
  */

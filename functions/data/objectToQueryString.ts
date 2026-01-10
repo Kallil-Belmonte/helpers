@@ -3,7 +3,7 @@ type ObjectType = { [key: string]: any };
 /**
  * @function objectToQueryString
  * @description Converts an object to query string.
- * @param { object } [params] - Params as an object.
+ * @param params - Params as an object.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/rNovEgM}
  */

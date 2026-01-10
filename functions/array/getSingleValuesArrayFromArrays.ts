@@ -1,8 +1,8 @@
 /**
  * @function getSingleValuesArrayFromArrays
  * @description Returns just the unique items from two arrays.,
- * @param { any[] } array - Values array.
- * @param { any[] } arrayToAddOrRemove - Array to add or remove.
+ * @param array - Values array.
+ * @param arrayToAddOrRemove - Array to add or remove.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/bGdgLxV}
  */

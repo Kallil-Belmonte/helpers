@@ -1,8 +1,8 @@
 /**
  * @function isElementInCenterOfViewport
  * @description Detects if the element is in the center of the viewport.
- * @param { string } selector - Element selector.
- * @param { number } [acceptableMargin=50] - Acceptable margin in pixels.
+ * @param selector - Element selector.
+ * @param acceptableMargin - Acceptable margin in pixels.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/JjwjqgK}
  */

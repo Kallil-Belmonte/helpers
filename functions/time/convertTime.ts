@@ -5,7 +5,7 @@ type Output = 'millisecond' | 'second' | 'minute' | 'hour' | 'day';
 /**
  * @function convertTime
  * @description Converts the time on a specific output.
- * @param { Object } params - Parameters.
+ * @param params - Parameters.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/oNdzNyy}
  */

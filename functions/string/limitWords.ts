@@ -1,8 +1,8 @@
 /**
  * @function limitWords
  * @description Limits the number of words in a text.
- * @param { string } text - Text.
- * @param { number } numberOfWords - Number of words to limit the text.
+ * @param text - Text.
+ * @param numberOfWords - Number of words to limit the text.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/ePYrQj}
  */

@@ -3,8 +3,8 @@ type ObjectType = { [key: string]: any };
 /**
  * @function sortObjectProperties
  * @description Sorts the object properties by ascending or descending order.
- * @param { Object } object - Object to sort properties.
- * @param { boolean } [reverse=false] - If true, reverts the properties order.
+ * @param object - Object to sort properties.
+ * @param reverse - If true, reverts the properties order.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/XWgzraV}
  */

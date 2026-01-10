@@ -7,7 +7,7 @@ type Params = {
 /**
  * @function getZodiacSign
  * @description Gets the zodiac sign based on date or day and month.
- * @param { Object } params - Date information.
+ * @param params - Date information.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/bGMVXJQ}
  */

@@ -1,7 +1,7 @@
 /**
  * @function isFullyElementInViewport
  * @description Detects if the whole element is in viewport.
- * @param { string } selector - Element selector.
+ * @param selector - Element selector.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/oNJNRrY}
  */

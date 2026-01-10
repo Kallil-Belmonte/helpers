@@ -1,8 +1,8 @@
 /**
  * @function setPagination
  * @description Sets a pagination object based on an array.
- * @param { any[] } array - Data array.
- * @param { number } quantity - Number of pages per page.
+ * @param array - Data array.
+ * @param quantity - Number of pages per page.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/YzMvVKz}
  */

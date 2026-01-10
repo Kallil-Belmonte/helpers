@@ -7,9 +7,9 @@ type Options = {
 /**
  * @function checkValueDifference
  * @description Checks the difference between two values.
- * @param { number } firstValue - First value.
- * @param { number } secondValue - Second value.
- * @param { Object } [options={}] - Check options.
+ * @param firstValue - First value.
+ * @param secondValue - Second value.
+ * @param options - Check options.
  * @author Kallil Belmonte
  * @see CodePen {@link https://codepen.io/kallil-belmonte/full/vYNQdMr}
  */
