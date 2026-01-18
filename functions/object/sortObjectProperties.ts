@@ -17,8 +17,8 @@ const sortObjectProperties = (object: ObjectType, reverse: boolean = false): Obj
     .sort((a, b) => a.localeCompare(b));
   if (reverse) propertiesResult.reverse();
 
-  return propertiesResult.reduce((accumulator, value) => {
-    const index = keys(object).findIndex(key => format(key) === format(value));
+  return propertiesResult.reduce((accumulator, currentValue) => {
+    const index = keys(object).findIndex(key => format(key) === format(currentValue));
     const property = keys(object)[index];
     accumulator[property] = object[property];
     return accumulator;
